@@ -2,6 +2,8 @@ import { Suspense, useEffect, useState } from 'react'
 import './app.css'
 import Experience from "./components/Experience"
 import Loader from './Loader'
+import { Route, Routes } from 'react-router-dom'
+import Works from './components/Works'
 
 
 function App() {
@@ -16,7 +18,6 @@ function App() {
   return (
     <>
       <Loader />
-
       <Experience onLoaded={() => setLoaded(true)} />
     </>
   )

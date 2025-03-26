@@ -1,10 +1,20 @@
 import { useCamera } from '@react-three/drei'
+import gsap from 'gsap'
 import React from 'react'
 import { useFrame, useThree } from 'react-three-fiber'
 import * as THREE from 'three'
 
 const Camera = () => {
-      const { camera } = useThree()
+
+  const { camera } = useThree()
+  const moveCamera = () => {
+    gsap.to(camera.position, {
+      x:1,
+      y:1,
+      z:1,
+      duration:2
+    })
+  }
       console.log(camera.position)
       console.log(camera.getWorldDirection(new THREE.Vector3()))
       useFrame((state, delta) => {

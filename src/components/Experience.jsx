@@ -1,4 +1,4 @@
-import { Loader, OrbitControls, Text } from '@react-three/drei'
+import { Html, Loader, OrbitControls, Text } from '@react-three/drei'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import './Experience.css'
 import Island from './Island'
@@ -6,11 +6,21 @@ import Sea from './Sea'
 import { useEffect, useRef, useState } from 'react'
 import Camera from './Camera'
 import { SRGBColorSpace } from 'three'
+import { Link, useLocation } from 'react-router-dom'
+import Buttons from './Buttons'
 
 
 const Experience = ({ onLoaded }) => {
+  
+
   const [isRenderd, setIsRendered] = useState(false)
+  const hashName = useLocation().hash.slice(1)
+
+
+
   useEffect(() => {
+
+    console.log(hashName)
 
     setTimeout(() => {
       if(isRenderd) {
@@ -37,11 +47,14 @@ const Experience = ({ onLoaded }) => {
           position={ [ -4, 8, -35 ] }
           fontSize={ 5 }
           fontWeight={ 800 }
-          maxWidth={ 50 }
+          maxWidth={ 55 }
+          font='/assets/fonts/LINESeedJP_OTF_Eb.woff'
           
         >
           Welcome to Rimpei's Portfolio!
         </Text>
+        <Buttons />
+
         { isRenderd ? (
       <>
         <Camera />
