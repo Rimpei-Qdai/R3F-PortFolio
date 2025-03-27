@@ -1,16 +1,18 @@
 import { Html } from '@react-three/drei'
 import gsap from 'gsap'
-import React from 'react'
-import { useThree } from 'react-three-fiber'
+import React, { useState } from 'react'
+import { useLocation } from 'react-router-dom'
+import { useFrame, useThree } from 'react-three-fiber'
 
 const Buttons = () => {
       const { camera } = useThree()
     const moveCamera = () => {
         gsap.to(camera.position, {
-            x:1,
-            y:1,
-            z:0,
-            duration:2
+          x:-5.53,
+          y:4.56,
+          z:4.95,
+          duration:1.5,
+          ease: "power2.out",
         })
     }
   return (

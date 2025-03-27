@@ -8,6 +8,8 @@ import Camera from './Camera'
 import { SRGBColorSpace } from 'three'
 import { Link, useLocation } from 'react-router-dom'
 import Buttons from './Buttons'
+import * as THREE from 'three'
+import { hash } from 'three/tsl'
 
 
 const Experience = ({ onLoaded }) => {
@@ -15,11 +17,14 @@ const Experience = ({ onLoaded }) => {
 
   const [isRenderd, setIsRendered] = useState(false)
   const hashName = useLocation().hash.slice(1)
+  const [cameraPosition, setCameraPosition] = useState(new THREE.Vector3(2.5611305471454915, 8.789112370409582, 24.548538336427537))
 
 
 
   useEffect(() => {
-
+    if(hashName == "works") {
+      setCameraPosition(new THREE.Vector3(-5.53, 4.56, 4.95))
+    }
     console.log(hashName)
 
     setTimeout(() => {
@@ -36,7 +41,7 @@ const Experience = ({ onLoaded }) => {
         fov: 45,
         near: 0.1,
         far: 2000,
-        position: [2.5611305471454915, 8.789112370409582, 24.548538336427537],
+        position: cameraPosition,
         shadows:false,
     } }
     >
@@ -58,7 +63,8 @@ const Experience = ({ onLoaded }) => {
         { isRenderd ? (
       <>
         <Camera />
-        <OrbitControls /></>
+        <OrbitControls />
+      </>
     ) : (
       <></>
     ) }
