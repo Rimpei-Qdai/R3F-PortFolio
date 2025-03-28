@@ -4,6 +4,7 @@ import Experience from "./components/Experience"
 import Loader from './Loader'
 import { Route, Routes } from 'react-router-dom'
 import Works from './components/Works'
+import ContentManager from './components/ContentManager'
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
   return (
     <>
       <Loader />
+      
+      <ContentManager />
       <Experience onLoaded={() => setLoaded(true)} />
     </>
   )

@@ -23,10 +23,12 @@ const Experience = ({ onLoaded }) => {
 
   useEffect(() => {
     if(hashName == "works") {
-      setCameraPosition(new THREE.Vector3(-5.53, 4.56, 4.95))
+      setCameraPosition(new THREE.Vector3(-4.8, 4, 6))
+    } else if(hashName == "labo") {
+      setCameraPosition(new THREE.Vector3(-8, 3, 0))
+    } else if(hashName == "hobby") {
+      setCameraPosition(new THREE.Vector3(7, 3.5, 1))
     }
-    console.log(hashName)
-
     setTimeout(() => {
       if(isRenderd) {
         onLoaded()

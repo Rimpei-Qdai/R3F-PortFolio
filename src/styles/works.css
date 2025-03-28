@@ -1,0 +1,14 @@
+#twoD-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background-color: red;
+  z-index: 100;
+  overflow-y: scroll;
+}
+#twoD-content.right {
+  background-color: blue;
+  left: 60%;
+}/*# sourceMappingURL=works.css.map */
