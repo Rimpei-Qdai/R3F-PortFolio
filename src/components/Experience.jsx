@@ -69,7 +69,7 @@ const Experience = ({ onLoaded }) => {
         { isRenderd ? (
       <>
         <Camera />
-        <OrbitControls />
+
       </>
     ) : (
       <></>
