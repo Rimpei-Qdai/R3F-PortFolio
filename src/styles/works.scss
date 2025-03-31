@@ -12,4 +12,11 @@
         background-color: blue;
         left: 60%;
     }
+
+    &.down {
+        background-color: yellow;
+        width: 100%;
+        height: 40%;
+        top: 60%;
+    }
 }

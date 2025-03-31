@@ -3,6 +3,8 @@ import Works from './Works'
 import Labo from './Labo'
 import { useLocation } from 'react-router-dom'
 import Hobby from './Hobby'
+import Philosophy from './Philosophy'
+import SNS from './SNS'
 
 const ContentManager = () => {
 
@@ -19,6 +21,10 @@ const ContentManager = () => {
         <Labo />
       ) : content =="hobby" ? (
         <Hobby />
+      ) : content == "philosophy" ? (
+        <Philosophy />
+      ) : content == "sns" ? (
+        <SNS />
       ) : (
         <></>
       )

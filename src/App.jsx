@@ -11,9 +11,11 @@ function App() {
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
-    if(loaded) {
-      document.querySelector('.loading').classList.add('unview')
-    }
+    setTimeout(() => {
+      if(loaded) {
+        document.querySelector('.loading').classList.add('unview')
+      }
+    },3000)
   }, [ loaded ])
 
   return (

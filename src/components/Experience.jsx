@@ -28,6 +28,10 @@ const Experience = ({ onLoaded }) => {
       setCameraPosition(new THREE.Vector3(-8, 3, 0))
     } else if(hashName == "hobby") {
       setCameraPosition(new THREE.Vector3(7, 3.5, 1))
+    } else if(hashName == "philosophy") {
+      setCameraPosition(new THREE.Vector3(6, 2.5, 3.5))
+    } else if(hashName == "sns") {
+      setCameraPosition(new THREE.Vector3(0, 1.5, 15))
     }
     setTimeout(() => {
       if(isRenderd) {

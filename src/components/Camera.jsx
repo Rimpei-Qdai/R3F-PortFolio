@@ -30,6 +30,10 @@ const Camera = () => {
       setTargetCameraLookAt(new THREE.Vector3(-8,  1.5,  -10))
     } else if(hashName == "hobby") {
       setTargetCameraLookAt(new THREE.Vector3(20,  -5,  -30))
+    } else if(hashName == "philosophy") {
+      setTargetCameraLookAt(new THREE.Vector3(20,  0,  7))
+    } else if(hashName == "sns") {
+      setTargetCameraLookAt(new THREE.Vector3(-0.5,  0.5,  12))
     }
   }, [ ])
   window.addEventListener('hashchange', (event) => {
@@ -42,6 +46,10 @@ const Camera = () => {
       setTargetCameraLookAt(new THREE.Vector3(-8,  1.5,  -10))
     } else if(event.srcElement.location.hash.slice(1) == "hobby") {
       setTargetCameraLookAt(new THREE.Vector3(20,  -5,  -30))
+    } else if(event.srcElement.location.hash.slice(1) == "philosophy") {
+      setTargetCameraLookAt(new THREE.Vector3(20,  0,  7))
+    } else if(event.srcElement.location.hash.slice(1) == "sns") {
+      setTargetCameraLookAt(new THREE.Vector3(-0.5,  0.5,  12))
     }
   })
 

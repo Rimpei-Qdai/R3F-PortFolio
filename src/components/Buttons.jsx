@@ -32,6 +32,10 @@ const Buttons = () => {
         moveCamera({x:-8, y:3, z:0})
       } else if(event.srcElement.location.hash.slice(1) == "hobby") {
         moveCamera({x:7, y:3.5, z:1})
+      } else if(event.srcElement.location.hash.slice(1) == "philosophy") {
+        moveCamera({x:6, y:2.5, z:3.5})
+      } else if(event.srcElement.location.hash.slice(1) == "sns") {
+        moveCamera({x:0, y:1.5, z:15})
       } else {
         backCamera()
       }
@@ -65,6 +69,28 @@ const Buttons = () => {
             useLocation().hash.slice(1) == "" ? (
               <>
                 <a href="#hobby" >Hobby</a>
+              </>
+            ) : (
+              <></>
+            ) 
+          }
+        </Html>
+        <Html position={ [ 12, 2, 3 ] }>
+          {
+            useLocation().hash.slice(1) == "" ? (
+              <>
+                <a href="#philosophy" >Philosophy</a>
+              </>
+            ) : (
+              <></>
+            ) 
+          }
+        </Html>
+        <Html position={ [ - 0.5, 0.7, 12 ] }>
+          {
+            useLocation().hash.slice(1) == "" ? (
+              <>
+                <a href="#sns" >sns</a>
               </>
             ) : (
               <></>

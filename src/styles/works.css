@@ -11,4 +11,10 @@
 #twoD-content.right {
   background-color: blue;
   left: 60%;
+}
+#twoD-content.down {
+  background-color: yellow;
+  width: 100%;
+  height: 40%;
+  top: 60%;
 }/*# sourceMappingURL=works.css.map */
