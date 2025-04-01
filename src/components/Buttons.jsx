@@ -42,7 +42,7 @@ const Buttons = () => {
     })
   return (
     <>
-        <Html position={ [ -12, 5, 2.5 ] }>
+        <Html position={ [ -12,6.5, 2.5 ] }>
           {
             useLocation().hash.slice(1) == "" ? (
               <>
@@ -53,7 +53,7 @@ const Buttons = () => {
             ) 
           }
         </Html>
-        <Html position={ [ -6.5, 1, -9 ] }>
+        <Html position={ [ -6.5, 3.5, -9 ] }>
           {
             useLocation().hash.slice(1) == "" ? (
               <>
@@ -64,7 +64,7 @@ const Buttons = () => {
             ) 
           }
         </Html>
-        <Html position={ [ 7, 1.5, - 8 ] }>
+        <Html position={ [ 7, 4, - 8 ] }>
           {
             useLocation().hash.slice(1) == "" ? (
               <>
@@ -75,7 +75,7 @@ const Buttons = () => {
             ) 
           }
         </Html>
-        <Html position={ [ 12, 2, 3 ] }>
+        <Html position={ [ 12, 3.5, 3 ] }>
           {
             useLocation().hash.slice(1) == "" ? (
               <>
@@ -86,7 +86,7 @@ const Buttons = () => {
             ) 
           }
         </Html>
-        <Html position={ [ - 0.5, 0.7, 12 ] }>
+        <Html position={ [ - 0.5, 2.5, 12 ] }>
           {
             useLocation().hash.slice(1) == "" ? (
               <>

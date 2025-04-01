@@ -3,62 +3,27 @@ import { TextureLoader, SRGBColorSpace, LinearMipMapLinearFilter, LinearSRGBColo
 import React, { useEffect, useRef, useState } from "react";
 
 useGLTF.preload("/assets/models/Rimpei.glb")
-let textureNames = []
-if(window.innerWidth <= 768) {
-  textureNames = [
-    "Ground",
-    "Gate",
-    "Gate_Name",
-    "Logo",
-    "Bridge1",
-    "Bridge2",
-    "Bridge_Fence",
-    "Bridge_Light",
-    "Tree_Leaves",
-    "Tree_Stem",
-   ]
-} else {
-  textureNames = [
-    "Ground",
-    "Bridge1",
-    "Bridge2",
-    "Bridge_Fence",
-    "Bridge_Light",
-    "Grage_Frame",
-    "Grage_Content",
-    "Building_Frame",
-    "Building_Table",
-    "Building_Shell",
-    "Building_Display",
-    "Building_Window_Frame",
-    "Clam_School",
-    "Clam_School_Text",
-    "Lab_Frame",
-    "Lab_Interior",
-    "Lab_Circuit",
-    "Log_House",
-    "Log_deck_Camp",
-    "Log_View_Deck",
-    "Gate",
-    "Gate_Name",
-    "Tree_Leaves",
-    "Tree_Stem",
-    "Logo",
-    "Bike_Frame",
-    "Bike_Foak",
-    "Bike_Wheel",
-  ];
-
-}
+const textureNames = [
+  "Ground_Gate",
+  "Logo",
+  "Building",
+  "Labolatry",
+  "Grage",
+  "Log_House",
+  "Tree",
+  "Bridge",
+  "Clam_School"
+]
 
 textureNames.forEach((name) => {
-  const path = window.innerWidth <= 768 ? `/assets/textures/mobile/${name}.webp` : `/assets/textures/${name}.webp`
+  const path = `/assets/textures/Optimized/${name}.webp`
   useTexture.preload(path)
 })
 
 const Island = ({ onRendered }) => {
-  const gltf = useGLTF("/assets/models/Rimpei.glb");
+  const gltf = useGLTF("/assets/models/Rimpei_Optimized.glb");
   const nodes = useRef(gltf.nodes)
+  console.log(nodes)
  
   // テクスチャの状態
   const [textures, setTextures] = useState({});
@@ -70,12 +35,12 @@ const Island = ({ onRendered }) => {
     const loadTextures = async () => {
       const texturePromises = textureNames.map((name) =>
         new Promise((resolve) => {
-          const path = window.innerWidth <= 768 ? `/assets/textures/mobile/${name}.webp` : `/assets/textures/${name}.webp`
+            const path = `/assets/textures/Optimized/${name}.webp`
 
           loader.load(path, (texture) => {
             texture.flipY = false;
-            texture.needsUpdate = true;
-            texture.colorSpace = SRGBColorSpace;
+            // texture.needsUpdate = true;
+            // texture.colorSpace = SRGBColorSpace;
             // texture.generateMipmaps = true;
             // texture.minFilter = LinearMipMapLinearFilter;
             resolve({ name, texture });

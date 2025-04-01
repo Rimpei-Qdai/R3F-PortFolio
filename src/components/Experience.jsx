@@ -65,6 +65,7 @@ const Experience = ({ onLoaded }) => {
           Welcome to Rimpei's Portfolio!
         </Text>
         <Buttons />
+        <OrbitControls />
 
         { isRenderd ? (
       <>
