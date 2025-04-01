@@ -23,8 +23,9 @@ textureNames.forEach((name) => {
 const Island = ({ onRendered }) => {
   const gltf = useGLTF("/assets/models/Rimpei_Optimized.glb");
   const nodes = useRef(gltf.nodes)
-  console.log(nodes)
- 
+
+
+
   // テクスチャの状態
   const [textures, setTextures] = useState({});
   const [loading, setLoading] = useState(true); // 読み込み中フラグ
@@ -35,7 +36,7 @@ const Island = ({ onRendered }) => {
     const loadTextures = async () => {
       const texturePromises = textureNames.map((name) =>
         new Promise((resolve) => {
-            const path = `/assets/textures/Optimized/${name}.webp`
+          const path = `/assets/textures/Optimized/${name}.webp`
 
           loader.load(path, (texture) => {
             texture.flipY = false;
@@ -65,29 +66,38 @@ const Island = ({ onRendered }) => {
 
   return (
     <>
-        { loading ? (
-            <>
-            </>
-        ) : (
-            <>
-                  <Center scale={0.2} position-y={2}>
-        {textureNames.map((key) =>
-            nodes.current[key] ? (
+      {loading ? (
+        <>
+        </>
+      ) : (
+        <>
+          <Center scale={0.38} position-y={2}>
+            {textureNames.map((key) =>
+              nodes.current[key] ? (
+                <mesh
+                  key={key}
+                  geometry={nodes.current[key].geometry}
+                  position={nodes.current[key].position}
+                  scale={nodes.current[key].scale}
+                  rotation={nodes.current[key].rotation}
+                >
+                  <meshBasicMaterial map={textures[key]} />
+                </mesh>
+              ) : null
+            )}
             <mesh
-                key={key}
-                geometry={nodes.current[key].geometry}
-                position={nodes.current[key].position}
-                scale={nodes.current[key].scale}
-                rotation={nodes.current[key].rotation}
+              key={"Emissions"}
+              geometry={nodes.current["Emissions"].geometry}
+              position={nodes.current["Emissions"].position}
+              scale={nodes.current["Emissions"].scale}
+              rotation={nodes.current["Emissions"].rotation}
             >
-                <meshBasicMaterial map={textures[key]} />
+              <meshBasicMaterial color={"lightblue"} />
             </mesh>
-            ) : null
-        )}
-        </Center>
-            </>
-        ) }
-  
+          </Center>
+        </>
+      )}
+
     </>
   );
 };
