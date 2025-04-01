@@ -71,7 +71,7 @@ const Island = ({ onRendered }) => {
         </>
       ) : (
         <>
-          <Center scale={0.38} position-y={2}>
+          <Center scale={0.36} position-y={2}>
             {textureNames.map((key) =>
               nodes.current[key] ? (
                 <mesh
@@ -93,6 +93,15 @@ const Island = ({ onRendered }) => {
               rotation={nodes.current["Emissions"].rotation}
             >
               <meshBasicMaterial color={"lightblue"} />
+            </mesh>
+            <mesh
+              key={"Brain"}
+              geometry={nodes.current["Brain"].geometry}
+              position={nodes.current["Brain"].position}
+              scale={nodes.current["Brain"].scale}
+              rotation={nodes.current["Brain"].rotation}
+            >
+              <meshBasicMaterial color={"skyblue"} wireframe />
             </mesh>
           </Center>
         </>
