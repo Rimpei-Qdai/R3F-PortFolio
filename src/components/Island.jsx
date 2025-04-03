@@ -1,6 +1,7 @@
-import { Center, useGLTF, useTexture } from "@react-three/drei";
-import { TextureLoader, SRGBColorSpace, LinearMipMapLinearFilter, LinearSRGBColorSpace, } from "three";
+import { Center, Edges, useGLTF, useTexture } from "@react-three/drei";
+import { TextureLoader, SRGBColorSpace, LinearMipMapLinearFilter, LinearSRGBColorSpace, Color, } from "three";
 import React, { useEffect, useRef, useState } from "react";
+import { useFrame } from "react-three-fiber";
 
 useGLTF.preload("/assets/models/Rimpei.glb")
 const textureNames = [
@@ -24,6 +25,12 @@ const Island = ({ onRendered }) => {
   const gltf = useGLTF("/assets/models/Rimpei_Optimized.glb");
   const nodes = useRef(gltf.nodes)
 
+  const brain = useRef()
+  useFrame(() => {
+    if(brain) {
+      brain.current.rotation.z += 0.01
+    }
+  })
 
 
   // テクスチャの状態
@@ -92,16 +99,18 @@ const Island = ({ onRendered }) => {
               scale={nodes.current["Emissions"].scale}
               rotation={nodes.current["Emissions"].rotation}
             >
-              <meshBasicMaterial color={"lightblue"} />
+              <meshBasicMaterial color={"whitesmoke "} />
             </mesh>
             <mesh
               key={"Brain"}
               geometry={nodes.current["Brain"].geometry}
               position={nodes.current["Brain"].position}
-              scale={nodes.current["Brain"].scale}
+              scale={ nodes.current["Brain"].scale }
               rotation={nodes.current["Brain"].rotation}
+              ref={ brain }
             >
-              <meshBasicMaterial color={"skyblue"} wireframe />
+              <meshBasicMaterial color={ "royalblue" } />
+              <Edges color="white" lineWidth={0.5} />
             </mesh>
           </Center>
         </>

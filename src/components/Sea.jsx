@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import waterNormal from "/src/textures/water/Water_1_M_Normal.jpg";
 import * as THREE from "three";
-import { extend, useThree } from "@react-three/fiber";
+import { extend, useFrame, useThree } from "@react-three/fiber";
 import { Water } from "three/examples/jsm/objects/Water2.js";
 import { texture } from "three/src/nodes/TSL.js";
 import { useTexture } from "@react-three/drei";
@@ -31,6 +31,7 @@ const Sea = () => {
     water.rotateX( - Math.PI * 0.5)
     water.position.y = - 0.8
     scene.add(water)
+    
 
     return () => scene.remove(water)
 

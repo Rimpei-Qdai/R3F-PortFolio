@@ -1,16 +1,19 @@
-import { Html, Loader, OrbitControls, Text } from '@react-three/drei'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import './Experience.css'
+// モジュールインポート
+import { OrbitControls, Text } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
 import Island from './Island'
 import Sea from './Sea'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Camera from './Camera'
-import { SRGBColorSpace } from 'three'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { useControls } from 'leva'
+
+// コンポーネント
 import Buttons from './Buttons'
 import * as THREE from 'three'
-import { hash } from 'three/tsl'
 import Imgs from './Imgs'
+import Fire from './FIre'
+import './Experience.css'
 
 
 const Experience = ({ onLoaded }) => {
@@ -55,6 +58,7 @@ const Experience = ({ onLoaded }) => {
         <color args={ [ 0x5ccae6 ] } attach="background" />
         <Island onRendered={ () => setIsRendered(true) }/>
         <Sea />
+        <Fire />
         <Text
           position={ [ -4, 8, -35 ] }
           fontSize={ 5 }
@@ -67,7 +71,7 @@ const Experience = ({ onLoaded }) => {
         </Text>
         <Buttons />
         <Imgs />
-        {/* <OrbitControls/> */}
+        <OrbitControls />
 
         { isRenderd ? (
       <>
