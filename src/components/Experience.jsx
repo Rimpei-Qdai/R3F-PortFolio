@@ -71,7 +71,7 @@ const Experience = ({ onLoaded }) => {
         </Text>
         <Buttons />
         <Imgs />
-        <OrbitControls />
+        {/* <OrbitControls /> */}
 
         { isRenderd ? (
       <>
