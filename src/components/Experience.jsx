@@ -10,6 +10,7 @@ import { Link, useLocation } from 'react-router-dom'
 import Buttons from './Buttons'
 import * as THREE from 'three'
 import { hash } from 'three/tsl'
+import Imgs from './Imgs'
 
 
 const Experience = ({ onLoaded }) => {
@@ -65,6 +66,8 @@ const Experience = ({ onLoaded }) => {
           Welcome to Rimpei's Portfolio!
         </Text>
         <Buttons />
+        <Imgs />
+        {/* <OrbitControls/> */}
 
         { isRenderd ? (
       <>
