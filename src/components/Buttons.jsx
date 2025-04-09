@@ -1,8 +1,8 @@
-import { Html } from '@react-three/drei'
+import { Float, Html } from '@react-three/drei'
 import gsap from 'gsap'
-import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { useFrame, useThree } from 'react-three-fiber'
+import { useThree } from 'react-three-fiber'
+import '../styles/buttons.css'
 
 const Buttons = () => {
     const { camera } = useThree()
@@ -42,61 +42,40 @@ const Buttons = () => {
     })
   return (
     <>
-        <Html position={ [ -12,6.5, 2.5 ] }>
-          {
-            useLocation().hash.slice(1) == "" ? (
-              <>
-                <a href="#works" >Works</a>
-              </>
-            ) : (
-              <></>
-            ) 
-          }
-        </Html>
-        <Html position={ [ -6.5, 3.5, -9 ] }>
-          {
-            useLocation().hash.slice(1) == "" ? (
-              <>
-                <a href="#labo" >Labo</a>
-              </>
-            ) : (
-              <></>
-            ) 
-          }
-        </Html>
-        <Html position={ [ 7, 4, - 8 ] }>
-          {
-            useLocation().hash.slice(1) == "" ? (
-              <>
-                <a href="#hobby" >Hobby</a>
-              </>
-            ) : (
-              <></>
-            ) 
-          }
-        </Html>
-        <Html position={ [ 12, 3.5, 3 ] }>
-          {
-            useLocation().hash.slice(1) == "" ? (
-              <>
-                <a href="#philosophy" >Philosophy</a>
-              </>
-            ) : (
-              <></>
-            ) 
-          }
-        </Html>
-        <Html position={ [ - 0.5, 2.5, 12 ] }>
-          {
-            useLocation().hash.slice(1) == "" ? (
-              <>
-                <a href="#sns" >sns</a>
-              </>
-            ) : (
-              <></>
-            ) 
-          }
-        </Html>
+      {
+        useLocation().hash.slice(1) == "" ? (
+          <>
+          <Float>
+            <Html position={ [ -12, 6.5, 2.5 ] }>
+              <a className='ThreeeD-Button' href="#works" >Works</a>
+            </Html>
+          </Float>
+            <Html position={ [ - 7, 4.2, -9 ] }>
+              <a className='ThreeeD-Button' href="#labo" >Labo</a>
+            </Html>
+            <Html position={ [ 6.4, 4.3, - 8 ] }>
+              <a className='ThreeeD-Button' href="#hobby" >Hobby</a>
+            </Html>
+            <Html position={ [ 10.5, 3.3, 3 ] }>
+              <a className='ThreeeD-Button' href="#philosophy" >Phil</a>       
+            </Html>
+            <Html position={ [ - 0.7, 2.8, 12 ] }>   
+              <a className='ThreeeD-Button' href="#sns" >SNS</a>    
+            </Html>
+        </>
+        ) : useLocation().hash.slice(1) == "sns" ? (
+          <>
+            <Html position={ [ 0.75, 1.05, 11.1 ] } rotation={ [ 0, 0, 0 ] }>   
+              <a className='sns-links' href="https://instagram.com" ></a>    
+            </Html>
+            <Html position={ [ 0.4, 1.07, 11.1 ] } rotation={ [ 0, 0, 0 ] }>   
+              <a className='sns-links' href="https://instagram.com" ></a>    
+            </Html>
+          </>
+        ) : (
+          <></>
+        )
+      }   
     </>
   )
 }

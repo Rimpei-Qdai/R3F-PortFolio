@@ -109,7 +109,7 @@ const Island = ({ onRendered }) => {
               rotation={nodes.current["Brain"].rotation}
               ref={ brain }
             >
-              <meshBasicMaterial color={ "royalblue" } />
+              <meshBasicMaterial color={ "skyblue" } />
               <Edges color="white" lineWidth={0.5} />
             </mesh>
           </Center>

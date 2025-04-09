@@ -7,6 +7,8 @@ const Imgs = () => {
   const hoshTexture = useTexture("/assets/imgs/Hosh.png")
   const hoshMobileTexture = useTexture("/assets/imgs/Hosh-mobile.png")
   const ThreeJSTexture = useTexture("/assets/imgs/ThreeJS.png")
+  const SwiftTexture = useTexture("/assets/imgs/Swift.png")
+  
   hoshTexture.colorSpace = SRGBColorSpace
   
     const { scale, color, wireframe, positionX, positionY, positionZ, rotationX, rotationY, rotationZ, scaleX, scaleY, scaleZ } = useControls({
@@ -37,6 +39,20 @@ const Imgs = () => {
        <mesh position={[ -12.12, 4.03, -0.376 ]} rotation={ [ 0, -0.35, 0 ] } scale={ [0.73, 0.43, 1] }>
         <planeGeometry />
         <meshBasicMaterial map={ ThreeJSTexture } />
+       </mesh>
+
+       <mesh position={[ -8.25, 1.4, -8.78 ]} rotation={ [ 0, 1.72, 0 ] } scale={ [1, 0.8, 1] }>
+        <planeGeometry />
+        <meshBasicMaterial map={ SwiftTexture } />
+       </mesh>
+       <mesh position={[ -8.16, 1.41, -9.95 ]} rotation={ [ 0, 1.25, 0 ] } scale={ [0.98, 0.8, 1] }>
+        <planeGeometry />
+        <meshBasicMaterial map={ SwiftTexture } />
+       </mesh>
+
+       <mesh position={[ -4.15, 1.46, -10.08 ]} rotation={ [ 0, -0.7, 0 ] } scale={ [1.1, 0.6, 1] }>
+        <planeGeometry />
+        <meshBasicMaterial map={ SwiftTexture } />
        </mesh>
     </>
   )
