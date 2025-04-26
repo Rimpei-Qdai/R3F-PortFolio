@@ -11,20 +11,20 @@ const Imgs = () => {
   
   hoshTexture.colorSpace = SRGBColorSpace
   
-    const { scale, color, wireframe, positionX, positionY, positionZ, rotationX, rotationY, rotationZ, scaleX, scaleY, scaleZ } = useControls({
-      scale: { value: 1, min: 0.5, max: 3, step: 0.1 },
-      color: "#ff0000",
-      positionX: { value:0, min: -20, max: 20, step:0.001 },
-      positionY: { value:0, min: -20, max: 20, step:0.001 },
-      positionZ: { value:0, min: -20, max: 20, step:0.001 },
-      rotationX: { value:0, min: -Math.PI, max: Math.PI, step:0.001 },
-      rotationY: { value:0, min: -Math.PI, max: Math.PI, step:0.001 },
-      rotationZ: { value:0, min: -Math.PI, max: Math.PI, step:0.001 },
-      scaleX: { value:1, min: 0, max: 20, step:0.001 },
-      scaleY: { value:1, min: 0, max: 20, step:0.001 },
-      scaleZ: { value:1, min: 0, max: 20, step:0.001 },
+    // const { scale, color, wireframe, positionX, positionY, positionZ, rotationX, rotationY, rotationZ, scaleX, scaleY, scaleZ } = useControls({
+    //   scale: { value: 1, min: 0.5, max: 3, step: 0.1 },
+    //   color: "#ff0000",
+    //   positionX: { value:0, min: -20, max: 20, step:0.001 },
+    //   positionY: { value:0, min: -20, max: 20, step:0.001 },
+    //   positionZ: { value:0, min: -20, max: 20, step:0.001 },
+    //   rotationX: { value:0, min: -Math.PI, max: Math.PI, step:0.001 },
+    //   rotationY: { value:0, min: -Math.PI, max: Math.PI, step:0.001 },
+    //   rotationZ: { value:0, min: -Math.PI, max: Math.PI, step:0.001 },
+    //   scaleX: { value:1, min: 0, max: 20, step:0.001 },
+    //   scaleY: { value:1, min: 0, max: 20, step:0.001 },
+    //   scaleZ: { value:1, min: 0, max: 20, step:0.001 },
 
-    });
+    // });
 
   return (
     <>

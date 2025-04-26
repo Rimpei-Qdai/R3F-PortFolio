@@ -3,9 +3,12 @@ import gsap from 'gsap'
 import { useLocation } from 'react-router-dom'
 import { useThree } from 'react-three-fiber'
 import '../styles/buttons.css'
+import { useEffect, useState } from 'react'
+import { hash } from 'three/tsl'
 
 const Buttons = () => {
     const { camera } = useThree()
+    const [ hashName, setHashName ] = useState(useLocation().hash.slice(1))
     const moveCamera = (cameraPosition) => {
         gsap.to(camera.position, {
           x:cameraPosition.x,
@@ -24,28 +27,40 @@ const Buttons = () => {
           ease: "power2.out",
         })
     }
-    window.addEventListener('hashchange', (event) => {
-      console.log('hashChanged in Button.jsx!')
-      if(event.srcElement.location.hash.slice(1) == "works") {
+
+    useEffect(() => {
+      if(hashName == "works") {
         moveCamera({x:-4.8, y:4, z:6})
-      } else if(event.srcElement.location.hash.slice(1) == "labo") {
+      } else if(hashName == "labo") {
         moveCamera({x:-8, y:3, z:0})
-      } else if(event.srcElement.location.hash.slice(1) == "hobby") {
+      } else if(hashName == "hobby") {
         moveCamera({x:7, y:3.5, z:1})
-      } else if(event.srcElement.location.hash.slice(1) == "philosophy") {
+      } else if(hashName == "philosophy") {
         moveCamera({x:6, y:2.5, z:3.5})
-      } else if(event.srcElement.location.hash.slice(1) == "sns") {
+      } else if(hashName == "sns") {
         moveCamera({x:0, y:1.5, z:15})
       } else {
         backCamera()
       }
+    }, [ hashName ])
+
+
+    window.addEventListener('hashchange', (event) => {
+      setHashName(event.srcElement.location.hash.slice(1))
     })
+
+
   return (
     <>
       {
-        useLocation().hash.slice(1) == "" ? (
+        hashName == "" ? (
           <>
-          <Float>
+          <Float
+            speed={0.5} // 回転速度。デフォルトでは1
+            rotationIntensity={0.1} // 回転強度。デフォルトでは1
+            floatIntensity={0.1} // 上下の Float の強度。デフォルトでは1
+            floatingRange={[-0.01, 0.01]} // オブジェクトが浮動する Y 軸値の範囲。デフォルトは [-0.1,0.1]
+          >
             <Html position={ [ -12, 6.5, 2.5 ] }>
               <a className='ThreeeD-Button' href="#works" >Works</a>
             </Html>
@@ -63,13 +78,16 @@ const Buttons = () => {
               <a className='ThreeeD-Button' href="#sns" >SNS</a>    
             </Html>
         </>
-        ) : useLocation().hash.slice(1) == "sns" ? (
+        ) : hashName == "sns" ? (
           <>
             <Html position={ [ 0.75, 1.05, 11.1 ] } rotation={ [ 0, 0, 0 ] }>   
               <a className='sns-links' href="https://instagram.com" ></a>    
             </Html>
             <Html position={ [ 0.4, 1.07, 11.1 ] } rotation={ [ 0, 0, 0 ] }>   
-              <a className='sns-links' href="https://instagram.com" ></a>    
+              <a className='sns-links' href="https://x.com" ></a>    
+            </Html>
+            <Html position={ [ - 1.88, 1.05, 11.1 ] } rotation={ [ 0, 0, 0 ] }>   
+              <a className='sns-links' href="https://facebook.com" ></a>    
             </Html>
           </>
         ) : (

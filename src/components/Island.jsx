@@ -99,7 +99,7 @@ const Island = ({ onRendered }) => {
               scale={nodes.current["Emissions"].scale}
               rotation={nodes.current["Emissions"].rotation}
             >
-              <meshBasicMaterial color={"whitesmoke "} />
+              <meshBasicMaterial color={"whitesmoke"} />
             </mesh>
             <mesh
               key={"Brain"}

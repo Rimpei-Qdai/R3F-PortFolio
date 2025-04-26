@@ -4,9 +4,88 @@
   left: 0;
   width: 40%;
   height: 100%;
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   overflow-y: scroll;
+}
+#twoD-content .back-button {
+  position: absolute;
+  top: 3%;
+  right: 9%;
+  cursor: pointer;
+  width: 90px;
+  height: 90px;
+}
+#twoD-content .back-button span {
+  display: block;
+  width: 80px;
+  height: 8px;
+  background-color: white;
+  transform-origin: center center;
+}
+#twoD-content .back-button span:nth-child(1) {
+  transform: translate(4px, 40px) rotateZ(45deg);
+}
+#twoD-content .back-button span:nth-child(2) {
+  transform: translate(5px, 34px) rotateZ(-45deg);
+}
+#twoD-content .title {
+  color: white;
+  font-size: 70px;
+  padding-top: 0.2em;
+  padding-left: 0.7em;
+}
+#twoD-content ul.works-list {
+  width: 85%;
+  margin: 0 auto;
+  list-style: none;
+}
+#twoD-content ul.works-list li.works-item {
+  margin-top: 1em;
+  margin-bottom: 5em;
+}
+#twoD-content ul.works-list li.works-item .works-title {
+  color: white;
+  font-size: 50px;
+  border-bottom: 4px solid white;
+  line-height: 120%;
+}
+#twoD-content ul.works-list li.works-item img.thumbnail {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  margin-top: 1em;
+}
+#twoD-content ul.works-list li.works-item .description {
+  color: white;
+  font-size: 20px;
+  margin-top: 0.5em;
+}
+#twoD-content ul.works-list li.works-item h3.used-techs {
+  color: white;
+  font-size: 32px;
+  margin-top: 0.8em;
+}
+#twoD-content ul.works-list li.works-item ul.used-techs-list {
+  list-style: none;
+  flex-wrap: wrap;
+}
+#twoD-content ul.works-list li.works-item ul.used-techs-list li.used-techs-item {
+  margin-top: 0.4em;
+  color: white;
+  font-size: 24px;
+}
+#twoD-content ul.works-list li.works-item ul.used-techs-list li.used-techs-item img.techs-logo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 80px;
+}
+#twoD-content ul.works-list li.works-item ul.achieves {
+  padding-left: 5%;
+}
+#twoD-content ul.works-list li.works-item ul.achieves li.achieve {
+  color: white;
+  font-size: 24px;
 }
 #twoD-content.right {
   background-color: blue;

@@ -4,9 +4,109 @@
     left: 0;
     width: 40%;
     height:100%;
-    background-color: red;
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
     overflow-y: scroll;
+
+    & .back-button {
+        position: absolute;
+        top: 3%;
+        right: 9%;
+        cursor: pointer;
+        width: 90px;
+        height: 90px;
+
+
+        & span {
+            display: block;
+            width: 80px;
+            height: 8px;
+            background-color: white;
+            transform-origin: center center;
+
+            &:nth-child(1) {
+                transform: translate(4px, 40px) rotateZ(45deg);
+            }
+            
+            &:nth-child(2) {
+                transform: translate(5px, 34px) rotateZ(-45deg);
+            }
+        }
+    }
+
+    & .title {
+        color: white;
+        font-size: 70px;
+        padding-top: 0.2em;
+        padding-left: 0.7em;
+
+    }
+
+    & ul.works-list {
+        width: 85%;
+        margin: 0 auto;
+        list-style: none;
+
+
+        & li.works-item {
+            margin-top: 1em;
+            margin-bottom: 5em;
+            & .works-title {
+                color: white;
+                font-size: 50px;
+                border-bottom: 4px solid white;
+                line-height: 120%;
+
+            }
+
+            & img.thumbnail {
+                object-fit: cover;
+                width: 100%;
+                margin-top: 1em;
+
+            }
+
+            & .description {
+                color: white;
+                font-size:20px;
+                margin-top: .5em;
+            }
+
+            & h3.used-techs {   
+                color: white;
+                font-size: 32px;
+                margin-top: .8em;
+
+
+            }
+
+            & ul.used-techs-list {
+                list-style: none;
+                // display: flex;
+                // justify-content: space-around;
+                flex-wrap: wrap;
+                & li.used-techs-item {
+                    margin-top: .4em;
+                    color: white;
+                    font-size: 24px;
+                    & img.techs-logo {
+                        object-fit: cover;
+                        height: 80px;
+                    }
+                }
+            }
+
+            & ul.achieves {
+                padding-left: 5%;
+                & li.achieve {
+                    color: white;
+                    font-size: 24px;
+
+                }
+            }
+
+        }
+    }
 
     &.right {
         background-color: blue;
