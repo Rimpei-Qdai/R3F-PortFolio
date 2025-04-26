@@ -1,4 +1,4 @@
-@font-face{ font-family: 'Line-Font-Bd'; src: url('/public/assets/fonts/LINESeedJP_OTF_Bd.woff') format('woff'); }
+@font-face{ font-family: 'Line-Font-Bd'; src: url('/assets/fonts/LINESeedJP_OTF_Bd.woff') format('woff'); }
 
 * {
     margin: 0;

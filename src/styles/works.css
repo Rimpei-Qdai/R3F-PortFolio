@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Line-Font-Eb";
+  src: url("/assets/fonts/LINESeedJP_OTF_Eb.woff") format("woff");
+}
 #twoD-content {
   position: fixed;
   top: 0;
@@ -7,6 +11,9 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   overflow-y: scroll;
+}
+#twoD-content::-webkit-scrollbar {
+  display: none;
 }
 #twoD-content .back-button {
   position: absolute;
@@ -34,6 +41,7 @@
   font-size: 70px;
   padding-top: 0.2em;
   padding-left: 0.7em;
+  font-family: "Line-Font-Eb";
 }
 #twoD-content ul.works-list {
   width: 85%;
@@ -49,6 +57,7 @@
   font-size: 50px;
   border-bottom: 4px solid white;
   line-height: 120%;
+  font-family: "Line-Font-Eb";
 }
 #twoD-content ul.works-list li.works-item img.thumbnail {
   -o-object-fit: cover;
@@ -64,6 +73,7 @@
 #twoD-content ul.works-list li.works-item h3.used-techs {
   color: white;
   font-size: 32px;
+  font-family: "Line-Font-Eb";
   margin-top: 0.8em;
 }
 #twoD-content ul.works-list li.works-item ul.used-techs-list {

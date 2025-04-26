@@ -1,7 +1,3 @@
-@font-face {
-  font-family: "Line-Font";
-  src: url("/public/assets/fonts/LINESeedJP_OTF_Bd.woff") format("woff");
-}
 .sns-links {
   position: relative;
   display: block;
@@ -13,7 +9,6 @@
 .ThreeeD-Button {
   color: white;
   text-decoration: none;
-  font-family: "Line-Font";
   font-weight: 600;
   border-radius: 50px;
   background-color: rgba(0, 0, 0, 0.412);
