@@ -4,7 +4,7 @@ import '../styles/works.css'
 const Labo = () => {
   return (
     <>
-        <div id="twoD-content">
+        <div id="twoD-content" className='academic'>
       <h2 className="title">ACADEMIC</h2>
       <a href='#' className="back-button">
         <span></span>

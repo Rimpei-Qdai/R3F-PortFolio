@@ -62,7 +62,9 @@ const Buttons = () => {
             floatingRange={[-0.01, 0.01]} // オブジェクトが浮動する Y 軸値の範囲。デフォルトは [-0.1,0.1]
           >
             <Html position={ [ -12, 6.5, 2.5 ] }>
-              <a className='ThreeeD-Button' href="#works" >Works</a>
+              <a className='ThreeeD-Button' href="#works" onClick={() => {
+                console.log('hi')
+              }} >Works</a>
             </Html>
           </Float>
             <Html position={ [ - 7, 4.2, -9 ] }>
@@ -80,7 +82,7 @@ const Buttons = () => {
         </>
         ) : hashName == "sns" ? (
           <>
-            <Html position={ [ 0.75, 1.05, 11.1 ] } rotation={ [ 0, 0, 0 ] }>   
+            {/* <Html position={ [ 0.75, 1.05, 11.1 ] } rotation={ [ 0, 0, 0 ] }>   
               <a className='sns-links' href="https://instagram.com" ></a>    
             </Html>
             <Html position={ [ 0.4, 1.07, 11.1 ] } rotation={ [ 0, 0, 0 ] }>   
@@ -88,7 +90,7 @@ const Buttons = () => {
             </Html>
             <Html position={ [ - 1.88, 1.05, 11.1 ] } rotation={ [ 0, 0, 0 ] }>   
               <a className='sns-links' href="https://facebook.com" ></a>    
-            </Html>
+            </Html> */}
           </>
         ) : (
           <></>

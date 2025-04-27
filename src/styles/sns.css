@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Line-Font-Eb";
+  src: url("/assets/fonts/LINESeedJP_OTF_Eb.woff") format("woff");
+}
+ul.sns-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 1.5em;
+  padding-bottom: 2em;
+}
+ul.sns-list li.sns-item a.link {
+  font-family: "Line-Font-Eb";
+  color: transparent;
+  font-size: 50px;
+  text-decoration: none;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: white;
+}/*# sourceMappingURL=sns.css.map */

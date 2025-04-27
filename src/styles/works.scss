@@ -23,6 +23,11 @@
         width: 90px;
         height: 90px;
 
+        &.right {
+            top: 8%;
+            right: 3%;
+        }
+
 
         & span {
             display: block;
@@ -43,10 +48,21 @@
 
     & .title {
         color: white;
-        font-size: 70px;
-        padding-top: 0.2em;
+        font-size: 65px;
+        padding-top: 0.3em;
         padding-left: 0.7em;
         font-family: "Line-Font-Eb";
+
+        &.center {
+            text-align: center;
+            margin-top: .2em;
+        }
+        
+        &.middle {
+            font-size: 60px;
+            padding-top: 0.4em;
+            padding-left: 0.8em;
+        }
 
     }
 

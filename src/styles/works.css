@@ -23,6 +23,10 @@
   width: 90px;
   height: 90px;
 }
+#twoD-content .back-button.right {
+  top: 8%;
+  right: 3%;
+}
 #twoD-content .back-button span {
   display: block;
   width: 80px;
@@ -38,10 +42,19 @@
 }
 #twoD-content .title {
   color: white;
-  font-size: 70px;
-  padding-top: 0.2em;
+  font-size: 65px;
+  padding-top: 0.3em;
   padding-left: 0.7em;
   font-family: "Line-Font-Eb";
+}
+#twoD-content .title.center {
+  text-align: center;
+  margin-top: 0.2em;
+}
+#twoD-content .title.middle {
+  font-size: 60px;
+  padding-top: 0.4em;
+  padding-left: 0.8em;
 }
 #twoD-content ul.works-list {
   width: 85%;

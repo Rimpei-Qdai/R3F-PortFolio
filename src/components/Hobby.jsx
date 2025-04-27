@@ -4,7 +4,7 @@ import '../styles/works.css'
 const Hobby = () => {
   return (
     <>
-    <div id="twoD-content" className='right'>
+    <div id="twoD-content" className='right hobby'>
       <h2 className="title">HOBBY</h2>
       <a href='#' className="back-button">
         <span></span>
