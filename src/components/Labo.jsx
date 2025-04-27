@@ -97,6 +97,7 @@ const Labo = () => {
 
 
       </ul>
+      <div className="footer">© 2025 Rimpei.H</div>
     </div>
     </>
   )

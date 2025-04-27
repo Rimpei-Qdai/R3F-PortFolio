@@ -76,6 +76,24 @@
   font-family: "Line-Font-Eb";
   margin-top: 0.8em;
 }
+#twoD-content ul.works-list li.works-item .photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#twoD-content ul.works-list li.works-item .photo-gallery img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 49%;
+  margin-top: 2%;
+  transition: all 0.3s;
+  transition-timing-function: ease-in-out;
+}
+#twoD-content ul.works-list li.works-item .photo-gallery img:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.4);
+}
 #twoD-content ul.works-list li.works-item ul.used-techs-list {
   list-style: none;
   flex-wrap: wrap;
@@ -136,12 +154,23 @@
   font-size: 20px;
   padding-left: 2.5em;
 }
+#twoD-content ul.works-list li.works-item .small-title {
+  color: white;
+  font-size: 28px;
+  font-family: "Line-Font-Eb";
+  margin-top: 1em;
+}
+#twoD-content .footer {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Line-Font-Eb";
+  margin-bottom: 2em;
+  text-align: center;
+}
 #twoD-content.right {
-  background-color: blue;
   left: 60%;
 }
 #twoD-content.down {
-  background-color: yellow;
   width: 100%;
   height: 40%;
   top: 60%;
