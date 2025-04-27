@@ -27,7 +27,7 @@ const Island = ({ onRendered }) => {
 
   const brain = useRef()
   useFrame(() => {
-    if(brain) {
+    if(brain.current) {
       brain.current.rotation.z += 0.01
     }
   })

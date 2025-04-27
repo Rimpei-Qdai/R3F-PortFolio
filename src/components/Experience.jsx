@@ -14,6 +14,7 @@ import * as THREE from 'three'
 import Imgs from './Imgs'
 import Fire from './FIre'
 import './Experience.css'
+import { hash } from 'three/tsl'
 
 
 const Experience = ({ onLoaded }) => {
@@ -36,6 +37,10 @@ const Experience = ({ onLoaded }) => {
       setCameraPosition(new THREE.Vector3(6, 2.5, 3.5))
     } else if(hashName == "sns") {
       setCameraPosition(new THREE.Vector3(0, 1.5, 15))
+    }
+
+    if(hashName != "") {
+      document.querySelector(`#twoD-content.${hashName}`).classList.add('show')
     }
     setTimeout(() => {
       if(isRenderd) {

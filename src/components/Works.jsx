@@ -6,7 +6,11 @@ const Works = () => {
     <>
     <div id="twoD-content" className='works'>
       <h2 className="title">WORKS</h2>
-      <a href='#' className="back-button">
+      <a href='#' className="back-button" onClick={() => {
+        const sectionDOM = document.querySelector('#twoD-content')
+        sectionDOM.classList.remove('show')
+        console.log(sectionDOM)
+      }}>
         <span></span>
         <span></span>
       </a>

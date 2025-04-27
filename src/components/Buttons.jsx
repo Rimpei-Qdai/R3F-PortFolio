@@ -44,10 +44,20 @@ const Buttons = () => {
       }
     }, [ hashName ])
 
+    useEffect(() => {
+      window.addEventListener('hashchange', (event) => {
+        setHashName(event.srcElement.location.hash.slice(1))
+        if(event.srcElement.location.hash.slice(1) != "") {
+          const sectionDOM = document.querySelector(`#twoD-content.${event.srcElement.location.hash.slice(1)}`)
+          setTimeout(() => {
+            sectionDOM.classList.add('show')
+          }, 100)
+        }
+      })
+    }, [ ])
 
-    window.addEventListener('hashchange', (event) => {
-      setHashName(event.srcElement.location.hash.slice(1))
-    })
+
+
 
 
   return (
@@ -62,9 +72,7 @@ const Buttons = () => {
             floatingRange={[-0.01, 0.01]} // オブジェクトが浮動する Y 軸値の範囲。デフォルトは [-0.1,0.1]
           >
             <Html position={ [ -12, 6.5, 2.5 ] }>
-              <a className='ThreeeD-Button' href="#works" onClick={() => {
-                console.log('hi')
-              }} >Works</a>
+              <a className='ThreeeD-Button' href="#works" >Works</a>
             </Html>
           </Float>
             <Html position={ [ - 7, 4.2, -9 ] }>

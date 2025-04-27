@@ -37,7 +37,6 @@ const Camera = () => {
     }
   }, [ ])
   window.addEventListener('hashchange', (event) => {
-    console.log('hash changed!')
     if(event.srcElement.location.hash.slice(1) == "works") {
       setTargetCameraLookAt(new THREE.Vector3(-15, 1.5, 3))
     } else if(event.srcElement.location.hash.slice(1) == "") {
