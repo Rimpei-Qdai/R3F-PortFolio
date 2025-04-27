@@ -64,11 +64,17 @@
      object-fit: cover;
   width: 100%;
   margin-top: 1em;
+  border: solid 6px white;
+  box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.4);
 }
 #twoD-content ul.works-list li.works-item .description {
   color: white;
   font-size: 20px;
   margin-top: 0.5em;
+}
+#twoD-content ul.works-list li.works-item .description.name {
+  font-size: 24px;
+  font-family: "Line-Font-Eb";
 }
 #twoD-content ul.works-list li.works-item h3.used-techs {
   color: white;
@@ -84,15 +90,13 @@
 #twoD-content ul.works-list li.works-item .photo-gallery img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 49%;
+  width: 47%;
   margin-top: 2%;
-  transition: all 0.3s;
-  transition-timing-function: ease-in-out;
-}
-#twoD-content ul.works-list li.works-item .photo-gallery img:hover {
-  transform: scale(1.05);
-  z-index: 10;
+  border: solid 6px white;
   box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.4);
+}
+#twoD-content ul.works-list li.works-item .photo-gallery img.large {
+  width: 98.5%;
 }
 #twoD-content ul.works-list li.works-item ul.used-techs-list {
   list-style: none;
@@ -159,6 +163,37 @@
   font-size: 28px;
   font-family: "Line-Font-Eb";
   margin-top: 1em;
+}
+#twoD-content ul.works-list li.works-item .activity {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  z-index: 1;
+}
+#twoD-content ul.works-list li.works-item .activity .image-wrapper {
+  width: 45%;
+  box-shadow: inset 0px 0px 15px 8px rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+}
+#twoD-content ul.works-list li.works-item .activity .image-wrapper img.activity-log {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  z-index: -1;
+  vertical-align: bottom;
+}
+#twoD-content ul.works-list li.works-item .activity .activity-description {
+  width: 45%;
+  color: white;
+}
+#twoD-content ul.works-list li.works-item .activity .activity-description .activity-title {
+  font-size: 28px;
+  color: white;
+  font-family: "Line-Font-Eb";
 }
 #twoD-content .footer {
   display: block;
