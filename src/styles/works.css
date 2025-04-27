@@ -97,6 +97,45 @@
   color: white;
   font-size: 24px;
 }
+#twoD-content ul.works-list li.works-item .history-flow {
+  position: relative;
+  padding-top: 1em;
+  padding-bottom: 2.5em;
+}
+#twoD-content ul.works-list li.works-item .history-flow .bar {
+  position: absolute;
+  background-color: white;
+  width: 500px;
+  height: 5px;
+  transform-origin: top left;
+  transform: rotate(90deg);
+  top: 20px;
+  left: 18px;
+}
+#twoD-content ul.works-list li.works-item .history-flow .point .point-title {
+  color: white;
+  font-size: 32px;
+  position: relative;
+  padding-left: 1.5em;
+  margin-top: 0.5em;
+  font-family: "Line-Font-Eb";
+}
+#twoD-content ul.works-list li.works-item .history-flow .point .point-title::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 50px;
+}
+#twoD-content ul.works-list li.works-item .history-flow .point .point-sub-title {
+  color: white;
+  font-size: 20px;
+  padding-left: 2.5em;
+}
 #twoD-content.right {
   background-color: blue;
   left: 60%;

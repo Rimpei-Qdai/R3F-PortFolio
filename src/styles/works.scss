@@ -115,6 +115,53 @@
                 }
             }
 
+            & .history-flow {
+                position: relative;
+                padding-top: 1em;
+                padding-bottom: 2.5em;
+                & .bar {
+                    position: absolute;
+                    background-color: white;
+                    width: 500px;
+                    height: 5px;
+                    transform-origin: top left;
+                    transform: rotate(90deg);
+                    top: 20px;
+                    left: 18px;
+                }
+
+                & .point {
+                    & .point-title {
+                        color: white;
+                        font-size: 32px;
+                        position: relative;
+                        padding-left: 1.5em;
+                        margin-top: .5em;
+                        font-family: "Line-Font-Eb";
+
+                        &::before {
+                            content: "";
+                            width: 30px;
+                            height: 30px;
+                            background-color: white;
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            transform: translateY(-50%);
+                            border-radius: 50px;
+                        }
+
+                    }
+
+                    & .point-sub-title {
+                        color: white;
+                        font-size: 20px;
+                        padding-left: 2.5em;
+
+                    }
+                }
+            }
+
         }
     }
 
