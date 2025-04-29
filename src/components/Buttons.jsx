@@ -77,18 +77,11 @@ const Buttons = () => {
   return (
     <>
       {
-        hashName == "" ? (
+        hashName == "" && window.innerWidth >= 600  ? (
           <>
-          <Float
-            speed={0.5} // 回転速度。デフォルトでは1
-            rotationIntensity={0.1} // 回転強度。デフォルトでは1
-            floatIntensity={0.1} // 上下の Float の強度。デフォルトでは1
-            floatingRange={[-0.01, 0.01]} // オブジェクトが浮動する Y 軸値の範囲。デフォルトは [-0.1,0.1]
-          >
             <Html position={ [ -12, 6.5, 2.5 ] }>
               <a className='ThreeeD-Button' href="#works" >Works</a>
             </Html>
-          </Float>
             <Html position={ [ - 7, 4.2, -9 ] }>
               <a className='ThreeeD-Button' href="#labo" >Labo</a>
             </Html>

@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom'
 import Hobby from './Hobby'
 import Philosophy from './Philosophy'
 import SNS from './SNS'
+import Header from './Header'
 
 const ContentManager = () => {
 
@@ -14,6 +15,15 @@ const ContentManager = () => {
   })
   return (
     <>
+    { 
+      window.innerWidth <= 600 ? (
+        <>
+         <Header />
+        </>
+      ) : (
+        <></>
+      )
+    }
     {
       content == "works" ? (
         <Works />
