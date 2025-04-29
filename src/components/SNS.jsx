@@ -14,19 +14,22 @@ const SNS = () => {
 
           <ul className="sns-list">
             <li className="sns-item">
-              <a href="https://x.com" target="_blank" className="link">X</a>
+              <a href="https://x.com/sadalmelik2002" target="_blank" className="link">X</a>
             </li>
             <li className="sns-item">
-              <a href="https://x.com" target="_blank" className="link">Instagram</a>
+              <a href="https://www.facebook.com/people/Rimpei-Hata" target="_blank" className="link">FaceBook</a>
             </li>
             <li className="sns-item">
-              <a href="https://x.com" target="_blank" className="link">FaceBook</a>
+              <a href="https://www.wantedly.com/id/rin_hata" target="_blank" className="link">Wantedly</a>
             </li>
             <li className="sns-item">
-              <a href="https://x.com" target="_blank" className="link">Mail</a>
+              <a href="https://www.instagram.com/rimpei3188/" target="_blank" className="link">Instagram</a>
             </li>
             <li className="sns-item">
-              <a href="https://x.com" target="_blank" className="link">Strava</a>
+              <a href="https://www.strava.com/athletes/80879326" target="_blank" className="link">Strava</a>
+            </li>
+            <li className="sns-item">
+              <a href="mailto:info@rimpei-hata.com" target="_blank" className="link">Mail</a>
             </li>
           </ul>
           <div className="footer">© 2025 Rimpei.H</div>

@@ -6,7 +6,7 @@ ul.sns-list {
   display: flex;
   list-style: none;
   justify-content: space-around;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   padding-top: 1.5em;
   padding-bottom: 2em;
@@ -14,7 +14,7 @@ ul.sns-list {
 ul.sns-list li.sns-item a.link {
   font-family: "Line-Font-Eb";
   color: transparent;
-  font-size: 50px;
+  font-size: 48px;
   text-decoration: none;
   -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: white;

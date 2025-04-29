@@ -39,7 +39,7 @@ const Hobby = () => {
               <div className="activity-title">
                 - 鹿児島TT
               </div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste voluptates quaerat facilis harum? Consequuntur iure nemo excepturi ea doloremque necessitatibus nisi natus illo impedit culpa! Officia excepturi nostrum ab.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste voluptates quaerat facilis harum? 
             </div>
           </div>
 
@@ -48,7 +48,7 @@ const Hobby = () => {
               <div className="activity-title">
                 - 100kmウォーク
               </div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste voluptates quaerat facilis harum? Consequuntur iure nemo excepturi ea doloremque necessitatibus nisi natus illo impedit culpa! Officia excepturi nostrum ab.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste voluptates quaerat facilis harum?
             </div>
             <div className="image-wrapper">
               <img src="/assets/imgs/100km_Walk.jpg" alt="" className="activity-log" />
