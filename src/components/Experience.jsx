@@ -67,16 +67,36 @@ const Experience = ({ onLoaded }) => {
         <Island onRendered={ () => setIsRendered(true) }/>
         <Sea />
         <Fire />
-        <Text
-          position={ [ -4, 8, -35 ] }
-          fontSize={ 5 }
-          fontWeight={ 800 }
-          maxWidth={ 55 }
-          font='/assets/fonts/LINESeedJP_OTF_Eb.woff'
-          
-        >
-          Welcome to Rimpei's Portfolio!
-        </Text>
+        { window.innerWidth <= 600 ? (
+          <>
+            <Text
+            position={ [ 5, 10, -30 ] }
+            fontSize={ 4.5 }
+            fontWeight={ 800 }
+            maxWidth={ 35 }
+            font='/assets/fonts/LINESeedJP_OTF_Eb.woff'
+            textAlign='center'
+            rotation={ [ - 0.3, - 0.2, - 0.04 ] }
+            
+            >
+            Welcome to Rimpei's Portfolio!
+          </Text>
+          </>
+        ) : (
+          <>
+            <Text
+            position={ [ -4, 8, -35 ] }
+            fontSize={ 5 }
+            fontWeight={ 800 }
+            maxWidth={ 55 }
+            font='/assets/fonts/LINESeedJP_OTF_Eb.woff'
+            
+          >
+            Welcome to Rimpei's Portfolio!
+          </Text>
+          </>
+        ) }
+        
         <Buttons />
         <Imgs />
         {/* <OrbitControls /> */}

@@ -35,6 +35,10 @@ const Camera = () => {
     } else if(hashName == "sns") {
       setTargetCameraLookAt(new THREE.Vector3(-0.5,  0.5,  12))
     }
+
+    if(window.innerWidth <= 600) {
+      setTargetCameraLookAt(new THREE.Vector3(3,  8,  -15))
+    }
   }, [ ])
   window.addEventListener('hashchange', (event) => {
     if(event.srcElement.location.hash.slice(1) == "works") {

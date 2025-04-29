@@ -24,9 +24,9 @@ const Buttons = () => {
 
         if(window.innerWidth <= 600) {
           gsap.to(camera.position, {
-            x:0,
-            y: 30,
-            z: 50,
+            x:-10,
+            y: 42,
+            z: 48,
             duration:3,
             ease: "power2.out",
           })
