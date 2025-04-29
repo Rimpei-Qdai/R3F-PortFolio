@@ -7,7 +7,7 @@ ul.sns-list {
   list-style: none;
   justify-content: space-around;
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 3em auto;
   padding-top: 1.5em;
   padding-bottom: 2em;
 }
@@ -16,11 +16,11 @@ ul.sns-list li.sns-item a.link {
   color: transparent;
   font-size: 48px;
   text-decoration: none;
-  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-width: 4px;
   -webkit-text-stroke-color: white;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 ul.sns-list li.sns-item a.link:hover {
-  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: transparent;
   color: white;
 }/*# sourceMappingURL=sns.css.map */

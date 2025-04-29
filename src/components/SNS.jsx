@@ -17,7 +17,7 @@ const SNS = () => {
               <a href="https://x.com/sadalmelik2002" target="_blank" className="link">X</a>
             </li>
             <li className="sns-item">
-              <a href="https://www.facebook.com/people/Rimpei-Hata" target="_blank" className="link">FaceBook</a>
+              <a href="https://www.facebook.com/profile.php?id=100086779051895" target="_blank" className="link">FaceBook</a>
             </li>
             <li className="sns-item">
               <a href="https://www.wantedly.com/id/rin_hata" target="_blank" className="link">Wantedly</a>
