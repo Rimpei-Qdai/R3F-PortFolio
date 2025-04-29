@@ -19,13 +19,27 @@ const Buttons = () => {
         })
     }
     const backCamera = () => {
-        gsap.to(camera.position, {
-          x:2.5611305471454915,
-          y: 8.789112370409582,
-          z: 24.548538336427537,
-          duration:3,
-          ease: "power2.out",
-        })
+      console.log('backed')
+        
+
+        if(window.innerWidth <= 600) {
+          gsap.to(camera.position, {
+            x:0,
+            y: 30,
+            z: 50,
+            duration:3,
+            ease: "power2.out",
+          })
+        } else {
+          gsap.to(camera.position, {
+            x:2.5611305471454915,
+            y: 8.789112370409582,
+            z: 24.548538336427537,
+            duration:3,
+            ease: "power2.out",
+          })
+
+        }
     }
 
     useEffect(() => {
