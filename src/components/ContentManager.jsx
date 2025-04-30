@@ -15,15 +15,7 @@ const ContentManager = () => {
   })
   return (
     <>
-    { 
-      window.innerWidth <= 600 ? (
-        <>
-         <Header />
-        </>
-      ) : (
-        <></>
-      )
-    }
+     <Header />
     {
       content == "works" ? (
         <Works />

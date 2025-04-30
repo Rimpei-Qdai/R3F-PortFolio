@@ -1,10 +1,93 @@
 .header {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  height: 80px;
-  background-color: rgba(255, 255, 255, 0.881);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 20;
+}
+.header .header-logo {
+  width: 100px;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+.header .header-logo svg {
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: 80px;
+  background-color: rgba(0, 0, 0, 0.824);
+  padding: 0.3em;
+  animation-name: logo-animation;
+  animation-iteration-count: infinite;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  transform-origin: bottom center;
+}
+.header .hamburger-menu {
+  margin-top: 1em;
+  margin-right: 1em;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.header .hamburger-menu span {
+  display: block;
+  width: 60px;
+  height: 8px;
+  background-color: black;
+  margin: 10px auto;
+}
+.header .hamburger-menu span:nth-child(1) {
+  margin-top: 28px;
+}
+
+.cls-1 {
+  fill: #ffd602;
+}
+
+.cls-1, .cls-2, .cls-3, .cls-4 {
+  stroke-width: 0px;
+}
+
+.cls-2 {
+  fill: #569cd6;
+}
+
+.cls-3 {
+  fill: #d4d4d4;
+}
+
+.cls-4 {
+  fill: orchid;
+}
+
+@keyframes logo-animation {
+  0% {
+    transform: translateY(0) scale(1, 1);
+  }
+  15% {
+    transform: translateY(0) scale(1.2, 0.8);
+  }
+  30% {
+    transform: translateY(-60px) scale(0.9, 1.1);
+  }
+  50% {
+    transform: translateY(0) scale(1.1, 0.9);
+  }
+  55% {
+    transform: translateY(0) scale(1.05, 0.95);
+  }
+  60% {
+    transform: none;
+  }
+  100% {
+    transform: none;
+  }
 }/*# sourceMappingURL=header.css.map */

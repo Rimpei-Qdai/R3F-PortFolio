@@ -8,6 +8,7 @@ const Imgs = () => {
   const hoshMobileTexture = useTexture("/assets/imgs/Hosh-mobile.png")
   const ThreeJSTexture = useTexture("/assets/imgs/ThreeJS.png")
   const SwiftTexture = useTexture("/assets/imgs/Swift.png")
+  const LogoTexture = useTexture("/assets/imgs/Logo.png")
   
   hoshTexture.colorSpace = SRGBColorSpace
   
