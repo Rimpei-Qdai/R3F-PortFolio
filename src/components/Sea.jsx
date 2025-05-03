@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import waterNormal from "/src/textures/water/Water_1_M_Normal.jpg";
 import * as THREE from "three";
 import { extend, useFrame, useThree } from "@react-three/fiber";
@@ -12,8 +12,15 @@ extend({ Water })
 const Sea = () => {
   const { scene } = useThree()
 
+  
   useEffect(() => {
-    const waterMesh = new THREE.CircleGeometry(140)
+    let waterMesh = null
+    if(window.innerWidth <= 600) {
+      waterMesh = new THREE.CircleGeometry(120)
+    } else {
+      waterMesh = new THREE.CircleGeometry(20)
+
+    }
   
     const textureLoader = new THREE.TextureLoader()
   
@@ -22,8 +29,8 @@ const Sea = () => {
       textureHeight:256,
       color:"#ffffff",
       flowDirection: new THREE.Vector2(1, 1),
-      scale:5,
-      flowSpeed:0.01,
+      scale:10,
+      flowSpeed:0.03,
       normalMap0:textureLoader.load("/src/textures/water/Water_1_M_Normal.jpg"),
       normalMap1:textureLoader.load("/src/textures/water/Water_2_M_Normal.jpg")
     })
@@ -38,10 +45,24 @@ const Sea = () => {
   }, [ scene ])
 
   return (
-    <mesh rotation={ [- Math.PI * 0.5, 0, 0] } position={ [0, -3, 0] } scale={140} >
-      <circleGeometry />
-      <meshBasicMaterial color={ 0x001B4C } transparent opacity={ 1 }/>
-    </mesh>
+    <>
+      { (window.innerWidth <= 600) ? (
+        <>
+            <mesh rotation={ [- Math.PI * 0.5, 0, 0] } position={ [0, -3, 0] } scale={120} >
+        <circleGeometry />
+        <meshBasicMaterial color={ 0x001B4C } transparent opacity={ 1 }/>
+      </mesh>
+        </>
+      ) : (
+        <>
+            <mesh rotation={ [- Math.PI * 0.5, 0, 0] } position={ [0, -1, 0] } scale={20} >
+        <circleGeometry />
+        <meshBasicMaterial color={ 0x001B4C } transparent opacity={ 1 }/>
+      </mesh>
+        </>
+      ) }
+    </>
+
   )
 }
 

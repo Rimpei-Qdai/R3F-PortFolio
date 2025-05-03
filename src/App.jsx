@@ -15,7 +15,7 @@ function App() {
       if(loaded) {
         document.querySelector('.loading').classList.add('unview')
       }
-    },3000)
+    },1500)
   }, [ loaded ])
 
   return (

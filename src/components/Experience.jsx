@@ -71,17 +71,32 @@ const Experience = ({ onLoaded }) => {
         { window.innerWidth <= 600 ? (
           <>
             <Text
-            position={ [ 6, 9, -20 ] }
-            fontSize={ 5 }
+            position={ [ 6, 0.5, -38 ] }
+            fontSize={ 7 }
             fontWeight={ 800 }
             maxWidth={ 28 }
             font='/assets/fonts/LINESeedJP_OTF_Eb.woff'
             textAlign='center'
             fillOpacity={ 0.85 }
             rotation={ [ - Math.PI * 0.3, - Math.PI * 0.03, - Math.PI * 0.06 ] }
+            // rotation={ [ - Math.PI * 0.5, 0, - Math.PI * 0.08 ] }
             
             >
-            Rimpei's Portfolio
+            Rimpei's
+          </Text>
+            <Text
+            position={ [ 6, -0.2, -22 ] }
+            fontSize={ 7 }
+            fontWeight={ 800 }
+            maxWidth={ 28 }
+            font='/assets/fonts/LINESeedJP_OTF_Eb.woff'
+            textAlign='center'
+            fillOpacity={ 0.85 }
+            rotation={ [ - Math.PI * 0.3, - Math.PI * 0.03, - Math.PI * 0.03 ] }
+            // rotation={ [ - Math.PI * 0.5, 0, - Math.PI * 0.08 ] }
+            
+            >
+             Portfolio
           </Text>
           </>
         ) : (
