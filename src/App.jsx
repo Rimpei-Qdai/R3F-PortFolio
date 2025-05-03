@@ -20,10 +20,21 @@ function App() {
 
   return (
     <>
+    <div className="global-cover" onClick={() => {
+          const globalContainer = document.querySelector("#global-container")
+          globalContainer.classList.toggle("open")
+          const globalCover = document.querySelector(".global-cover")
+          globalCover.classList.toggle("open")
+          const hamburgerButton = document.querySelector(".hamburger-menu")
+          hamburgerButton.classList.toggle("open")
+
+      }}></div>
+    <div id="global-container">
       <Loader />
       
       <ContentManager />
       <Experience onLoaded={() => setLoaded(true)} />
+    </div>
     </>
   )
 }
