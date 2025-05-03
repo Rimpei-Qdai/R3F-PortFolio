@@ -1,7 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/header.css'
+import { useLocation } from 'react-router-dom'
 
 const Header = () => {
+
+  const [hashName, setHashName] = useState(useLocation().hash.slice(1))
+
+  useEffect(() => {
+    const headerDOM = document.querySelector('.header')
+    if(hashName == "") {
+      headerDOM.classList.remove('unview')
+    } else {
+      headerDOM.classList.add('unview')
+    }
+  }, [ hashName ])
+
+  window.addEventListener('hashchange', (event) => {
+    setHashName(event.srcElement.location.hash.slice(1))
+  })
 
   return (
     <>

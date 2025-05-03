@@ -19,14 +19,12 @@ const Buttons = () => {
         })
     }
     const backCamera = () => {
-      console.log('backed')
-        
 
         if(window.innerWidth <= 600) {
           gsap.to(camera.position, {
-            x:-10,
-            y: 42,
-            z: 48,
+            x:-9,
+            y: 55,
+            z: 40,
             duration:3,
             ease: "power2.out",
           })
@@ -43,18 +41,35 @@ const Buttons = () => {
     }
 
     useEffect(() => {
-      if(hashName == "works") {
-        moveCamera({x:-4.8, y:4, z:6})
-      } else if(hashName == "labo") {
-        moveCamera({x:-8, y:3, z:0})
-      } else if(hashName == "hobby") {
-        moveCamera({x:7, y:3.5, z:1})
-      } else if(hashName == "philosophy") {
-        moveCamera({x:6, y:2.5, z:3.5})
-      } else if(hashName == "sns") {
-        moveCamera({x:0, y:1.5, z:15})
+      if(window.innerWidth <= 600) {
+        if(hashName == "works") {
+          moveCamera({x:-4, y:6, z:8})
+        } else if(hashName == "labo") {
+          moveCamera({x:-6, y:7, z:1.5})
+        } else if(hashName == "hobby") {
+          moveCamera({x:6.5, y:5, z:4.5})
+        } else if(hashName == "philosophy") {
+          moveCamera({x:3, y:4.5, z:5})
+        } else if(hashName == "sns") {
+          moveCamera({x:3.2, y:1.5, z:12.5})
+        } else {
+          backCamera()
+        }
       } else {
-        backCamera()
+        if(hashName == "works") {
+          moveCamera({x:-4.8, y:4, z:6})
+        } else if(hashName == "labo") {
+          moveCamera({x:-8, y:3, z:0})
+        } else if(hashName == "hobby") {
+          moveCamera({x:7, y:3.5, z:1})
+        } else if(hashName == "philosophy") {
+          moveCamera({x:6, y:2.5, z:3.5})
+        } else if(hashName == "sns") {
+          moveCamera({x:0, y:1.5, z:15})
+        } else {
+          backCamera()
+        }
+
       }
     }, [ hashName ])
 
@@ -77,7 +92,7 @@ const Buttons = () => {
   return (
     <>
       {
-        hashName == "" && window.innerWidth >= 600  ? (
+        hashName == "" && window.innerWidth >= 1000  ? (
           <>
             <Html position={ [ -12, 6.5, 2.5 ] }>
               <a className='ThreeeD-Button' href="#works" >Works</a>

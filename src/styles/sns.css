@@ -25,7 +25,7 @@ ul.sns-list li.sns-item a.link:hover {
   color: white;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   ul.sns-list {
     flex-direction: column;
     text-align: center;

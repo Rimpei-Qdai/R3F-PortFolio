@@ -27,6 +27,7 @@ const Experience = ({ onLoaded }) => {
 
 
   useEffect(() => {
+
     // if(hashName == "works") {
     //   setCameraPosition(new THREE.Vector3(-4.8, 4, 6))
     // } else if(hashName == "labo") {
@@ -63,23 +64,24 @@ const Experience = ({ onLoaded }) => {
         shadows:false,
     } }
     >
-        <color args={ [ 0x5ccae6 ] } attach="background" />
+        <color args={ [0x74C2E8] }  attach="background" />
         <Island onRendered={ () => setIsRendered(true) }/>
         <Sea />
         <Fire />
         { window.innerWidth <= 600 ? (
           <>
             <Text
-            position={ [ 5, 10, -30 ] }
-            fontSize={ 4.5 }
+            position={ [ 6, 9, -20 ] }
+            fontSize={ 5 }
             fontWeight={ 800 }
-            maxWidth={ 35 }
+            maxWidth={ 28 }
             font='/assets/fonts/LINESeedJP_OTF_Eb.woff'
             textAlign='center'
-            rotation={ [ - 0.3, - 0.2, - 0.04 ] }
+            fillOpacity={ 0.85 }
+            rotation={ [ - Math.PI * 0.3, - Math.PI * 0.03, - Math.PI * 0.06 ] }
             
             >
-            Welcome to Rimpei's Portfolio!
+            Rimpei's Portfolio
           </Text>
           </>
         ) : (
@@ -99,6 +101,15 @@ const Experience = ({ onLoaded }) => {
         
         <Buttons />
         <Imgs />
+        {/* <OrbitControls
+          // enableZoom={false}
+          // enablePan={false}
+          // minPolarAngle={ 0 }
+          // maxPolarAngle={ Math.PI/ 4 }
+          // minAzimuthAngle={ - Math.PI / 12 }
+          // maxAzimuthAngle={ Math.PI / 36 }
+          // rotateSpeed={ 0.05 }
+        /> */}
         {/* <OrbitControls /> */}
 
         { isRenderd ? (

@@ -13,7 +13,7 @@ const Sea = () => {
   const { scene } = useThree()
 
   useEffect(() => {
-    const waterMesh = new THREE.CircleGeometry(20)
+    const waterMesh = new THREE.CircleGeometry(140)
   
     const textureLoader = new THREE.TextureLoader()
   
@@ -22,8 +22,8 @@ const Sea = () => {
       textureHeight:256,
       color:"#ffffff",
       flowDirection: new THREE.Vector2(1, 1),
-      scale:10,
-      flowSpeed:0.2,
+      scale:5,
+      flowSpeed:0.01,
       normalMap0:textureLoader.load("/src/textures/water/Water_1_M_Normal.jpg"),
       normalMap1:textureLoader.load("/src/textures/water/Water_2_M_Normal.jpg")
     })
@@ -38,9 +38,9 @@ const Sea = () => {
   }, [ scene ])
 
   return (
-    <mesh rotation={ [- Math.PI * 0.5, 0, 0] } position={ [0, -0.9, 0] } scale={20} >
+    <mesh rotation={ [- Math.PI * 0.5, 0, 0] } position={ [0, -3, 0] } scale={140} >
       <circleGeometry />
-      <meshBasicMaterial color={ 0x010732 }/>
+      <meshBasicMaterial color={ 0x001B4C } transparent opacity={ 1 }/>
     </mesh>
   )
 }

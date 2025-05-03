@@ -31,12 +31,13 @@
   display: none;
 }
 #twoD-content .back-button {
-  position: absolute;
-  top: 3%;
-  right: 9%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
   width: 90px;
   height: 90px;
+  border-radius: 45px;
+  box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.2);
 }
 #twoD-content .back-button.right {
   top: 8%;
@@ -44,16 +45,16 @@
 }
 #twoD-content .back-button span {
   display: block;
-  width: 80px;
+  width: 70px;
   height: 8px;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.9);
   transform-origin: center center;
 }
 #twoD-content .back-button span:nth-child(1) {
-  transform: translate(4px, 40px) rotateZ(45deg);
+  transform: translate(10px, 40px) rotateZ(45deg);
 }
 #twoD-content .back-button span:nth-child(2) {
-  transform: translate(5px, 34px) rotateZ(-45deg);
+  transform: translate(10px, 34px) rotateZ(-45deg);
 }
 #twoD-content .title {
   color: white;
@@ -239,7 +240,7 @@
   top: 60%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   #twoD-content {
     width: 100%;
     height: 100% !important;
@@ -254,7 +255,9 @@
     transform: none;
   }
   #twoD-content .back-button {
-    top: 0;
+    z-index: 100;
+    top: 3% !important;
+    right: 5% !important;
     width: 50px;
     height: 50px;
   }
@@ -263,18 +266,21 @@
     right: 9%;
   }
   #twoD-content .back-button span {
-    width: 50px;
-    height: 6px;
+    width: 38px;
+    height: 5px;
+  }
+  #twoD-content .back-button span:nth-child(1) {
+    transform: translate(6px, 22px) rotateZ(45deg);
+  }
+  #twoD-content .back-button span:nth-child(2) {
+    transform: translate(6px, 18px) rotateZ(-45deg);
   }
   #twoD-content .title {
     font-size: 40px;
   }
-  #twoD-content .title.middle {
-    padding-left: 0;
-    font-size: 40px;
-  }
   #twoD-content .title.center {
     margin-top: 0;
+    padding-left: 0;
   }
   #twoD-content ul.works-list li.works-item .works-title {
     font-size: 32px;
