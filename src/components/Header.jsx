@@ -29,6 +29,9 @@ const Header = () => {
           const hamburgerButton = document.querySelector(".hamburger-menu")
           hamburgerButton.classList.toggle("open")
 
+          const menuList = document.querySelector(".menu-list")
+          menuList.classList.toggle('open')
+
 
       }}>
         <span></span><span></span><span></span>

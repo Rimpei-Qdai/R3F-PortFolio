@@ -23,12 +23,144 @@ function App() {
     <div className="global-cover" onClick={() => {
           const globalContainer = document.querySelector("#global-container")
           globalContainer.classList.toggle("open")
+
+          const globalCover = document.querySelector(".global-cover")
+          globalCover.classList.toggle("open")
+
+          const hamburgerButton = document.querySelector(".hamburger-menu")
+          hamburgerButton.classList.toggle("open")
+
+          const menuList = document.querySelector(".menu-list")
+          menuList.classList.toggle('open')
+
+      }}></div>
+      
+      <ul className="menu-list">
+        <div className="title">
+          <p>M</p>
+          <p>E</p>
+          <p>N</p>
+          <p>U</p>
+        </div>
+        <li className="menu-item">
+          <a href="#works" onClick={() => {
+          const globalContainer = document.querySelector("#global-container")
+          globalContainer.classList.toggle("open")
           const globalCover = document.querySelector(".global-cover")
           globalCover.classList.toggle("open")
           const hamburgerButton = document.querySelector(".hamburger-menu")
           hamburgerButton.classList.toggle("open")
 
-      }}></div>
+          const menuList = document.querySelector(".menu-list")
+          menuList.classList.toggle('open')
+
+      }}>
+        <div className="menu-title">
+          INTRO
+        </div>
+        <div className="sub-title">開発実績</div>
+        </a>
+        </li>
+        <li className="menu-item">
+          <a href="#works" onClick={() => {
+          const globalContainer = document.querySelector("#global-container")
+          globalContainer.classList.toggle("open")
+          const globalCover = document.querySelector(".global-cover")
+          globalCover.classList.toggle("open")
+          const hamburgerButton = document.querySelector(".hamburger-menu")
+          hamburgerButton.classList.toggle("open")
+
+          const menuList = document.querySelector(".menu-list")
+          menuList.classList.toggle('open')
+
+      }}>
+        <div className="menu-title">
+          WORKS
+        </div>
+        <div className="sub-title">開発実績</div>
+        </a>
+        </li>
+        
+        <li className="menu-item">
+          <a href="#labo" onClick={() => {
+          const globalContainer = document.querySelector("#global-container")
+          globalContainer.classList.toggle("open")
+          const globalCover = document.querySelector(".global-cover")
+          globalCover.classList.toggle("open")
+          const hamburgerButton = document.querySelector(".hamburger-menu")
+          hamburgerButton.classList.toggle("open")
+
+          const menuList = document.querySelector(".menu-list")
+          menuList.classList.toggle('open')
+
+      }}>
+        <div className="menu-title">
+          LABO
+        </div>
+              <div className="sub-title">開発実績</div>
+        </a>
+        </li>
+
+<li className="menu-item">
+          <a href="#philosophy" onClick={() => {
+          const globalContainer = document.querySelector("#global-container")
+          globalContainer.classList.toggle("open")
+          const globalCover = document.querySelector(".global-cover")
+          globalCover.classList.toggle("open")
+          const hamburgerButton = document.querySelector(".hamburger-menu")
+          hamburgerButton.classList.toggle("open")
+
+          const menuList = document.querySelector(".menu-list")
+          menuList.classList.toggle('open')
+
+      }}>
+        <div className="menu-title">
+          PHILOSOPHY
+        </div>
+          <div className="sub-title">開発実績</div>
+      </a>
+        </li>
+
+        <li className="menu-item">
+          <a href="#hobby" onClick={() => {
+          const globalContainer = document.querySelector("#global-container")
+          globalContainer.classList.toggle("open")
+          const globalCover = document.querySelector(".global-cover")
+          globalCover.classList.toggle("open")
+          const hamburgerButton = document.querySelector(".hamburger-menu")
+          hamburgerButton.classList.toggle("open")
+
+          const menuList = document.querySelector(".menu-list")
+          menuList.classList.toggle('open')
+
+      }}>
+        <div className="menu-title">
+          HOBBY
+        </div>
+        <div className="sub-title">開発実績</div>
+      </a>
+        </li>
+        <li className="menu-item">
+          <a href="#sns" onClick={() => {
+          const globalContainer = document.querySelector("#global-container")
+          globalContainer.classList.toggle("open")
+          const globalCover = document.querySelector(".global-cover")
+          globalCover.classList.toggle("open")
+          const hamburgerButton = document.querySelector(".hamburger-menu")
+          hamburgerButton.classList.toggle("open")
+
+          const menuList = document.querySelector(".menu-list")
+          menuList.classList.toggle('open')
+
+      }}>
+        <div className="menu-title">
+          SNS
+        </div>
+        <div className="sub-title">開発実績</div>
+      </a>
+        </li>
+
+      </ul>
     <div id="global-container">
       <Loader />
       

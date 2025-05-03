@@ -44,7 +44,11 @@ const Camera = () => {
     if(event.srcElement.location.hash.slice(1) == "works") {
       setTargetCameraLookAt(new THREE.Vector3(-15, 1.5, 3))
     } else if(event.srcElement.location.hash.slice(1) == "") {
-      setTargetCameraLookAt(new THREE.Vector3(-0.09197187297645354,  2.12531889455056244,  -0.9878442940311131))
+      if(window.innerWidth <= 600) {
+        setTargetCameraLookAt(new THREE.Vector3(3,  8,  -15))
+      } else {
+        setTargetCameraLookAt(new THREE.Vector3(-0.09197187297645354,  2.12531889455056244,  -0.9878442940311131))
+      }
     } else if(event.srcElement.location.hash.slice(1) == "labo") {
       setTargetCameraLookAt(new THREE.Vector3(-8,  1.5,  -10))
     } else if(event.srcElement.location.hash.slice(1) == "hobby") {
