@@ -43,7 +43,7 @@ const Hobby = () => {
             </div>
           </div>
 
-          <div className="activity">
+          <div className="activity reverse">
             <div className="activity-description">
               <div className="activity-title">
                 - 100kmウォーク

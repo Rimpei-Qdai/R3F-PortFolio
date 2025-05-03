@@ -23,4 +23,15 @@ ul.sns-list li.sns-item a.link {
 ul.sns-list li.sns-item a.link:hover {
   -webkit-text-stroke-color: transparent;
   color: white;
+}
+
+@media screen and (max-width: 600px) {
+  ul.sns-list {
+    flex-direction: column;
+    text-align: center;
+  }
+  ul.sns-list li.sns-item a.link {
+    font-size: 32px;
+    -webkit-text-stroke-width: 2px;
+  }
 }/*# sourceMappingURL=sns.css.map */

@@ -245,5 +245,110 @@
     height: 100% !important;
     top: 0 !important;
     left: 0 !important;
+    transform: none;
+  }
+  #twoD-content.right {
+    transform: none;
+  }
+  #twoD-content.down {
+    transform: none;
+  }
+  #twoD-content .back-button {
+    top: 0;
+    width: 50px;
+    height: 50px;
+  }
+  #twoD-content .back-button.right {
+    top: 0;
+    right: 9%;
+  }
+  #twoD-content .back-button span {
+    width: 50px;
+    height: 6px;
+  }
+  #twoD-content .title {
+    font-size: 40px;
+  }
+  #twoD-content .title.middle {
+    padding-left: 0;
+    font-size: 40px;
+  }
+  #twoD-content .title.center {
+    margin-top: 0;
+  }
+  #twoD-content ul.works-list li.works-item .works-title {
+    font-size: 32px;
+    border-bottom: 3px solid white;
+  }
+  #twoD-content ul.works-list li.works-item img.thumbnail {
+    border: solid 3px white;
+  }
+  #twoD-content ul.works-list li.works-item .description {
+    font-size: 16px;
+  }
+  #twoD-content ul.works-list li.works-item .description.name {
+    font-size: 18px;
+  }
+  #twoD-content ul.works-list li.works-item h3.used-techs {
+    font-size: 24px;
+  }
+  #twoD-content ul.works-list li.works-item .photo-gallery img {
+    width: 47%;
+    margin-top: 2%;
+    border: solid 3px white;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);
+  }
+  #twoD-content ul.works-list li.works-item .photo-gallery img.large {
+    width: 98%;
+  }
+  #twoD-content ul.works-list li.works-item ul.used-techs-list li.used-techs-item {
+    font-size: 16px;
+  }
+  #twoD-content ul.works-list li.works-item ul.achieves {
+    margin-top: 0.5em;
+  }
+  #twoD-content ul.works-list li.works-item ul.achieves li.achieve {
+    font-size: 16px;
+  }
+  #twoD-content ul.works-list li.works-item .history-flow {
+    margin-bottom: 4em;
+  }
+  #twoD-content ul.works-list li.works-item .history-flow .bar {
+    width: 450px;
+  }
+  #twoD-content ul.works-list li.works-item .history-flow .point .point-title {
+    font-size: 20px;
+    margin-left: 0.3em;
+  }
+  #twoD-content ul.works-list li.works-item .history-flow .point .point-title::before {
+    width: 20px;
+    height: 20px;
+  }
+  #twoD-content ul.works-list li.works-item .history-flow .point .point-sub-title {
+    font-size: 14px;
+  }
+  #twoD-content ul.works-list li.works-item .activity {
+    position: relative;
+    background-color: rgb(161, 161, 161);
+    flex-direction: column;
+  }
+  #twoD-content ul.works-list li.works-item .activity.reverse {
+    flex-direction: column-reverse;
+  }
+  #twoD-content ul.works-list li.works-item .activity .image-wrapper {
+    width: 90%;
+    margin: 1em auto 0 auto;
+  }
+  #twoD-content ul.works-list li.works-item .activity .image-wrapper img.activity-log {
+    position: relative;
+  }
+  #twoD-content ul.works-list li.works-item .activity .activity-description {
+    margin: 1em auto;
+    width: 100%;
+    font-size: 16px;
+    width: 90%;
+  }
+  #twoD-content ul.works-list li.works-item .activity .activity-description .activity-title {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=works.css.map */

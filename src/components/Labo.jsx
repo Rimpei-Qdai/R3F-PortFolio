@@ -5,7 +5,7 @@ const Labo = () => {
   return (
     <>
         <div id="twoD-content" className='labo'>
-      <h2 className="title">ACADEMIC</h2>
+      <h2 className="title">LABO</h2>
       <a href='#' className="back-button">
         <span></span>
         <span></span>
@@ -59,8 +59,8 @@ const Labo = () => {
           <div className="history-flow">
             <div className="bar"></div>
             <div className="point">
-              <div className="point-title">2025 九州大学大学院 在学中</div>
-              <div className="point-sub-title">統合新領域科学府オートモーティブサイエンス専攻 <br /> 情報制御学分野</div>
+              <div className="point-title">2025 九州大学大学院</div>
+              <div className="point-sub-title">統合新領域科学府 <br /> オートモーティブサイエンス専攻 <br /> 情報制御学分野 在学中</div>
             </div>
             <div className="point">
               <div className="point-title">2024 卒業研究着手</div>
@@ -71,8 +71,8 @@ const Labo = () => {
               <div className="point-sub-title">起業のため一年間休学</div>
             </div>
             <div className="point">
-              <div className="point-title">2020 九州大学工学部 入学</div>
-              <div className="point-sub-title">電気情報工学科 電気電子工学課程</div>
+              <div className="point-title">2020 九州大学</div>
+              <div className="point-sub-title">工学部 電気情報工学科 <br /> 電気電子工学課程 入学</div>
             </div>
           </div>
          

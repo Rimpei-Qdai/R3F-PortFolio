@@ -28,3 +28,21 @@ ul.sns-list {
     }
 
 }
+
+@media screen and (max-width: 600px) {
+
+    ul.sns-list {
+        flex-direction: column;
+        text-align: center;
+        & li.sns-item {
+            & a.link {
+                font-size: 32px;
+                -webkit-text-stroke-width: 2px;
+
+            }
+
+        }
+    }
+
+
+}
