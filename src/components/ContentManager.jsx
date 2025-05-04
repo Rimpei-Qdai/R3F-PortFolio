@@ -6,6 +6,7 @@ import Hobby from './Hobby'
 import Philosophy from './Philosophy'
 import SNS from './SNS'
 import Header from './Header'
+import { Intro } from './Intro'
 
 const ContentManager = () => {
   const [content, setContent] = useState(useLocation().hash.slice(1))
@@ -20,17 +21,19 @@ const ContentManager = () => {
     if(content != "") {
       const parent = document.querySelector(`#twoD-content`)
       const backButton = document.querySelector('.back-button')
-
-      const rect = parent.getBoundingClientRect()
-      if(parent.classList.contains("right")) {
-        backButton.style.top = `${rect.top + window.innerHeight * 0.03}px`
-        backButton.style.right = `${ rect.width * 0.03 }px`
-      } else if(parent.classList.contains("down")) {
-        backButton.style.position = "absolute"
-      } else {
-        backButton.style.top = `${rect.top + window.innerHeight * 0.03}px`
-        backButton.style.left = `${ rect.width * 0.8}px`
+      if(parent) {
+        const rect = parent.getBoundingClientRect()
+        if(parent.classList.contains("right")) {
+          backButton.style.top = `${rect.top + window.innerHeight * 0.03}px`
+          backButton.style.right = `${ rect.width * 0.03 }px`
+        } else if(parent.classList.contains("down")) {
+          backButton.style.position = "absolute"
+        } else {
+          backButton.style.top = `${rect.top + window.innerHeight * 0.03}px`
+          backButton.style.left = `${ rect.width * 0.8}px`
+        }
       }
+
   
     }
   }, [ content ])
@@ -50,6 +53,8 @@ const ContentManager = () => {
         <Philosophy />
       ) : content == "sns" ? (
         <SNS />
+      ) : content == "intro" ? (
+        <Intro />
       ) : (
         <></>
       )

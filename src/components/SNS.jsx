@@ -6,7 +6,11 @@ const SNS = () => {
   return (
     <>
         <div id="twoD-content" className='down sns'>
-          <h2 className="title center">SNS</h2>
+          <h2 className="title center">
+            <p>S</p>
+            <p>N</p>
+            <p>S</p>
+          </h2>
           <a href='#' className="back-button right">
             <span></span>
             <span></span>

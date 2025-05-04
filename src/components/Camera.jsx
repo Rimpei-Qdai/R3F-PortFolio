@@ -34,6 +34,8 @@ const Camera = () => {
         setTargetCameraLookAt(new THREE.Vector3(8,  0,  -10))
       } else if(hashName == "philosophy") {
         setTargetCameraLookAt(new THREE.Vector3(20,  -2.5,  2))
+      } else if(hashName == "intro") {
+        setTargetCameraLookAt(new THREE.Vector3(-1.5,  0,  0.8))
       } else if(hashName == "sns") {
         setTargetCameraLookAt(new THREE.Vector3(-1,  1.5,  10.5))
       } else {
@@ -50,9 +52,10 @@ const Camera = () => {
         setTargetCameraLookAt(new THREE.Vector3(20,  0,  7))
       } else if(hashName == "sns") {
         setTargetCameraLookAt(new THREE.Vector3(-0.5,  0.5,  12))
+      } else if(hashName == "intro") {
+        setTargetCameraLookAt(new THREE.Vector3(-4.5,  0,  1))
       } else {
         setTargetCameraLookAt(new THREE.Vector3(0,  - 1,  4.5))
-
       }
     }
   }, [ ])
@@ -61,8 +64,6 @@ const Camera = () => {
     if(window.innerWidth <= 600) {
       if(event.srcElement.location.hash.slice(1) == "works") {
         setTargetCameraLookAt(new THREE.Vector3(-16, 0, -1))
-      } else if(event.srcElement.location.hash.slice(1) == "") {
-        setTargetCameraLookAt(new THREE.Vector3(2.2,  9,  -7))
       } else if(event.srcElement.location.hash.slice(1) == "labo") {
         setTargetCameraLookAt(new THREE.Vector3(-6,  1,  -10))
       } else if(event.srcElement.location.hash.slice(1) == "hobby") {
@@ -71,12 +72,14 @@ const Camera = () => {
         setTargetCameraLookAt(new THREE.Vector3(20,  -2.5,  2))
       } else if(event.srcElement.location.hash.slice(1) == "sns") {
         setTargetCameraLookAt(new THREE.Vector3(-1,  1.5,  10.5))
+      } else if(event.srcElement.location.hash.slice(1) == "intro") {
+        setTargetCameraLookAt(new THREE.Vector3(-1.5,  0,  0.8))
+      }  else {
+        setTargetCameraLookAt(new THREE.Vector3(2.2,  9,  -7))
       }
     } else {
       if(event.srcElement.location.hash.slice(1) == "works") {
         setTargetCameraLookAt(new THREE.Vector3(-15, 1.5, 3))
-      } else if(event.srcElement.location.hash.slice(1) == "") {
-        setTargetCameraLookAt(new THREE.Vector3(0,  - 1,  4.5))
       } else if(event.srcElement.location.hash.slice(1) == "labo") {
         setTargetCameraLookAt(new THREE.Vector3(-8,  1.5,  -10))
       } else if(event.srcElement.location.hash.slice(1) == "hobby") {
@@ -85,6 +88,10 @@ const Camera = () => {
         setTargetCameraLookAt(new THREE.Vector3(20,  0,  7))
       } else if(event.srcElement.location.hash.slice(1) == "sns") {
         setTargetCameraLookAt(new THREE.Vector3(-0.5,  0.5,  12))
+      } else if(event.srcElement.location.hash.slice(1) == "intro") {
+        setTargetCameraLookAt(new THREE.Vector3(-4.5,  0,  1))
+      } else {
+        setTargetCameraLookAt(new THREE.Vector3(0,  - 1,  4.5))
       }
     }
 

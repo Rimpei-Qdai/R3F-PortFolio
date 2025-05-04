@@ -59,6 +59,8 @@ const Buttons = () => {
           moveCamera({x:3, y:4.5, z:5})
         } else if(hashName == "sns") {
           moveCamera({x:3.2, y:1.5, z:12.5})
+        } else if(hashName == "intro") {
+          moveCamera({x:-1.5, y:20, z:5})
         } else {
           backCamera()
         }
@@ -73,6 +75,8 @@ const Buttons = () => {
           moveCamera({x:6, y:2.5, z:3.5})
         } else if(hashName == "sns") {
           moveCamera({x:0, y:1.5, z:15})
+        } else if(hashName == "intro") {
+          moveCamera({x:-3, y:9, z:9})
         } else {
           backCamera()
         }
@@ -85,9 +89,11 @@ const Buttons = () => {
         setHashName(event.srcElement.location.hash.slice(1))
         if(event.srcElement.location.hash.slice(1) != "") {
           const sectionDOM = document.querySelector(`#twoD-content.${event.srcElement.location.hash.slice(1)}`)
-          setTimeout(() => {
-            sectionDOM.classList.add('show')
-          }, 100)
+          if(sectionDOM) {
+            setTimeout(() => {
+              sectionDOM.classList.add('show')
+            }, 100)
+          }
         }
       })
     }, [ ])
@@ -99,7 +105,7 @@ const Buttons = () => {
   return (
     <>
       {
-        hashName == "" && window.innerWidth >= 1000  ? (
+        !(hashName == "works" || hashName == "labo" || hashName == "hobby" || hashName == "philosophy" || hashName == "sns" || hashName == "works" || hashName == "intro" ) && window.innerWidth >= 1000  ? (
           <>
             <Html position={ [ -12, 4.1, 2.5 ] }>
               <a className='ThreeeD-Button' href="#works" >Works</a>
@@ -115,6 +121,9 @@ const Buttons = () => {
             </Html>
             <Html position={ [ - 1.1, 2.2, 12 ] }>   
               <a className='ThreeeD-Button' href="#sns" >SNS</a>    
+            </Html>
+            <Html position={ [ - 2.5, 1, 0.5 ] }>   
+              <a className='ThreeeD-Button' href="#intro" >INTRO</a>    
             </Html>
         </>
         ) : hashName == "sns" ? (

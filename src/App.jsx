@@ -43,7 +43,7 @@ function App() {
           <p>U</p>
         </div>
         <li className="menu-item">
-          <a href="#works" onClick={() => {
+          <a href="#intro" onClick={() => {
           const globalContainer = document.querySelector("#global-container")
           globalContainer.classList.toggle("open")
           const globalCover = document.querySelector(".global-cover")
@@ -58,7 +58,7 @@ function App() {
         <div className="menu-title">
           INTRO
         </div>
-        <div className="sub-title">開発実績</div>
+        <div className="sub-title">自己紹介</div>
         </a>
         </li>
         <li className="menu-item">
@@ -97,7 +97,7 @@ function App() {
         <div className="menu-title">
           LABO
         </div>
-              <div className="sub-title">開発実績</div>
+              <div className="sub-title">研究紹介</div>
         </a>
         </li>
 
@@ -115,9 +115,9 @@ function App() {
 
       }}>
         <div className="menu-title">
-          PHILOSOPHY
+          VISION
         </div>
-          <div className="sub-title">開発実績</div>
+          <div className="sub-title">理念</div>
       </a>
         </li>
 
@@ -137,7 +137,7 @@ function App() {
         <div className="menu-title">
           HOBBY
         </div>
-        <div className="sub-title">開発実績</div>
+        <div className="sub-title">趣味</div>
       </a>
         </li>
         <li className="menu-item">
@@ -156,7 +156,7 @@ function App() {
         <div className="menu-title">
           SNS
         </div>
-        <div className="sub-title">開発実績</div>
+        <div className="sub-title">コンタクト</div>
       </a>
         </li>
 

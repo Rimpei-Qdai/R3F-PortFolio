@@ -5,7 +5,13 @@ const Works = () => {
   return (
     <>
     <div id="twoD-content" className='works'>
-      <h2 className="title">WORKS</h2>
+      <h2 className="title">
+        <p>W</p>
+        <p>O</p>
+        <p>R</p>
+        <p>K</p>
+        <p>S</p>
+      </h2>
       <a href='#' className="back-button" onClick={() => {
         const sectionDOM = document.querySelector('#twoD-content')
         sectionDOM.classList.remove('show')
@@ -26,7 +32,7 @@ const Works = () => {
           </p>
 
           <h3 className="used-techs">
-            ■使用技術
+            <span className='pink'>■</span>使用技術
           </h3>
           <ul className="used-techs-list">
             {/* <li className='used-techs-item'>
@@ -51,12 +57,18 @@ const Works = () => {
           </h3>
 
           <ul className="achieves">
-            <li className="achieve">
-            Engineer Driven Day 2023 決勝進出
+          <li className="achieve">
+              <a href="https://mitou-fukuoka.org/works/hosh/" target='_blank'>
+                福岡未踏コンソーシアム 2023 Grow3期採択
+              </a>
             </li>
             <li className="achieve">
-            福岡未踏コンソーシアム 2023 Grow3期採択
+              <a href="https://protopedia.net/prototype/4674" target='_blank'>
+                Engineer Driven Day 2023 決勝進出
+
+              </a>
             </li>
+           
           </ul>
         </li>
         <li className="works-item">
@@ -67,6 +79,14 @@ const Works = () => {
           <p className="description">
           フリーランスとして、システム開発の案件を受託。デザイナーのポートフォリオサイト開発や、学習塾の進捗管理システムの開発など、幅広く受注。
           </p>
+          <ul className="achieves">
+          <li className="achieve">
+              <a href="https://wahiru-f.com/" target='_blank'>
+                市野わひるさん ポートフォリオ
+              </a>
+            </li>
+           
+          </ul>
 
           <h3 className="used-techs">
             ■使用技術
@@ -89,6 +109,8 @@ const Works = () => {
             </li>
           </ul>
 
+          
+
         </li>
         <li className="works-item">
           <div className="works-title">
@@ -97,6 +119,14 @@ const Works = () => {
           <p className="description">
           2022年6月、株式会社RIWBを設立し代表取締役社長に就任。自律したシンクタンクの実現を最終目標に掲げ、不動産検索サイトの共同開発やシステム案件受注を行う。
           </p>
+          <ul className="achieves">
+          <li className="achieve">
+              <a href="https://riwb.org/" target='_blank'>
+                RIWBホームページ
+              </a>
+            </li>
+           
+          </ul>
 
           <h3 className="used-techs">
             ■使用技術

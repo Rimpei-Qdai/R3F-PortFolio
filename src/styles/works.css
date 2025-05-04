@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Line-Font-Eb";
   src: url("/assets/fonts/LINESeedJP_OTF_Eb.woff") format("woff");
@@ -60,9 +61,32 @@
 #twoD-content .title {
   color: white;
   font-size: 65px;
+  width: 85%;
+  margin: 0 auto;
   padding-top: 0.3em;
-  padding-left: 0.7em;
   font-family: "Line-Font-Eb";
+}
+#twoD-content .title p {
+  font-family: "Line-Font-Eb";
+  display: inline;
+}
+#twoD-content .title p:nth-child(1) {
+  color: #569CD6;
+}
+#twoD-content .title p:nth-child(2) {
+  color: #DA70D6;
+}
+#twoD-content .title p:nth-child(3) {
+  color: #FFD602;
+}
+#twoD-content .title p:nth-child(4) {
+  color: #569CD6;
+}
+#twoD-content .title p:nth-child(5) {
+  color: #DA70D6;
+}
+#twoD-content .title p:nth-child(6) {
+  color: #FFD602;
 }
 #twoD-content .title.center {
   text-align: center;
@@ -85,7 +109,10 @@
 #twoD-content ul.works-list li.works-item .works-title {
   color: white;
   font-size: 50px;
-  border-bottom: 4px solid white;
+  border-bottom: 5px solid transparent; /* 幅を決めて透明にする */
+  -o-border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+     border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+  border-image-slice: 1; /* 全体を使う */
   line-height: 120%;
   font-family: "Line-Font-Eb";
 }
@@ -143,11 +170,18 @@
   height: 80px;
 }
 #twoD-content ul.works-list li.works-item ul.achieves {
-  padding-left: 5%;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 1em;
 }
 #twoD-content ul.works-list li.works-item ul.achieves li.achieve {
   color: white;
   font-size: 24px;
+}
+#twoD-content ul.works-list li.works-item ul.achieves li.achieve a {
+  margin-top: 0.5em;
+  font-size: 20px;
+  color: white;
 }
 #twoD-content ul.works-list li.works-item .history-flow {
   position: relative;
@@ -285,7 +319,10 @@
   }
   #twoD-content ul.works-list li.works-item .works-title {
     font-size: 32px;
-    border-bottom: 3px solid white;
+    border-bottom: 5px solid transparent; /* 幅を決めて透明にする */
+    -o-border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+       border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+    border-image-slice: 1; /* 全体を使う */
   }
   #twoD-content ul.works-list li.works-item img.thumbnail {
     border: solid 3px white;
@@ -315,7 +352,11 @@
     margin-top: 0.5em;
   }
   #twoD-content ul.works-list li.works-item ul.achieves li.achieve {
-    font-size: 16px;
+    font-size: 18px;
+  }
+  #twoD-content ul.works-list li.works-item ul.achieves li.achieve a {
+    font-size: 18px;
+    color: white;
   }
   #twoD-content ul.works-list li.works-item .history-flow {
     margin-bottom: 4em;
@@ -336,8 +377,8 @@
   }
   #twoD-content ul.works-list li.works-item .activity {
     position: relative;
-    background-color: rgb(161, 161, 161);
     flex-direction: column;
+    background-color: rgba(227, 227, 227, 0.8901960784);
   }
   #twoD-content ul.works-list li.works-item .activity.reverse {
     flex-direction: column-reverse;
@@ -354,8 +395,10 @@
     width: 100%;
     font-size: 16px;
     width: 90%;
+    color: rgba(0, 0, 0, 0.8);
   }
   #twoD-content ul.works-list li.works-item .activity .activity-description .activity-title {
+    color: rgba(0, 0, 0, 0.8);
     font-size: 20px;
   }
 }/*# sourceMappingURL=works.css.map */

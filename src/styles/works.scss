@@ -74,9 +74,35 @@
     & .title {
         color: white;
         font-size: 65px;
-        padding-top: 0.3em;
-        padding-left: 0.7em;
+        width: 85%;
+        margin: 0 auto;
+        padding-top: .3em;
         font-family: "Line-Font-Eb";
+
+        & p{
+            font-family: "Line-Font-Eb";
+            display: inline;
+        }
+
+        & p:nth-child(1) {
+        color: #569CD6;
+        }
+        & p:nth-child(2) {
+        color: #DA70D6;
+        }
+        & p:nth-child(3) {
+        color: #FFD602;
+        }
+        & p:nth-child(4) {
+        color: #569CD6;
+        }
+        & p:nth-child(5) {
+        color: #DA70D6;
+        }
+        & p:nth-child(6) {
+        color: #FFD602;
+        }
+
 
         &.center {
             text-align: center;
@@ -103,7 +129,9 @@
             & .works-title {
                 color: white;
                 font-size: 50px;
-                border-bottom: 4px solid white;
+                border-bottom: 5px solid transparent; /* 幅を決めて透明にする */
+                border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+                border-image-slice: 1; /* 全体を使う */
                 line-height: 120%;
                 font-family: "Line-Font-Eb";
 
@@ -134,7 +162,6 @@
                 font-size: 32px;
                 font-family: "Line-Font-Eb";
                 margin-top: .8em;
-
 
             }
 
@@ -181,10 +208,18 @@
             }
 
             & ul.achieves {
-                padding-left: 5%;
+                // width: 85%;
+                width: 100%;
+                margin: 0 auto;
+                padding-left: 1em;
                 & li.achieve {
                     color: white;
                     font-size: 24px;
+                    & a {
+                        margin-top: .5em;
+                        font-size: 20px;
+                        color: white;
+                    }
 
                 }
             }
@@ -225,6 +260,7 @@
                             transform: translateY(-50%);
                             border-radius: 50px;
                         }
+                        
 
                     }
 
@@ -362,7 +398,10 @@
             & li.works-item {
                 & .works-title {
                     font-size: 32px;
-                    border-bottom: 3px solid white;
+                    // border-bottom: 3px solid linear-gradient(to right, yellow, red, purple);
+                    border-bottom: 5px solid transparent; /* 幅を決めて透明にする */
+                    border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+                    border-image-slice: 1; /* 全体を使う */
                 }
 
                 & img.thumbnail {
@@ -406,7 +445,11 @@
                 & ul.achieves {
                     margin-top: .5em;
                     & li.achieve {
-                        font-size: 16px;
+                        font-size: 18px;
+                        & a {
+                            font-size: 18px;
+                            color: white;
+                        }
                     }
                 }
 
@@ -440,8 +483,9 @@
 
                 & .activity {
                     position: relative;
-                    background-color: rgb(161, 161, 161);
+                    // background: linear-gradient( - 210deg, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
                     flex-direction: column;
+                    background-color: #e3e3e3e3;
 
                     &.reverse {
                         flex-direction: column-reverse;
@@ -460,7 +504,9 @@
                         width: 100%;
                         font-size: 16px;
                         width: 90%;
+                        color: rgba(0, 0, 0, 0.8);
                         & .activity-title {
+                            color: rgba(0, 0, 0, 0.8);
                             font-size: 20px;
                         }
                     }

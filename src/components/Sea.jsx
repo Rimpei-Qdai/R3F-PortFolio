@@ -40,7 +40,7 @@ const Sea = () => {
 
   return (
     <>
-      <mesh rotation={ [- Math.PI * 0.5, 0, 0] } position={ [0, -1, 0] } scale={120} >
+      <mesh rotation={ [- Math.PI * 0.5, 0, 0] } position={ [0, -2, 0] } scale={120} >
         <circleGeometry />
         <meshBasicMaterial color={ 0x001B4C } transparent opacity={ 1 }/>
       </mesh>

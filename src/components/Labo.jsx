@@ -5,7 +5,12 @@ const Labo = () => {
   return (
     <>
         <div id="twoD-content" className='labo'>
-      <h2 className="title">LABO</h2>
+      <h2 className="title">
+        <p>L</p>  
+        <p>A</p>  
+        <p>B</p>  
+        <p>O</p>  
+      </h2>
       <a href='#' className="back-button">
         <span></span>
         <span></span>

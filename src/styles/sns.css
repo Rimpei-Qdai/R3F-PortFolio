@@ -29,6 +29,7 @@ ul.sns-list li.sns-item a.link:hover {
   ul.sns-list {
     flex-direction: column;
     text-align: center;
+    margin-bottom: 1em;
   }
   ul.sns-list li.sns-item a.link {
     font-size: 32px;

@@ -44,7 +44,10 @@ const Experience = ({ onLoaded }) => {
     // }
 
     if(hashName != "") {
-      document.querySelector(`#twoD-content.${hashName}`).classList.add('show')
+      const twoDContentDOM = document.querySelector(`#twoD-content.${hashName}`)
+      if(twoDContentDOM) {
+        twoDContentDOM.classList.add('show')
+      }
     }
     setTimeout(() => {
       if(isRenderd) {

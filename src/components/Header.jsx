@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/header.css'
 import { useLocation } from 'react-router-dom'
+import { hash } from 'three/tsl'
 
 const Header = () => {
 
@@ -8,10 +9,10 @@ const Header = () => {
 
   useEffect(() => {
     const headerDOM = document.querySelector('.header')
-    if(hashName == "") {
-      headerDOM.classList.remove('unview')
-    } else {
+    if (hashName == "works" || hashName == "labo" || hashName == "hobby" || hashName == "philosophy" || hashName == "sns" || hashName == "intro" ) {
       headerDOM.classList.add('unview')
+    } else {
+      headerDOM.classList.remove('unview')
     }
   }, [ hashName ])
 

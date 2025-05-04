@@ -5,7 +5,13 @@ const Hobby = () => {
   return (
     <>
     <div id="twoD-content" className='right hobby'>
-      <h2 className="title">HOBBY</h2>
+      <h2 className="title">
+        <p>H</p>
+        <p>O</p>
+        <p>B</p>
+        <p>B</p>
+        <p>Y</p>
+      </h2>
       <a href='#' className="back-button">
         <span></span>
         <span></span>

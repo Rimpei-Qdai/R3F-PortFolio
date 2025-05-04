@@ -5,7 +5,14 @@ const Philosophy = () => {
   return (
     <>
             <div id="twoD-content" className='right philosophy'>
-      <h2 className="title">VISION</h2>
+      <h2 className="title">
+        <p>V</p>
+        <p>I</p>
+        <p>S</p>
+        <p>I</p>
+        <p>O</p>
+        <p>N</p>
+      </h2>
       <a href='#' className="back-button">
         <span></span>
         <span></span>
