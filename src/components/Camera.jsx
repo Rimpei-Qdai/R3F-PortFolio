@@ -50,6 +50,9 @@ const Camera = () => {
         setTargetCameraLookAt(new THREE.Vector3(20,  0,  7))
       } else if(hashName == "sns") {
         setTargetCameraLookAt(new THREE.Vector3(-0.5,  0.5,  12))
+      } else {
+        setTargetCameraLookAt(new THREE.Vector3(0,  - 1,  4.5))
+
       }
     }
   }, [ ])
@@ -73,7 +76,7 @@ const Camera = () => {
       if(event.srcElement.location.hash.slice(1) == "works") {
         setTargetCameraLookAt(new THREE.Vector3(-15, 1.5, 3))
       } else if(event.srcElement.location.hash.slice(1) == "") {
-        setTargetCameraLookAt(new THREE.Vector3(-0.09197187297645354,  2.12531889455056244,  -0.9878442940311131))
+        setTargetCameraLookAt(new THREE.Vector3(0,  - 1,  4.5))
       } else if(event.srcElement.location.hash.slice(1) == "labo") {
         setTargetCameraLookAt(new THREE.Vector3(-8,  1.5,  -10))
       } else if(event.srcElement.location.hash.slice(1) == "hobby") {

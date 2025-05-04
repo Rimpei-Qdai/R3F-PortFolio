@@ -30,12 +30,19 @@ const Buttons = () => {
           })
         } else {
           gsap.to(camera.position, {
-            x:2.5611305471454915,
-            y: 8.789112370409582,
-            z: 24.548538336427537,
+            x:1.5,
+            y: 13,
+            z: 25,
             duration:3,
             ease: "power2.out",
           })
+          // gsap.to(camera.position, {
+          //   x:2.5611305471454915,
+          //   y: 8.789112370409582,
+          //   z: 24.548538336427537,
+          //   duration:3,
+          //   ease: "power2.out",
+          // })
 
         }
     }
@@ -94,19 +101,19 @@ const Buttons = () => {
       {
         hashName == "" && window.innerWidth >= 1000  ? (
           <>
-            <Html position={ [ -12, 6.5, 2.5 ] }>
+            <Html position={ [ -12, 4.1, 2.5 ] }>
               <a className='ThreeeD-Button' href="#works" >Works</a>
             </Html>
-            <Html position={ [ - 7, 4.2, -9 ] }>
+            <Html position={ [ - 7, 3.2, -9 ] }>
               <a className='ThreeeD-Button' href="#labo" >Labo</a>
             </Html>
-            <Html position={ [ 6.4, 4.3, - 8 ] }>
+            <Html position={ [ 5.8, 3.5, - 8 ] }>
               <a className='ThreeeD-Button' href="#hobby" >Hobby</a>
             </Html>
-            <Html position={ [ 10.5, 3.3, 3 ] }>
+            <Html position={ [ 11, 2.6, 3 ] }>
               <a className='ThreeeD-Button' href="#philosophy" >Phil</a>       
             </Html>
-            <Html position={ [ - 0.7, 2.8, 12 ] }>   
+            <Html position={ [ - 1.1, 2.2, 12 ] }>   
               <a className='ThreeeD-Button' href="#sns" >SNS</a>    
             </Html>
         </>

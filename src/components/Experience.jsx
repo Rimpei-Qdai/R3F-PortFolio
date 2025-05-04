@@ -71,7 +71,7 @@ const Experience = ({ onLoaded }) => {
         { window.innerWidth <= 600 ? (
           <>
             <Text
-            position={ [ 6, 0.5, -38 ] }
+            position={ [ 6, 0.6, -38 ] }
             fontSize={ 7 }
             fontWeight={ 800 }
             maxWidth={ 28 }
@@ -85,7 +85,7 @@ const Experience = ({ onLoaded }) => {
             Rimpei's
           </Text>
             <Text
-            position={ [ 6, -0.2, -22 ] }
+            position={ [ 6, 0.2, -22 ] }
             fontSize={ 7 }
             fontWeight={ 800 }
             maxWidth={ 28 }
@@ -102,14 +102,14 @@ const Experience = ({ onLoaded }) => {
         ) : (
           <>
             <Text
-            position={ [ -4, 8, -35 ] }
-            fontSize={ 5 }
+            position={ [ 0, -0.5, 14 ] }
+            fontSize={ 1.5 }
             fontWeight={ 800 }
             maxWidth={ 55 }
             font='/assets/fonts/LINESeedJP_OTF_Eb.woff'
-            
+            rotation={ [ - Math.PI * 0.25, - Math.PI * 0.0, - Math.PI * 0.005 ] }
           >
-            Welcome to Rimpei's Portfolio!
+            Rimpei's Portfolio!
           </Text>
           </>
         ) }

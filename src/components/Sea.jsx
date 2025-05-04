@@ -14,13 +14,7 @@ const Sea = () => {
 
   
   useEffect(() => {
-    let waterMesh = null
-    if(window.innerWidth <= 600) {
-      waterMesh = new THREE.CircleGeometry(120)
-    } else {
-      waterMesh = new THREE.CircleGeometry(20)
-
-    }
+    let waterMesh = new THREE.CircleGeometry(120)
   
     const textureLoader = new THREE.TextureLoader()
   
@@ -46,21 +40,10 @@ const Sea = () => {
 
   return (
     <>
-      { (window.innerWidth <= 600) ? (
-        <>
-            <mesh rotation={ [- Math.PI * 0.5, 0, 0] } position={ [0, -3, 0] } scale={120} >
+      <mesh rotation={ [- Math.PI * 0.5, 0, 0] } position={ [0, -1, 0] } scale={120} >
         <circleGeometry />
         <meshBasicMaterial color={ 0x001B4C } transparent opacity={ 1 }/>
       </mesh>
-        </>
-      ) : (
-        <>
-            <mesh rotation={ [- Math.PI * 0.5, 0, 0] } position={ [0, -1, 0] } scale={20} >
-        <circleGeometry />
-        <meshBasicMaterial color={ 0x001B4C } transparent opacity={ 1 }/>
-      </mesh>
-        </>
-      ) }
     </>
 
   )
