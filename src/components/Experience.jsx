@@ -103,16 +103,7 @@ const Experience = ({ onLoaded }) => {
         ) }
         
         <Buttons />
-
-        {
-          hashName == "works" || window.innerWidth >= 1000 ? (
-            <>
-              <Imgs />
-            </>
-          ) : (
-            <></>
-          ) 
-        }
+        <Imgs />
         {/* <OrbitControls
           // enableZoom={false}
           // enablePan={false}
