@@ -70,19 +70,19 @@
   font-family: "Line-Font-Eb";
   display: inline;
 }
-#twoD-content .title p:nth-child(1) {
+#twoD-content .title p:nth-child(2) {
   color: #569CD6;
 }
-#twoD-content .title p:nth-child(2) {
+#twoD-content .title p:nth-child(1) {
   color: #DA70D6;
 }
 #twoD-content .title p:nth-child(3) {
   color: #FFD602;
 }
-#twoD-content .title p:nth-child(4) {
+#twoD-content .title p:nth-child(5) {
   color: #569CD6;
 }
-#twoD-content .title p:nth-child(5) {
+#twoD-content .title p:nth-child(4) {
   color: #DA70D6;
 }
 #twoD-content .title p:nth-child(6) {
@@ -106,6 +106,50 @@
   margin-top: 1em;
   margin-bottom: 5em;
 }
+#twoD-content ul.works-list li.works-item .more-button {
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: white;
+  display: block;
+  padding: 0.4em 1em;
+  border-radius: 30px;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+#twoD-content ul.works-list li.works-item .more-button:hover {
+  box-shadow: none;
+  transform: scale(0.98);
+}
+#twoD-content ul.works-list li.works-item .more-button.second {
+  margin-bottom: 0;
+}
+#twoD-content ul.works-list li.works-item .more-button .text {
+  background: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Line-Font-Eb";
+  font-size: 24px;
+}
+#twoD-content ul.works-list li.works-item .vision div {
+  font-size: 80px;
+  font-family: "Line-Font-Eb";
+  line-height: 130%;
+}
+#twoD-content ul.works-list li.works-item .vision .pink {
+  color: #DA70D6;
+}
+#twoD-content ul.works-list li.works-item .vision .blue {
+  color: #569CD6;
+  text-align: center;
+  padding-right: 0.5em;
+}
+#twoD-content ul.works-list li.works-item .vision .yellow {
+  color: #FFD602;
+  text-align: end;
+}
 #twoD-content ul.works-list li.works-item .works-title {
   color: white;
   font-size: 50px;
@@ -124,6 +168,12 @@
   border: solid 6px white;
   box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.4);
 }
+#twoD-content ul.works-list li.works-item img.thumbnail.face {
+  width: 80%;
+  display: block;
+  margin: 2em auto;
+  border-radius: 50%;
+}
 #twoD-content ul.works-list li.works-item .description {
   color: white;
   font-size: 20px;
@@ -131,6 +181,23 @@
 }
 #twoD-content ul.works-list li.works-item .description.name {
   font-size: 24px;
+  font-family: "Line-Font-Eb";
+}
+#twoD-content ul.works-list li.works-item .description p.eb {
+  display: inline;
+  font-family: "Line-Font-Eb";
+  font-size: 28px;
+  background: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#twoD-content ul.works-list li.works-item .description p.vision-jp {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 40px;
+  background: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: "Line-Font-Eb";
 }
 #twoD-content ul.works-list li.works-item h3.used-techs {
@@ -164,10 +231,10 @@
   color: white;
   font-size: 24px;
 }
-#twoD-content ul.works-list li.works-item ul.used-techs-list li.used-techs-item img.techs-logo {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 80px;
+#twoD-content ul.works-list li.works-item ul.used-techs-list li.used-techs-item a {
+  font-size: 32px;
+  display: block;
+  color: white;
 }
 #twoD-content ul.works-list li.works-item ul.achieves {
   width: 100%;
@@ -191,7 +258,7 @@
 #twoD-content ul.works-list li.works-item .history-flow .bar {
   position: absolute;
   background-color: white;
-  width: 500px;
+  width: 530px;
   height: 5px;
   transform-origin: top left;
   transform: rotate(90deg);
@@ -255,8 +322,13 @@
   color: white;
 }
 #twoD-content ul.works-list li.works-item .activity .activity-description .activity-title {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 28px;
-  color: white;
+  background: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: "Line-Font-Eb";
 }
 #twoD-content .footer {
@@ -317,6 +389,26 @@
     margin-top: 0;
     padding-left: 0;
   }
+  #twoD-content ul.works-list li.works-item .more-button .text {
+    font-size: 16px;
+  }
+  #twoD-content ul.works-list li.works-item .vision div {
+    font-size: 48px;
+    font-family: "Line-Font-Eb";
+    line-height: 130%;
+  }
+  #twoD-content ul.works-list li.works-item .vision .pink {
+    color: #DA70D6;
+  }
+  #twoD-content ul.works-list li.works-item .vision .blue {
+    color: #569CD6;
+    text-align: center;
+    padding-right: 0.5em;
+  }
+  #twoD-content ul.works-list li.works-item .vision .yellow {
+    color: #FFD602;
+    text-align: end;
+  }
   #twoD-content ul.works-list li.works-item .works-title {
     font-size: 32px;
     border-bottom: 5px solid transparent; /* 幅を決めて透明にする */
@@ -328,10 +420,27 @@
     border: solid 3px white;
   }
   #twoD-content ul.works-list li.works-item .description {
-    font-size: 16px;
+    font-size: 14px;
   }
   #twoD-content ul.works-list li.works-item .description.name {
     font-size: 18px;
+  }
+  #twoD-content ul.works-list li.works-item .description p.eb {
+    display: inline;
+    font-family: "Line-Font-Eb";
+    font-size: 18px;
+    background: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #twoD-content ul.works-list li.works-item .description p.vision-jp {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 22px;
+    background: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Line-Font-Eb";
   }
   #twoD-content ul.works-list li.works-item h3.used-techs {
     font-size: 24px;
@@ -348,11 +457,17 @@
   #twoD-content ul.works-list li.works-item ul.used-techs-list li.used-techs-item {
     font-size: 16px;
   }
+  #twoD-content ul.works-list li.works-item ul.used-techs-list li.used-techs-item a {
+    font-size: 18px;
+  }
   #twoD-content ul.works-list li.works-item ul.achieves {
     margin-top: 0.5em;
   }
   #twoD-content ul.works-list li.works-item ul.achieves li.achieve {
     font-size: 18px;
+  }
+  #twoD-content ul.works-list li.works-item ul.achieves li.achieve.references {
+    font-size: 14px;
   }
   #twoD-content ul.works-list li.works-item ul.achieves li.achieve a {
     font-size: 18px;
@@ -362,7 +477,7 @@
     margin-bottom: 4em;
   }
   #twoD-content ul.works-list li.works-item .history-flow .bar {
-    width: 450px;
+    width: 420px;
   }
   #twoD-content ul.works-list li.works-item .history-flow .point .point-title {
     font-size: 20px;
@@ -378,7 +493,8 @@
   #twoD-content ul.works-list li.works-item .activity {
     position: relative;
     flex-direction: column;
-    background-color: rgba(227, 227, 227, 0.8901960784);
+    background-color: #ffffff;
+    margin-bottom: 1em;
   }
   #twoD-content ul.works-list li.works-item .activity.reverse {
     flex-direction: column-reverse;
@@ -393,12 +509,11 @@
   #twoD-content ul.works-list li.works-item .activity .activity-description {
     margin: 1em auto;
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     width: 90%;
     color: rgba(0, 0, 0, 0.8);
   }
   #twoD-content ul.works-list li.works-item .activity .activity-description .activity-title {
-    color: rgba(0, 0, 0, 0.8);
     font-size: 20px;
   }
 }/*# sourceMappingURL=works.css.map */

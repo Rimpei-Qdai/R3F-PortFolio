@@ -32,7 +32,7 @@ const Camera = () => {
         setTargetCameraLookAt(new THREE.Vector3(-6,  1,  -10))
       } else if(hashName == "hobby") {
         setTargetCameraLookAt(new THREE.Vector3(8,  0,  -10))
-      } else if(hashName == "philosophy") {
+      } else if(hashName == "vision") {
         setTargetCameraLookAt(new THREE.Vector3(20,  -2.5,  2))
       } else if(hashName == "intro") {
         setTargetCameraLookAt(new THREE.Vector3(-1.5,  0,  0.8))
@@ -48,7 +48,7 @@ const Camera = () => {
         setTargetCameraLookAt(new THREE.Vector3(-8,  1.5,  -10))
       } else if(hashName == "hobby") {
         setTargetCameraLookAt(new THREE.Vector3(20,  -5,  -30))
-      } else if(hashName == "philosophy") {
+      } else if(hashName == "vision") {
         setTargetCameraLookAt(new THREE.Vector3(20,  0,  7))
       } else if(hashName == "sns") {
         setTargetCameraLookAt(new THREE.Vector3(-0.5,  0.5,  12))
@@ -68,7 +68,7 @@ const Camera = () => {
         setTargetCameraLookAt(new THREE.Vector3(-6,  1,  -10))
       } else if(event.srcElement.location.hash.slice(1) == "hobby") {
         setTargetCameraLookAt(new THREE.Vector3(8,  0,  -10))
-      } else if(event.srcElement.location.hash.slice(1) == "philosophy") {
+      } else if(event.srcElement.location.hash.slice(1) == "vision") {
         setTargetCameraLookAt(new THREE.Vector3(20,  -2.5,  2))
       } else if(event.srcElement.location.hash.slice(1) == "sns") {
         setTargetCameraLookAt(new THREE.Vector3(-1,  1.5,  10.5))
@@ -84,7 +84,7 @@ const Camera = () => {
         setTargetCameraLookAt(new THREE.Vector3(-8,  1.5,  -10))
       } else if(event.srcElement.location.hash.slice(1) == "hobby") {
         setTargetCameraLookAt(new THREE.Vector3(20,  -5,  -30))
-      } else if(event.srcElement.location.hash.slice(1) == "philosophy") {
+      } else if(event.srcElement.location.hash.slice(1) == "vision") {
         setTargetCameraLookAt(new THREE.Vector3(20,  0,  7))
       } else if(event.srcElement.location.hash.slice(1) == "sns") {
         setTargetCameraLookAt(new THREE.Vector3(-0.5,  0.5,  12))

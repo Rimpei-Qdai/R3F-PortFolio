@@ -6,7 +6,7 @@ import Hobby from './Hobby'
 import Philosophy from './Philosophy'
 import SNS from './SNS'
 import Header from './Header'
-import { Intro } from './Intro'
+import Intro from './Intro'
 
 const ContentManager = () => {
   const [content, setContent] = useState(useLocation().hash.slice(1))
@@ -49,7 +49,7 @@ const ContentManager = () => {
         <Labo />
       ) : content =="hobby" ? (
         <Hobby />
-      ) : content == "philosophy" ? (
+      ) : content == "vision" ? (
         <Philosophy />
       ) : content == "sns" ? (
         <SNS />

@@ -15,11 +15,12 @@ function App() {
       if(loaded) {
         document.querySelector('.loading').classList.add('unview')
       }
-    },1500)
+    },3200)
   }, [ loaded ])
 
   return (
     <>
+    <h1>りんぺいのポートフォリオ</h1>
     <div className="global-cover" onClick={() => {
           const globalContainer = document.querySelector("#global-container")
           globalContainer.classList.toggle("open")
@@ -102,7 +103,7 @@ function App() {
         </li>
 
 <li className="menu-item">
-          <a href="#philosophy" onClick={() => {
+          <a href="#vision" onClick={() => {
           const globalContainer = document.querySelector("#global-container")
           globalContainer.classList.toggle("open")
           const globalCover = document.querySelector(".global-cover")

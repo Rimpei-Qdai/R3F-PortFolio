@@ -12,9 +12,8 @@ import { useControls } from 'leva'
 import Buttons from './Buttons'
 import * as THREE from 'three'
 import Imgs from './Imgs'
-import Fire from './FIre'
+import Fire from './Fire'
 import './Experience.css'
-import { hash } from 'three/tsl'
 
 
 const Experience = ({ onLoaded }) => {
@@ -27,21 +26,6 @@ const Experience = ({ onLoaded }) => {
 
 
   useEffect(() => {
-
-    // if(hashName == "works") {
-    //   setCameraPosition(new THREE.Vector3(-4.8, 4, 6))
-    // } else if(hashName == "labo") {
-    //   setCameraPosition(new THREE.Vector3(-8, 3, 0))
-    // } else if(hashName == "hobby") {
-    //   setCameraPosition(new THREE.Vector3(7, 3.5, 1))
-    // } else if(hashName == "philosophy") {
-    //   setCameraPosition(new THREE.Vector3(6, 2.5, 3.5))
-    // } else if(hashName == "sns") {
-    //   setCameraPosition(new THREE.Vector3(0, 1.5, 15))
-    // } else if(window.innerWidth <= 600) {
-    //   setCameraPosition(new THREE.Vector3(-10, 100, 100))
-    //   console.log(cameraPosition)
-    // }
 
     if(hashName != "") {
       const twoDContentDOM = document.querySelector(`#twoD-content.${hashName}`)
@@ -58,6 +42,7 @@ const Experience = ({ onLoaded }) => {
   return (
     <>
     <Canvas
+        style={ { zIndex:0 } }
         className='webgl'
         camera={ {
         fov: 45,
@@ -118,7 +103,16 @@ const Experience = ({ onLoaded }) => {
         ) }
         
         <Buttons />
-        <Imgs />
+
+        {
+          hashName == "works" || window.innerWidth >= 1000 ? (
+            <>
+              <Imgs />
+            </>
+          ) : (
+            <></>
+          ) 
+        }
         {/* <OrbitControls
           // enableZoom={false}
           // enablePan={false}

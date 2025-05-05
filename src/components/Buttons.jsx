@@ -55,7 +55,7 @@ const Buttons = () => {
           moveCamera({x:-6, y:7, z:1.5})
         } else if(hashName == "hobby") {
           moveCamera({x:6.5, y:5, z:4.5})
-        } else if(hashName == "philosophy") {
+        } else if(hashName == "vision") {
           moveCamera({x:3, y:4.5, z:5})
         } else if(hashName == "sns") {
           moveCamera({x:3.2, y:1.5, z:12.5})
@@ -71,7 +71,7 @@ const Buttons = () => {
           moveCamera({x:-8, y:3, z:0})
         } else if(hashName == "hobby") {
           moveCamera({x:7, y:3.5, z:1})
-        } else if(hashName == "philosophy") {
+        } else if(hashName == "vision") {
           moveCamera({x:6, y:2.5, z:3.5})
         } else if(hashName == "sns") {
           moveCamera({x:0, y:1.5, z:15})
@@ -105,25 +105,47 @@ const Buttons = () => {
   return (
     <>
       {
-        !(hashName == "works" || hashName == "labo" || hashName == "hobby" || hashName == "philosophy" || hashName == "sns" || hashName == "works" || hashName == "intro" ) && window.innerWidth >= 1000  ? (
+        !(hashName == "works" || hashName == "labo" || hashName == "hobby" || hashName == "vision" || hashName == "sns" || hashName == "works" || hashName == "intro" ) && window.innerWidth >= 1000  ? (
           <>
-            <Html position={ [ -12, 4.1, 2.5 ] }>
-              <a className='ThreeeD-Button' href="#works" >Works</a>
+            <Html position={ [ -15, -0.9, 2.3 ] }>
+              <a className='ThreeeD-Button' href="#works" >
+                <div className="text">
+                  Works
+                </div>
+                </a>
             </Html>
-            <Html position={ [ - 7, 3.2, -9 ] }>
-              <a className='ThreeeD-Button' href="#labo" >Labo</a>
+            <Html position={ [ - 8, 4, -9 ] }>
+              <a className='ThreeeD-Button' href="#labo" >
+              <div className="text">
+                  Labo
+                </div>
+              </a>
             </Html>
-            <Html position={ [ 5.8, 3.5, - 8 ] }>
-              <a className='ThreeeD-Button' href="#hobby" >Hobby</a>
+            <Html position={ [ 6, -0.4, - 7 ] }>
+              <a className='ThreeeD-Button' href="#hobby" >
+              <div className="text">
+                  Hobby
+                </div>
+              </a>
             </Html>
-            <Html position={ [ 11, 2.6, 3 ] }>
-              <a className='ThreeeD-Button' href="#philosophy" >Phil</a>       
+            <Html position={ [ 11, -1.5, 3 ] }>
+              <a className='ThreeeD-Button' href="#vision" >
+                <div className="text">
+                 Vision
+                </div>
+              </a>       
             </Html>
-            <Html position={ [ - 1.1, 2.2, 12 ] }>   
-              <a className='ThreeeD-Button' href="#sns" >SNS</a>    
+            <Html position={ [ - 1.8, 0.6, 12 ] }>   
+              <a className='ThreeeD-Button' href="#sns" >
+                <div className="text">
+                  SNS
+                </div>
+              </a>    
             </Html>
-            <Html position={ [ - 2.5, 1, 0.5 ] }>   
-              <a className='ThreeeD-Button' href="#intro" >INTRO</a>    
+            <Html position={ [ - 3.8, 1, -1 ] }>   
+              <a className='ThreeeD-Button' href="#intro" ><div className="text">
+                  Intro
+                </div></a>    
             </Html>
         </>
         ) : hashName == "sns" ? (

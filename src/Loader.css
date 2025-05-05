@@ -5,48 +5,115 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: skyblue;
-  transition: opacity 0.2s;
+  background-color: rgb(143, 210, 255);
+  transition: opacity 0.8s;
+  z-index: 1000;
+}
+.loading .text {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.loading .text p {
+  color: transparent;
+  display: inline;
+  font-size: 42px;
+  font-family: "Line-Font-Eb";
+  animation: textAnimation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+.loading .text p:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.loading .text p:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loading .text p:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.loading .text p:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.loading .text p:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.loading .text p:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.loading .text p:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.loading .loader-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 200px;
+}
+.loading .loader-logo svg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  padding: 0.5em;
+}
+.loading .loader-logo svg path, .loading .loader-logo svg polygon {
+  opacity: 0;
+  animation: loaderAnimation;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+.loading .loader-logo svg path.cls-1, .loading .loader-logo svg polygon.cls-1 {
+  animation-delay: 1.6s;
+}
+.loading .loader-logo svg path.cls-2, .loading .loader-logo svg polygon.cls-2 {
+  animation-delay: 2.4s;
+}
+.loading .loader-logo svg path.cls-3, .loading .loader-logo svg polygon.cls-3 {
+  animation-delay: 3.2s;
+}
+.loading .loader-logo svg path.cls-4, .loading .loader-logo svg polygon.cls-4 {
+  animation-delay: 0.8s;
 }
 
+@keyframes textAnimation {
+  0% {
+    color: orchid;
+  }
+  50% {
+    color: #569cd6;
+  }
+  100% {
+    color: #ffd602;
+  }
+}
+@keyframes loaderAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .loading.unview {
   opacity: 0;
   pointer-events: none;
+  touch-action: none;
 }
 
-#container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -50px;
-  margin-top: -10px;
-  text-align: center;
-  font-family: Arial;
-  font-weight: bold;
-}
-
-#container span {
-  display: block;
-  background: #000;
-  width: 100px;
-  height: 5px;
-  margin-top: 5px;
-  animation: load 2s infinite;
-  border-radius: 5px;
-}
-
-#container span:nth-child(2) {
-  animation-delay: 100ms;
-}
-
-#container span:nth-child(3) {
-  animation-delay: 200ms;
-}
-
-@keyframes load {
-  50% {
-    width: 5px;
-    margin-right: 95px;
-    opacity: 0.1;
+@media screen and (max-width: 1000px) {
+  .loading .text p {
+    font-size: 32px;
+  }
+  .loading .loader-logo svg {
+    padding: 0.3em;
   }
 }/*# sourceMappingURL=Loader.css.map */

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Intro = () => {
+const Intro = () => {
   return (
     <>
         <div id="twoD-content" className='intro'>
@@ -14,7 +14,6 @@ export const Intro = () => {
         <a href='#' className="back-button" onClick={() => {
             const sectionDOM = document.querySelector('#twoD-content')
             sectionDOM.classList.remove('show')
-            console.log(sectionDOM)
         }}>
             <span></span>
             <span></span>
@@ -23,148 +22,78 @@ export const Intro = () => {
         <ul className="works-list">
             <li className="works-item">
             <div className="works-title">
-                Hosh!
+                りんぺい
             </div>
-            <img src="/assets/imgs/Hosh.png" alt="" className="thumbnail" />
+            <img src="/assets/imgs/Rimpei-Face.svg" alt="" className="thumbnail face" />
+            <h3 className="used-techs">
+                ■メッセージ
+            </h3>
             <p className="description">
-            「家族や恋人にプレゼントを選ぶのって難しい！」、「自分が本当に欲しいものを見つけるのって難しい！」そんな思いを解決るすために、「Hosh!」は誕生しました。今の自分の欲求を投稿することで、他ユーザーやLLMからほしい物をおすすめしてくれる。また、欲しいものリストを共有することで、プレゼント選びの参考にできる。「ほしい」をキーワードにユーザ間でのインタラクティブな環境を提供します。
+            初めまして！りんぺーのポートフォリオを訪れて下さり、ありがとうございます！普段は大学院生として自動車情報制御について学ぶとともに、学外では自転車で旅したり、アプリ作ったり、様々活動しています。このサイトを通して、僕の為人を少しでも知っていただければと思います！
             </p>
 
             <h3 className="used-techs">
-                <span className='pink'>■</span>使用技術
+                ■特技
             </h3>
-            <ul className="used-techs-list">
-                {/* <li className='used-techs-item'>
-                <img src="/assets/imgs/php-logo.svg" alt="" className="techs-logo" />
+            <ul className="achieves">
+                <li className="achieve">
+                折り紙
                 </li>
-                <li className='used-techs-item'>
-                <img src="/assets/imgs/matter-js-logo.svg" alt="" className="techs-logo" />
+                <li className="achieve">
+                プログラミング <br /> 
+                - PHP <br />
+                - Swift <br />
+                - C# <br />
+                - React.js <br />
+                - Three.js <br />
+                - SQL <br />
                 </li>
-                <li className='used-techs-item'>
-                <img src="/assets/imgs/mysql-logo.png" alt="" className="techs-logo" />
-                </li>
-                <li className='used-techs-item'>
-                <img src="/assets/imgs/google-apps-script-logo.png" alt="" className="techs-logo" />
-                </li> */}
-                <li className='used-techs-item'>
-                php, MySQL, Google Apps Scripts, Matter.js
-                </li>
+                
             </ul>
 
             <h3 className="used-techs">
-                ■実績
+                ■好きな食べ物
             </h3>
 
-            <ul className="achieves">
-            <li className="achieve">
-                <a href="https://mitou-fukuoka.org/works/hosh/" target='_blank'>
-                    福岡未踏コンソーシアム 2023 Grow3期採択
-                </a>
-                </li>
-                <li className="achieve">
-                <a href="https://protopedia.net/prototype/4674" target='_blank'>
-                    Engineer Driven Day 2023 決勝進出
-
-                </a>
-                </li>
-            
-            </ul>
-            </li>
-            <li className="works-item">
-            <div className="works-title">
-                フリーランス
+            <a href='https://unzenham.co.jp/' target='_blank' className="more-button second">
+            <div className="text">
+            雲仙ハム
             </div>
-            <img src="/assets/imgs/Wahiru-Ichino-portfolio.png" alt="" className="thumbnail" />
-            <p className="description">
-            フリーランスとして、システム開発の案件を受託。デザイナーのポートフォリオサイト開発や、学習塾の進捗管理システムの開発など、幅広く受注。
-            </p>
-            <ul className="achieves">
-            <li className="achieve">
-                <a href="https://wahiru-f.com/" target='_blank'>
-                    市野わひるさん ポートフォリオ
-                </a>
-                </li>
-            
-            </ul>
-
+            </a>
+            <a href='https://www.himematsuya.jp/' target='_blank' className="more-button second">
+            <div className="text">
+            姫松屋
+            </div>
+            </a>
+            <a href='https://www.instagram.com/naka_yuuji/' target='_blank' className="more-button second">
+            <div className="text">
+            豚トロラーメン
+            </div>
+            </a>
+            <a href='https://www.funabansho.jp/' target='_blank' className="more-button second">
+            <div className="text">
+            海の駅 船番所
+            </div>
+            </a>
+            <a href='https://onomichi-seto.sudachiya.com/' target='_blank' className="more-button">
+            <div className="text">
+            尾道大衆食堂せと
+            </div>
+            </a>
             <h3 className="used-techs">
-                ■使用技術
+                ■好きな言葉
             </h3>
-            <ul className="used-techs-list">
-                {/* <li className='used-techs-item'>
-                <img src="/assets/imgs/php-logo.svg" alt="" className="techs-logo" />
-                </li>
-                <li className='used-techs-item'>
-                <img src="/assets/imgs/matter-js-logo.svg" alt="" className="techs-logo" />
-                </li>
-                <li className='used-techs-item'>
-                <img src="/assets/imgs/mysql-logo.png" alt="" className="techs-logo" />
-                </li>
-                <li className='used-techs-item'>
-                <img src="/assets/imgs/google-apps-script-logo.png" alt="" className="techs-logo" />
-                </li> */}
-                <li className='used-techs-item'>
-                php, Google Apps Scripts, wordpress
-                </li>
-            </ul>
-
-            
-
-            </li>
-            <li className="works-item">
-            <div className="works-title">
-                株式会社RIWB
-            </div>
-            <p className="description">
-            2022年6月、株式会社RIWBを設立し代表取締役社長に就任。自律したシンクタンクの実現を最終目標に掲げ、不動産検索サイトの共同開発やシステム案件受注を行う。
-            </p>
-            <ul className="achieves">
-            <li className="achieve">
-                <a href="https://riwb.org/" target='_blank'>
-                    RIWBホームページ
-                </a>
-                </li>
-            
-            </ul>
-
-            <h3 className="used-techs">
-                ■使用技術
-            </h3>
-            <ul className="used-techs-list">
-                {/* <li className='used-techs-item'>
-                <img src="/assets/imgs/php-logo.svg" alt="" className="techs-logo" />
-                </li>
-                <li className='used-techs-item'>
-                <img src="/assets/imgs/matter-js-logo.svg" alt="" className="techs-logo" />
-                </li>
-                <li className='used-techs-item'>
-                <img src="/assets/imgs/mysql-logo.png" alt="" className="techs-logo" />
-                </li>
-                <li className='used-techs-item'>
-                <img src="/assets/imgs/google-apps-script-logo.png" alt="" className="techs-logo" />
-                </li> */}
-                <li className='used-techs-item'>
-                python, php, wordpress
-                </li>
-            </ul>
-
-            
-            </li>
-            <li className="works-item">
-            <div className="works-title">
-                その他
-            </div>
             <ul className="achieves">
                 <li className="achieve">
-                Wework Student Ambassador
+                折り紙
                 </li>
                 <li className="achieve">
-                ペンギンハック2024メンター
+                プログラミング
                 </li>
+                
             </ul>
-            
-            
             </li>
+
         </ul>
 
         <div className="footer">© 2025 Rimpei.H</div>
@@ -172,3 +101,5 @@ export const Intro = () => {
     </>
   )
 }
+
+export default Intro
