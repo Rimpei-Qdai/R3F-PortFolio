@@ -70,6 +70,7 @@ const Now = () => {
             </li>
             
         </ul>
+        <div className="warn">※データは一時間に一度更新されます。</div>
     </div>
     </>
   )
