@@ -1,7 +1,43 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/now.css'
+import { initializeApp } from "firebase/app";
+import { collection, getDocs, getFirestore, limit, orderBy, query } from 'firebase/firestore'
 
 const Now = () => {
+    const [latestItem, setLatestItem] = useState({cal:100, step:300});
+
+    const getData = async () => {
+        const firebaseConfig = {
+            apiKey: "AIzaSyBfN_XVjsEqI21JgZCoNjbZqZqxhcf3Fjc",
+            authDomain: "bio-data-portfolio.firebaseapp.com",
+            projectId: "bio-data-portfolio",
+            storageBucket: "bio-data-portfolio.firebasestorage.app",
+            messagingSenderId: "901365318859",
+            appId: "1:901365318859:web:cfbe35d660a6b5c714074e",
+            measurementId: "G-C2XMCW24X3"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        const q = query(
+            collection(db, "default"),
+            orderBy("fetchedAt", "desc"),
+            limit(1)
+        )
+
+        const querySnapshot = await getDocs(q)
+        setLatestItem(querySnapshot.docs[0].data())
+
+    }
+
+    useEffect(() => {
+        
+        getData()
+    }, [])
+
+
   return (
     <>
     <div className="reat-time-data">
@@ -10,7 +46,7 @@ const Now = () => {
             <p>O</p>
             <p>W</p>
         </div>
-        <div className="back-button" onClick={() => {
+        <div className="now-back-button" onClick={() => {
             const realTimeDataDOM = document.querySelector('.reat-time-data')
             realTimeDataDOM.classList.toggle('view')
             
@@ -24,12 +60,12 @@ const Now = () => {
         <ul className="data">
             <li className="datum">
                 <div className="datum-name">消費カロリー</div>
-                <div className="datum-score">133</div>
+                <div className="datum-score">{ latestItem.cal }</div>
                 <div className="datum-unit">kcal</div>
             </li>
             <li className="datum">
                 <div className="datum-name">歩数</div>
-                <div className="datum-score">133</div>
+                <div className="datum-score">{ latestItem.step }</div>
                 <div className="datum-unit">歩</div>
             </li>
             

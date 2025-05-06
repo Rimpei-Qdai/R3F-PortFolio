@@ -1,7 +1,6 @@
 import React from 'react'
-import { Html, useTexture } from '@react-three/drei'
+import { useTexture } from '@react-three/drei'
 import { SRGBColorSpace } from 'three'
-import { useControls } from 'leva'
 
 const Imgs = () => {
   const hoshTexture = useTexture("/assets/imgs/Hosh.png")

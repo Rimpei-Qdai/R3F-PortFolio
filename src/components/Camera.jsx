@@ -1,5 +1,3 @@
-import { useCamera } from '@react-three/drei'
-import gsap from 'gsap'
 import React, { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useFrame, useThree } from 'react-three-fiber'

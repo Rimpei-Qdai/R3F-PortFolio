@@ -1,5 +1,5 @@
 import { Center, Edges, useGLTF, useTexture } from "@react-three/drei";
-import { TextureLoader, SRGBColorSpace, LinearMipMapLinearFilter, LinearSRGBColorSpace, Color, } from "three";
+import { TextureLoader } from "three";
 import React, { useEffect, useRef, useState } from "react";
 import { useFrame } from "react-three-fiber";
 

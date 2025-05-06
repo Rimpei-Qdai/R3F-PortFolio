@@ -20,7 +20,7 @@
         
     }
 
-    & .back-button {
+    & .now-back-button {
         // width: 50%;
         width: 60px;
         height: 60px;
@@ -89,7 +89,7 @@
             text-align: center;
             margin-top: 1.5em;
             & .datum-name {
-                font-size: 24px;
+                font-size: 20px;
                 width: 100%;
                 text-align: start;
                 font-family: "Line-Font-Eb";
@@ -98,7 +98,7 @@
             
             & .datum-score {
                 width: 60%;
-                font-size: 32px;
+                font-size: 30px;
                 box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
                 font-family: "Line-Font-Eb";
                 padding: .1em 0;

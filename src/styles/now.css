@@ -20,7 +20,7 @@
   transform: translate(-50%, -50%);
   top: 50%;
 }
-.reat-time-data .back-button {
+.reat-time-data .now-back-button {
   width: 60px;
   height: 60px;
   position: relative;
@@ -28,7 +28,7 @@
   padding-right: 2em;
   cursor: pointer;
 }
-.reat-time-data .back-button span {
+.reat-time-data .now-back-button span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -38,10 +38,10 @@
   display: block;
   transform-origin: 0 0;
 }
-.reat-time-data .back-button span:nth-child(1) {
+.reat-time-data .now-back-button span:nth-child(1) {
   transform: rotate(45deg) translate(-50%, -50%);
 }
-.reat-time-data .back-button span:nth-child(2) {
+.reat-time-data .now-back-button span:nth-child(2) {
   transform: rotate(135deg) translate(-50%, -50%);
 }
 .reat-time-data .title {
@@ -87,14 +87,14 @@
   margin-top: 1.5em;
 }
 .reat-time-data ul.data li.datum .datum-name {
-  font-size: 24px;
+  font-size: 20px;
   width: 100%;
   text-align: start;
   font-family: "Line-Font-Eb";
 }
 .reat-time-data ul.data li.datum .datum-score {
   width: 60%;
-  font-size: 32px;
+  font-size: 30px;
   box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
   font-family: "Line-Font-Eb";
   padding: 0.1em 0;

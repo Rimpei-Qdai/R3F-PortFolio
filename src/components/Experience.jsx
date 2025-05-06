@@ -1,12 +1,11 @@
 // モジュールインポート
-import { OrbitControls, Text } from '@react-three/drei'
+import { Text } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import Island from './Island'
 import Sea from './Sea'
 import { useEffect, useState } from 'react'
 import Camera from './Camera'
 import { useLocation } from 'react-router-dom'
-import { useControls } from 'leva'
 
 // コンポーネント
 import Buttons from './Buttons'

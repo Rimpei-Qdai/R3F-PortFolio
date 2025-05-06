@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import * as THREE from "three";
-import { extend, useFrame, useThree } from "@react-three/fiber";
+import { extend, useThree } from "@react-three/fiber";
 import { Water } from "three/examples/jsm/objects/Water2.js";
 
 extend({ Water })
