@@ -21,6 +21,7 @@ function App() {
   return (
     <>
     <h1>りんぺいのポートフォリオ</h1>
+    <div className="global-cover-for-data"></div>
     <div className="global-cover" onClick={() => {
           const globalContainer = document.querySelector("#global-container")
           globalContainer.classList.toggle("open")

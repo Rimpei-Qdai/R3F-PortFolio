@@ -23,8 +23,8 @@ const Buttons = () => {
         if(window.innerWidth <= 600) {
           gsap.to(camera.position, {
             x:-9,
-            y: 55,
-            z: 40,
+            y: 50,
+            z: 38,
             duration:3,
             ease: "power2.out",
           })
@@ -107,14 +107,14 @@ const Buttons = () => {
       {
         !(hashName == "works" || hashName == "labo" || hashName == "hobby" || hashName == "vision" || hashName == "sns" || hashName == "works" || hashName == "intro" ) && window.innerWidth >= 1000  ? (
           <>
-            <Html position={ [ -15, -0.9, 2.3 ] }>
+            <Html position={ [ -15, -0.9, 2.3 ] } >
               <a className='ThreeeD-Button' href="#works" >
                 <div className="text">
                   Works
                 </div>
                 </a>
             </Html>
-            <Html position={ [ - 8, 4, -9 ] }>
+            <Html position={ [ - 8, 4, -8 ] }>
               <a className='ThreeeD-Button' href="#labo" >
               <div className="text">
                   Labo

@@ -193,7 +193,7 @@
 
             }
 
-            & img.thumbnail {
+            & .thumbnail {
                 object-fit: cover;
                 width: 100%;
                 margin-top: 1em;
@@ -242,7 +242,7 @@
                 color: white;
                 font-size: 32px;
                 font-family: "Line-Font-Eb";
-                margin-top: .8em;
+                margin-top: 1.5em;
 
             }
 
@@ -307,6 +307,20 @@
                         color: white;
                     }
 
+                }
+            }
+
+            & ul.quote-list {
+                padding-left: 1em;
+                list-style: disc;
+                color: white;
+                font-size: 22px;
+                & li.quote-item {
+                    margin-top: 1em;
+                    & .author {
+                        font-size: 20px;
+                        text-align: end;
+                    }
                 }
             }
 
@@ -544,7 +558,7 @@
 
                     & p.vision-jp {
                         width: fit-content;
-                        font-size: 22px;
+                        font-size: 24px;
                         background: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
@@ -595,6 +609,16 @@
                     }
                 }
 
+                & ul.quote-list {
+                    font-size: 16px;
+                    & li.quote-item {
+                        margin-top: 1em;
+                        & .author {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
                 & .history-flow {
                     margin-bottom: 4em;
                     & .bar {
@@ -629,9 +653,11 @@
                     flex-direction: column;
                     background-color: #ffffff;
                     margin-bottom: 1em;
+ 
 
                     &.reverse {
                         flex-direction: column-reverse;
+                        margin-top: 2.5em;
                     }
                     & .image-wrapper {
                         width: 90%;

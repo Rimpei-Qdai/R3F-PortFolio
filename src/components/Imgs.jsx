@@ -36,7 +36,7 @@ const Imgs = () => {
         <planeGeometry />
         <meshBasicMaterial map={ hoshMobileTexture } />
        </mesh>
-       <mesh position={[ -12.12, 4.03, -0.376 ]} rotation={ [ 0, -0.35, 0 ] } scale={ [0.73, 0.43, 1] }>
+       <mesh position={[ -12.12, 4.03, -0.37 ]} rotation={ [ 0, -0.35, 0 ] } scale={ [0.73, 0.43, 1] }>
         <planeGeometry />
         <meshBasicMaterial map={ ThreeJSTexture } />
        </mesh>

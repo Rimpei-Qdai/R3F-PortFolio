@@ -1,0 +1,125 @@
+@charset "UTF-8";
+.reat-time-data {
+  background-color: white;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  transition: all 0.8s;
+  transition-timing-function: cubic-bezier(0.5, 0.86, 0.57, 1.14);
+  width: 80%;
+  max-width: 600px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.314);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.reat-time-data.view {
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+.reat-time-data .back-button {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  padding-top: 0.5em;
+  padding-right: 2em;
+  cursor: pointer;
+}
+.reat-time-data .back-button span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 55px;
+  height: 8px;
+  display: block;
+  transform-origin: 0 0;
+}
+.reat-time-data .back-button span:nth-child(1) {
+  transform: rotate(45deg) translate(-50%, -50%);
+}
+.reat-time-data .back-button span:nth-child(2) {
+  transform: rotate(135deg) translate(-50%, -50%);
+}
+.reat-time-data .title {
+  text-align: center;
+  margin-top: 1em;
+  width: 50%;
+}
+.reat-time-data .title p {
+  display: inline;
+  font-size: 40px;
+  font-family: "Line-Font-Eb";
+}
+.reat-time-data .title p:nth-child(2) {
+  color: #569CD6;
+}
+.reat-time-data .title p:nth-child(1) {
+  color: #DA70D6;
+}
+.reat-time-data .title p:nth-child(3) {
+  color: #FFD602;
+}
+.reat-time-data .sub-title {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 32px;
+  border-bottom: 5px solid transparent; /* 幅を決めて透明にする */
+  -o-border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+     border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+  border-image-slice: 1; /* 全体を使う */
+  line-height: 120%;
+  font-family: "Line-Font-Eb";
+  width: 80%;
+  margin: 0.5em auto 0 auto;
+}
+.reat-time-data ul.data {
+  width: 80%;
+  margin: 1em auto 3em auto;
+  color: rgba(0, 0, 0, 0.9);
+}
+.reat-time-data ul.data li.datum {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 1.5em;
+}
+.reat-time-data ul.data li.datum .datum-name {
+  font-size: 24px;
+  width: 100%;
+  text-align: start;
+  font-family: "Line-Font-Eb";
+}
+.reat-time-data ul.data li.datum .datum-score {
+  width: 60%;
+  font-size: 36px;
+  box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+  font-family: "Line-Font-Eb";
+  padding: 0.1em 0;
+}
+.reat-time-data ul.data li.datum .datum-unit {
+  width: 40%;
+  font-size: 32px;
+  font-family: "Line-Font-Eb";
+  padding: 0.1em 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .reat-time-data .title p {
+    font-size: 48px;
+  }
+  .reat-time-data .sub-title {
+    font-size: 40px;
+  }
+  .reat-time-data ul.data li.datum .datum-name {
+    font-size: 32px;
+  }
+  .reat-time-data ul.data li.datum .datum-score {
+    font-size: 40px;
+  }
+  .reat-time-data ul.data li.datum .datum-unit {
+    font-size: 40px;
+  }
+}/*# sourceMappingURL=now.css.map */

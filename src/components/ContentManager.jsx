@@ -7,6 +7,7 @@ import Philosophy from './Philosophy'
 import SNS from './SNS'
 import Header from './Header'
 import Intro from './Intro'
+import Now from './Now'
 
 const ContentManager = () => {
   const [content, setContent] = useState(useLocation().hash.slice(1))
@@ -42,6 +43,7 @@ const ContentManager = () => {
   return (
     <>
      <Header />
+     <Now />
     {
       content == "works" ? (
         <Works />
