@@ -23,14 +23,14 @@ const Now = () => {
         <div className="sub-title">今日のりんぺい</div>
         <ul className="data">
             <li className="datum">
-                <div className="datum-name">カロリー</div>
+                <div className="datum-name">消費カロリー</div>
                 <div className="datum-score">133</div>
                 <div className="datum-unit">kcal</div>
             </li>
             <li className="datum">
-                <div className="datum-name">カロリー</div>
+                <div className="datum-name">歩数</div>
                 <div className="datum-score">133</div>
-                <div className="datum-unit">kcal</div>
+                <div className="datum-unit">歩</div>
             </li>
             
         </ul>

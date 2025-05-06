@@ -22,10 +22,10 @@
 
     & .back-button {
         // width: 50%;
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         position: relative;
-        padding-top: .5em;
+        padding-top: 1em;
         padding-right: 2em;
         cursor: pointer;
         & span {
@@ -33,8 +33,8 @@
             top: 50%;
             left: 50%;
             background-color: rgba(0, 0, 0, 0.9);
-            width: 55px;
-            height: 8px;
+            width: 40px;
+            height: 6px;
             display: block;
             transform-origin: 0 0;
 
@@ -49,10 +49,10 @@
     & .title {
         text-align: center;
         margin-top:1em;
-        width: 50%;
+        width: 60%;
         & p {
             display: inline;
-            font-size: 40px;
+            font-size: 36px;
             font-family: "Line-Font-Eb";
         }
         & p:nth-child(2) {
@@ -69,7 +69,7 @@
 
     & .sub-title {
         color: rgba(0, 0, 0, 0.9);
-        font-size: 32px;
+        font-size: 24px;
         border-bottom: 5px solid transparent; /* 幅を決めて透明にする */
         border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
         border-image-slice: 1; /* 全体を使う */
@@ -98,7 +98,7 @@
             
             & .datum-score {
                 width: 60%;
-                font-size: 36px;
+                font-size: 32px;
                 box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
                 font-family: "Line-Font-Eb";
                 padding: .1em 0;
@@ -107,9 +107,10 @@
             
             & .datum-unit {
                 width: 40%;
-                font-size: 32px;
+                font-size: 28px;
                 font-family: "Line-Font-Eb";
                 padding: .1em 0;
+                line-height: 180%;
                 
             }
 
@@ -119,15 +120,27 @@
 
 
 @media screen and (min-width: 1000px) {
-
     .reat-time-data {
         & .title {
+            text-align: start;
+            padding-left: 4em;
             
             & p {
                 font-size: 48px;
             
             }
           
+        }
+
+        & .back-button {
+            width: 80px;
+            height: 80px;
+            & span {
+                width: 55px;
+                height: 8px;
+                padding-top: .2em;
+
+            }
         }
     
         & .sub-title {
