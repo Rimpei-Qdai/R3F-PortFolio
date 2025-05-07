@@ -61,6 +61,11 @@ const Intro = () => {
             豚トロラーメン
             </div>
             </a>
+            <a href='http://www.macocchan.com/' target='_blank' className="more-button second">
+            <div className="text">
+            まこっちゃん弁当
+            </div>
+            </a>
             <a href='https://www.funabansho.jp/' target='_blank' className="more-button second">
             <div className="text">
             海の駅 船番所

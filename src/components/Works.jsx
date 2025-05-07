@@ -61,7 +61,7 @@ const Works = () => {
             福岡未踏プロジェクトページ
             </div>
           </a>
-          <a href='https://mitou-fukuoka.org/works/hosh/' target='_blank' className="more-button">
+          <a href='https://protopedia.net/prototype/4674' target='_blank' className="more-button">
             <div className="text">
             プロトぺディア
             </div>

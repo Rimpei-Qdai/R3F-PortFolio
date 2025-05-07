@@ -58,7 +58,7 @@ const Hobby = () => {
           <div className="activity reverse">
             <div className="activity-description">
               <div className="activity-title">
-                - 100kmウォーク
+                - 100km walk
               </div>
               九大伊都キャンパスから門司港までの100kmを徒歩で移動する。2025年4月に挑戦するも、60km地点で雨によりDNF。6月にリベンジ予定。
             </div>
