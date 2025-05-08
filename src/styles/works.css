@@ -319,7 +319,7 @@
 }
 #twoD-content ul.works-list li.works-item .activity .image-wrapper {
   width: 45%;
-  box-shadow: inset 0px 0px 15px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 15px 8px rgba(0, 0, 0, 0.3);
   background-color: transparent;
 }
 #twoD-content ul.works-list li.works-item .activity .image-wrapper img.activity-log {

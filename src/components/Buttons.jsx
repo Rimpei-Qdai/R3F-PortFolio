@@ -66,15 +66,15 @@ const Buttons = () => {
         }
       } else {
         if(hashName == "works") {
-          moveCamera({x:-4.8, y:4, z:6})
+          moveCamera({x:-6.5, y:6, z:6.5})
         } else if(hashName == "labo") {
-          moveCamera({x:-8, y:3, z:0})
+          moveCamera({x:-5.5, y:5, z:-2})
         } else if(hashName == "hobby") {
-          moveCamera({x:7, y:3.5, z:1})
+          moveCamera({x:6.2, y:3.5, z:-0.5})
         } else if(hashName == "vision") {
-          moveCamera({x:6, y:2.5, z:3.5})
+          moveCamera({x:6.5, y:2.2, z:4.2})
         } else if(hashName == "sns") {
-          moveCamera({x:0, y:1.5, z:15})
+          moveCamera({x:0, y:1.5, z:13.8})
         } else if(hashName == "intro") {
           moveCamera({x:-3, y:9, z:9})
         } else {

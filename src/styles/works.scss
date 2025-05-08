@@ -390,9 +390,9 @@
                 z-index: 1;
                 & .image-wrapper {
                     width: 45%;
-                    -moz-box-shadow: inset 0px 0px 15px 8px rgba(0, 0, 0, 0.5);
-                    -webkit-box-shadow: inset 0px 0px 15px 8px rgba(0, 0, 0, 0.5);
-                    box-shadow: inset 0px 0px 15px 8px rgba(0, 0, 0, 0.5);
+                    -moz-box-shadow: inset 0px 0px 15px 8px rgba(0, 0, 0, 0.3);
+                    -webkit-box-shadow: inset 0px 0px 15px 8px rgba(0, 0, 0, 0.3);
+                    box-shadow: inset 0px 0px 15px 8px rgba(0, 0, 0, 0.3);
                     background-color: transparent;
                     
                     & img.activity-log {
