@@ -1,9 +1,8 @@
 import { Center, Edges, useGLTF, useTexture } from "@react-three/drei";
 import { TextureLoader } from "three";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useFrame } from "react-three-fiber";
 
-useGLTF.preload("/assets/models/Rimpei.glb")
 const textureNames = [
   "Ground_Gate",
   "Logo",
@@ -21,8 +20,10 @@ textureNames.forEach((name) => {
   useTexture.preload(path)
 })
 
+useGLTF.preload("/assets/models/Rimpei_Optimized.glb")
+
 const Island = ({ onRendered }) => {
-  const gltf = useGLTF("/assets/models/Rimpei_Optimized.glb");
+  const gltf = useGLTF("/assets/models/Rimpei_Optimized.glb?v=2", false);
   const nodes = useRef(gltf.nodes)
 
   const brain = useRef()

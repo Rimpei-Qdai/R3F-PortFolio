@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import particleFire from 'three-particle-fire'
 import { useFrame, useThree } from 'react-three-fiber'
 
