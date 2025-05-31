@@ -1,5 +1,5 @@
 // モジュールインポート
-import { Text } from '@react-three/drei'
+import { OrbitControls, Text } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import Island from './Island'
 import Sea from './Sea'

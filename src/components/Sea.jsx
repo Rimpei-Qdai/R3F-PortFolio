@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import * as THREE from "three";
 import { extend, useThree } from "@react-three/fiber";
 import { Water } from "three/examples/jsm/objects/Water2.js";

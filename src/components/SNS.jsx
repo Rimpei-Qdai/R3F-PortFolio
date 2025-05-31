@@ -32,9 +32,9 @@ const SNS = () => {
             <li className="sns-item">
               <a href="https://www.strava.com/athletes/80879326" target="_blank" className="link">Strava</a>
             </li>
-            <li className="sns-item">
+            {/* <li className="sns-item">
               <a href="mailto:info@rimpei-hata.com" target="_blank" className="link">Mail</a>
-            </li>
+            </li> */}
           </ul>
           <div className="footer">© 2025 Rimpei.H</div>
         </div>
