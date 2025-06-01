@@ -8,7 +8,7 @@
   transform: translate(-50%, -150%);
   transition: all 0.8s;
   transition-timing-function: cubic-bezier(0.5, 0.86, 0.57, 1.14);
-  width: 80%;
+  width: 85%;
   max-width: 600px;
   border-radius: 30px;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.314);
@@ -17,7 +17,7 @@
   justify-content: space-between;
 }
 .reat-time-data .warn {
-  font-size: 11px;
+  font-size: 10px;
   width: 80%;
   margin: 0 auto;
   padding-bottom: 1em;
@@ -52,12 +52,12 @@
 }
 .reat-time-data .title {
   text-align: center;
-  margin-top: 1em;
+  margin-top: 0.8em;
   width: 60%;
 }
 .reat-time-data .title p {
   display: inline;
-  font-size: 36px;
+  font-size: 32px;
   font-family: "Line-Font-Eb";
 }
 .reat-time-data .title p:nth-child(2) {
@@ -71,7 +71,7 @@
 }
 .reat-time-data .sub-title {
   color: rgba(0, 0, 0, 0.9);
-  font-size: 24px;
+  font-size: 22px;
   border-bottom: 5px solid transparent; /* 幅を決めて透明にする */
   -o-border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
      border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
@@ -79,7 +79,7 @@
   line-height: 120%;
   font-family: "Line-Font-Eb";
   width: 80%;
-  margin: 0.5em auto 0.5em auto;
+  margin: 0.3em auto 0.5em auto;
 }
 .reat-time-data ul.data {
   width: 80%;
@@ -101,7 +101,7 @@
   width: 90%;
   text-align: start;
   font-family: "Line-Font-Eb";
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
   border-bottom: 5px solid transparent; /* 幅を決めて透明にする */
   -o-border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
      border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
@@ -109,19 +109,19 @@
 }
 .reat-time-data ul.data li.datum .datum-score {
   width: 90%;
-  font-size: 24px;
+  font-size: 22px;
   box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
   font-family: "Line-Font-Eb";
   padding: 0.1em 0;
 }
 .reat-time-data ul.data li.datum .datum-unit {
   width: 90%;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Line-Font-Eb";
   text-align: end;
 }
 .reat-time-data ul.data .message-title {
-  font-size: 22px;
+  font-size: 20px;
   width: -moz-fit-content;
   width: fit-content;
   box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
@@ -137,12 +137,12 @@
   padding: 0.2em;
   text-align: end;
   font-family: "Line-Font-Eb";
-  font-size: 18px;
+  font-size: 16px;
 }
 .reat-time-data ul.data .busy-title {
   position: relative;
   display: inline;
-  margin-top: 0.5em;
+  margin-top: 0.3em;
   width: 100%;
   font-size: 22px;
   font-family: "Line-Font-Eb";
