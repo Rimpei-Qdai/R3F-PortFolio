@@ -93,7 +93,7 @@
   width: 50%;
   flex-wrap: wrap;
   text-align: center;
-  margin-top: 1.5em;
+  margin-top: 0.8em;
 }
 .reat-time-data ul.data li.datum .datum-name {
   position: relative;
@@ -150,7 +150,7 @@
   -o-border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
      border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
   border-image-slice: 1; /* 全体を使う */
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
 }
 .reat-time-data ul.data .busy-title p {
   font-family: "Line-Font-Eb";
