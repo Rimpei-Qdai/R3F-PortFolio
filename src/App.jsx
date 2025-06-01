@@ -166,7 +166,6 @@ function App() {
       </ul>
     <div id="global-container">
       <Loader />
-      <Calender />
       <ContentManager />
       <Experience onLoaded={() => setLoaded(true)} />
     </div>

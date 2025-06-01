@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../styles/now.css'
 import { initializeApp } from "firebase/app";
 import { collection, getDocs, getFirestore, limit, orderBy, query } from 'firebase/firestore'
+import Calender from './Calender';
 
 const Now = () => {
     const [latestItem, setLatestItem] = useState({cal:100, step:300});
@@ -58,6 +59,7 @@ const Now = () => {
         </div>
         <div className="sub-title">今日のりんぺい</div>
         <ul className="data">
+                  <Calender />
             <li className="datum">
                 <div className="datum-name">消費カロリー</div>
                 <div className="datum-score">{ latestItem.cal }</div>
