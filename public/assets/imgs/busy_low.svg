@@ -1,12 +1,21 @@
-<svg width="240" height="31" viewBox="0 0 240 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="30" height="31" fill="#569CD6"/>
-<rect x="42" width="30" height="31" fill="#569CD6"/>
-<rect x="210" width="30" height="31" fill="white"/>
-<rect x="211" y="1" width="28" height="29" stroke="black" stroke-opacity="0.8" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="168" width="30" height="31" fill="white"/>
-<rect x="169" y="1" width="28" height="29" stroke="black" stroke-opacity="0.8" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="126" width="30" height="31" fill="white"/>
-<rect x="127" y="1" width="28" height="29" stroke="black" stroke-opacity="0.8" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="84" width="30" height="31" fill="white"/>
-<rect x="85" y="1" width="28" height="29" stroke="black" stroke-opacity="0.8" stroke-width="2" stroke-dasharray="4 4"/>
+<svg width="260" height="65" viewBox="0 0 260 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="18" width="44" height="31" fill="#569CD6"/>
+<rect x="1" y="19" width="42" height="29" stroke="black" stroke-opacity="0.8" stroke-width="2"/>
+<rect x="42" y="18" width="44" height="31" fill="#569CD6"/>
+<rect x="43" y="19" width="42" height="29" stroke="black" stroke-opacity="0.8" stroke-width="2"/>
+<rect x="210" y="18" width="44" height="31" fill="white"/>
+<rect x="211" y="19" width="42" height="29" stroke="black" stroke-opacity="0.8" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="168" y="18" width="44" height="31" fill="white"/>
+<rect x="169" y="19" width="42" height="29" stroke="black" stroke-opacity="0.8" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="126" y="18" width="44" height="31" fill="white"/>
+<rect x="127" y="19" width="42" height="29" stroke="black" stroke-opacity="0.8" stroke-width="2" stroke-dasharray="4 4"/>
+<mask id="path-11-inside-1_131_111" fill="white">
+<path d="M84 18H128V49H84V18Z"/>
+</mask>
+<path d="M84 18H128V49H84V18Z" fill="white"/>
+<path d="M128 18H129V17H128V18ZM128 49V50H129V49H128ZM84 49V50H85.8333V49V48H84V49ZM89.5 49V50H93.1667V49V48H89.5V49ZM96.8333 49V50H100.5V49V48H96.8333V49ZM104.167 49V50H107.833V49V48H104.167V49ZM111.5 49V50H115.167V49V48H111.5V49ZM118.833 49V50H122.5V49V48H118.833V49ZM126.167 49V50H128V49V48H126.167V49ZM128 49H129V47.0625H128H127V49H128ZM128 43.1875H129V39.3125H128H127V43.1875H128ZM128 35.4375H129V31.5625H128H127V35.4375H128ZM128 27.6875H129V23.8125H128H127V27.6875H128ZM128 19.9375H129V18H128H127V19.9375H128ZM128 18V17H126.167V18V19H128V18ZM122.5 18V17H118.833V18V19H122.5V18ZM115.167 18V17H111.5V18V19H115.167V18ZM107.833 18V17H104.167V18V19H107.833V18ZM100.5 18V17H96.8333V18V19H100.5V18ZM93.1667 18V17H89.5V18V19H93.1667V18ZM85.8333 18V17H84V18V19H85.8333V18ZM128 18H130V16H128V18ZM128 49V51H130V49H128ZM84 49V51H85.8333V49V47H84V49ZM89.5 49V51H93.1667V49V47H89.5V49ZM96.8333 49V51H100.5V49V47H96.8333V49ZM104.167 49V51H107.833V49V47H104.167V49ZM111.5 49V51H115.167V49V47H111.5V49ZM118.833 49V51H122.5V49V47H118.833V49ZM126.167 49V51H128V49V47H126.167V49ZM128 49H130V47.0625H128H126V49H128ZM128 43.1875H130V39.3125H128H126V43.1875H128ZM128 35.4375H130V31.5625H128H126V35.4375H128ZM128 27.6875H130V23.8125H128H126V27.6875H128ZM128 19.9375H130V18H128H126V19.9375H128ZM128 18V16H126.167V18V20H128V18ZM122.5 18V16H118.833V18V20H122.5V18ZM115.167 18V16H111.5V18V20H115.167V18ZM107.833 18V16H104.167V18V20H107.833V18ZM100.5 18V16H96.8333V18V20H100.5V18ZM93.1667 18V16H89.5V18V20H93.1667V18ZM85.8333 18V16H84V18V20H85.8333V18Z" fill="black" fill-opacity="0.8" mask="url(#path-11-inside-1_131_111)"/>
+<line x1="85" y1="49" x2="85" y2="18" stroke="black" stroke-opacity="0.8" stroke-width="2"/>
+<path d="M74.5 0L76.1839 5.18237H81.6329L77.2245 8.38525L78.9084 13.5676L74.5 10.3647L70.0916 13.5676L71.7755 8.38525L67.3671 5.18237H72.8161L74.5 0Z" fill="#569CD6"/>
+<path d="M101.5 28L103.184 33.1824H108.633L104.225 36.3853L105.908 41.5676L101.5 38.3647L97.0916 41.5676L98.7755 36.3853L94.3671 33.1824H99.8161L101.5 28Z" fill="#569CD6"/>
+<path d="M51.5 51L53.1839 56.1824H58.6329L54.2245 59.3853L55.9084 64.5676L51.5 61.3647L47.0916 64.5676L48.7755 59.3853L44.3671 56.1824H49.8161L51.5 51Z" fill="#569CD6"/>
 </svg>

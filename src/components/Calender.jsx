@@ -150,27 +150,27 @@ const Calender = () => {
         
           { (eventsCount + taskCount) == 0 ? (
             <>
-                <div className="busy-title zero">忙しさ：0</div>
+                <div className="busy-title zero">忙しさ：<p>0</p></div>
                 <img className='busy_level' src="/assets/imgs/busy_zero.svg" alt="" />
               </>
             ) : (eventsCount + taskCount) == 1 ? (
               <>
-                <div className="busy-title low">忙しさ：低</div>
+                <div className="busy-title low">忙しさ：<p>低</p></div>
                 <img className='busy_level' src="/assets/imgs/busy_low.svg" alt="" />
               </>
             ) :  (eventsCount + taskCount) == 2 ? (
               <>
-                <div className="busy-title mid">忙しさ：中</div>
+                <div className="busy-title mid">忙しさ： <p>中</p></div>
                 <img className='busy_level' src="/assets/imgs/busy_mid.svg" alt="" />
               </>
             ) : (eventsCount + taskCount) >= 3 ? (
               <>
-                <div className="busy-title high">忙しさ：高</div>
+                <div className="busy-title high">忙しさ： <p>高</p></div>
                 <img className='busy_level' src="/assets/imgs/busy_high.svg" alt="" />
               </>
             ) : (
               <>
-                <div className="busy-title mid">忙しさ：中</div>
+                <div className="busy-title mid">忙しさ： <p>中</p></div>
                 <img className='busy_level' src="/assets/imgs/busy_mid.svg" alt="" />
               </>
             )

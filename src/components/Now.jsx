@@ -57,18 +57,18 @@ const Now = () => {
             <span></span>
             <span></span>
         </div>
-        <div className="sub-title">今日のりんぺい</div>
+        <div className="sub-title">今日のりんぺいは</div>
         <ul className="data">
                   <Calender />
             <li className="datum">
-                <div className="datum-name">消費カロリー</div>
+                <div className="datum-name">消費</div>
                 <div className="datum-score">{ latestItem.cal }</div>
                 <div className="datum-unit">kcal</div>
             </li>
             <li className="datum">
                 <div className="datum-name">歩数</div>
                 <div className="datum-score">{ latestItem.step }</div>
-                <div className="datum-unit">歩</div>
+                <div className="datum-unit">steps</div>
             </li>
             
         </ul>

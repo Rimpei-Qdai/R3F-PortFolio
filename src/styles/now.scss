@@ -17,7 +17,7 @@
 
     & .warn {
         font-size: 11px;
-        width: 85%;
+        width: 80%;
         margin: 0 auto;
         padding-bottom: 1em;
     }
@@ -83,29 +83,49 @@
         line-height: 120%;
         font-family: "Line-Font-Eb";
         width: 80%;
-        margin: .5em auto 0 auto;
+        margin: .5em auto .5em auto;
     }
 
     & ul.data {
         width: 80%;
-        margin: 1em auto 3em auto;
+        margin: 0 auto 1em auto;
         color: rgba(0, 0, 0, 0.9);
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
         & li.datum {
-            display: flex;
+            width: 50%;
+            // display: flex;
             flex-wrap: wrap;
             text-align: center;
             margin-top: 1.5em;
             & .datum-name {
-                font-size: 20px;
-                width: 100%;
+                position: relative;
+                font-size: 22px;
+                width: 90%;
                 text-align: start;
                 font-family: "Line-Font-Eb";
+                margin-bottom: .5em;
                 
+                // &::after {
+                // content: "";
+                // width: 2.3em;
+                // height: .5em;
+                // bottom: .3em;
+                // left: -0.1em;
+                // position: absolute;
+                // background: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+                // z-index: -1;
+                // }
+                border-bottom: 5px solid transparent; /* 幅を決めて透明にする */
+                border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+                border-image-slice: 1; /* 全体を使う */
             }
             
             & .datum-score {
-                width: 60%;
-                font-size: 30px;
+                // margin-top: .8em;
+                width: 90%;
+                font-size: 24px;
                 box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
                 font-family: "Line-Font-Eb";
                 padding: .1em 0;
@@ -113,19 +133,90 @@
             }
             
             & .datum-unit {
-                width: 40%;
-                font-size: 28px;
+                width: 90%;
+                font-size: 20px;
                 font-family: "Line-Font-Eb";
-                padding: .1em 0;
-                line-height: 180%;
+                text-align: end;
                 
             }
 
         }
+
+        //予定と忙しさのデザイン
+        & .message-title {
+            font-size: 22px;
+            width: fit-content;
+            box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+            font-family: "Line-Font-Eb";
+            padding: .2em .8em;
+            & a {
+                color: #569CD6;
+                font-family: "Line-Font-Eb";
+            }
+        }
+        
+        & .message-sub-title {
+            width: 100%;
+            padding: .2em;
+            text-align: end;
+            font-family: "Line-Font-Eb";
+            font-size: 18px;
+        }
+        
+        & .busy-title {
+            position: relative;
+            display: inline;
+            margin-top: .5em;
+            width: 100%;
+            font-size: 22px;
+            font-family: "Line-Font-Eb";
+            border-bottom: 5px solid transparent; /* 幅を決めて透明にする */
+            border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+            border-image-slice: 1; /* 全体を使う */
+            margin-bottom: .5em;
+            // &::after {
+            //     content: "";
+            //     width: 3.3em;
+            //     height: .5em;
+            //     bottom: .3em;
+            //     left: -0.1em;
+            //     position: absolute;
+            //     background: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+            //     z-index: -1;
+            // }
+            & p {
+                font-family: "Line-Font-Eb";
+                display: inline;
+            }
+            
+            &.high {
+                & p {
+                    color: #DA70D6;
+                }
+            }
+            &.low {
+                & p {
+                color: #569CD6;
+                }
+            }
+            &.mid {
+                & p {
+                    color: #FFD602;
+                }
+            }
+        }
+        & img.busy_level {
+            width: 100%;
+            object-fit: cover;
+            // margin-top: 1em;
+
+        }
+
     }
 }
 
 
+//PCデザイン
 @media screen and (min-width: 1000px) {
     .reat-time-data {
 
@@ -155,30 +246,41 @@
         }
     
         & .sub-title {
-            font-size: 40px;
+            font-size: 36px;
         }
     
         & ul.data {
             & li.datum {
 
                 & .datum-name {
-                    font-size: 32px;
+                    font-size: 36px;
 
                 }
                 
                 & .datum-score {
-                    font-size: 40px;
+                    font-size: 36px;
                     
                     
                 }
                 
                 & .datum-unit {
-                    font-size: 40px;
+                    font-size: 32px;
 
                     
                 }
     
             }
+            & .busy-title {
+                font-size: 36px;
+            }
+
+            & .message-title {
+                font-size:36px;
+            }
+            & .message-sub-title {
+                font-size: 28px;
+            }
+
         }
     }
     
