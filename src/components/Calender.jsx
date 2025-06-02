@@ -126,7 +126,7 @@ const Calender = () => {
             </>
           ) : (
             <>
-              {mainEvent == "イベント" || mainEvent == "インターン" ? (
+              {mainEvent == "イベント" ? (
                 <>
                   <div className='message-title'>
                     <a href={ location } target='_blank'>
