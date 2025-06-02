@@ -204,6 +204,14 @@
                     color: #FFD602;
                 }
             }
+
+            &.max {
+                & p {
+                    background: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
         }
         & img.busy_level {
             width: 100%;
@@ -234,12 +242,14 @@
           
         }
 
-        & .back-button {
+        & .now-back-button {
+            padding-top: 1.5em;
+            margin-right: 1em;
             width: 80px;
             height: 80px;
             & span {
                 width: 55px;
-                height: 8px;
+                height: 5px;
                 padding-top: .2em;
 
             }

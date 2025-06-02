@@ -165,6 +165,11 @@
 .reat-time-data ul.data .busy-title.mid p {
   color: #FFD602;
 }
+.reat-time-data ul.data .busy-title.max p {
+  background: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .reat-time-data ul.data img.busy_level {
   width: 100%;
   -o-object-fit: cover;
@@ -182,13 +187,15 @@
   .reat-time-data .title p {
     font-size: 48px;
   }
-  .reat-time-data .back-button {
+  .reat-time-data .now-back-button {
+    padding-top: 1.5em;
+    margin-right: 1em;
     width: 80px;
     height: 80px;
   }
-  .reat-time-data .back-button span {
+  .reat-time-data .now-back-button span {
     width: 55px;
-    height: 8px;
+    height: 5px;
     padding-top: 0.2em;
   }
   .reat-time-data .sub-title {

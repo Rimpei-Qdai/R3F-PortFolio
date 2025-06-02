@@ -3,13 +3,13 @@ import authData from '../Config'
 
 const Calender = () => {
     let [events, setEvents] = useState({
-      遊び:0,
+      講義:0,
       企業面接:0,
-      イベント:0,
-      自転車:0,
       研究活動:0,
+      自転車:0,
+      イベント:0,
       インターン:0,
-      講義:0
+      遊び:0,
     })
 
     const eventMessage = {
@@ -106,6 +106,8 @@ const Calender = () => {
         }
         
         fetchData()
+        console.log(mainEvent)
+
         
       }, [ ])
 
@@ -163,10 +165,15 @@ const Calender = () => {
                 <div className="busy-title mid">忙しさ： <p>中</p></div>
                 <img className='busy_level' src="/assets/imgs/busy_mid.svg" alt="" />
               </>
-            ) : (eventsCount + taskCount) >= 3 ? (
+            ) : (eventsCount + taskCount) >= 3 && (eventsCount + taskCount) < 4 ? (
               <>
                 <div className="busy-title high">忙しさ： <p>高</p></div>
                 <img className='busy_level' src="/assets/imgs/busy_high.svg" alt="" />
+              </>
+            ) : (eventsCount + taskCount) >= 4 ? (
+              <>
+                <div className="busy-title max">忙しさ： <p>MAX</p></div>
+                <img className='busy_level' src="/assets/imgs/busy_max.svg" alt="" />
               </>
             ) : (
               <>
