@@ -75,6 +75,8 @@ ul.menu-list {
   list-style: none;
   margin-top: 3em;
   margin-right: 3em;
+  overflow-y: scroll !important;
+  height: 100%;
 }
 ul.menu-list .title {
   font-size: 36px;
@@ -115,6 +117,9 @@ ul.menu-list li.menu-item a .menu-title {
 ul.menu-list li.menu-item a .sub-title {
   color: rgba(0, 0, 0, 0.8);
   font-size: 14px;
+}
+ul.menu-list.open {
+  overflow-y: scroll;
 }
 ul.menu-list.open li.menu-item {
   transform: none;

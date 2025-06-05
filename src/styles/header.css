@@ -15,8 +15,8 @@
   opacity: 0;
 }
 .header .header-logo {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   margin-top: 1.5em;
   margin-left: 1em;
   cursor: pointer;
@@ -34,12 +34,20 @@
 .header .header-logo svg {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 140px;
+  width: 120px;
   border-radius: 80px;
   background-color: rgba(0, 0, 0, 0.824);
   padding: 0.3em;
   margin-top: -2px;
   margin-left: -1.5px;
+}
+.header .header-logo .click_me {
+  position: absolute;
+  top: 20%;
+  left: 105%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 200px;
 }
 .header .hamburger-menu {
   touch-action: auto;
@@ -128,6 +136,9 @@
   .header .header-logo svg {
     width: 70px;
     padding: 0.2em;
+  }
+  .header .header-logo .click_me {
+    display: none;
   }
 }
 @media screen and (min-width: 1000px) {

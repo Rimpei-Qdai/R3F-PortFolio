@@ -41,8 +41,9 @@ const Header = () => {
         <polygon className="cls-3" points="468.18 960.61 342.14 1088.51 679.28 1088.51 468.18 960.61"/>
         <polygon className="cls-3" points="1214.49 959.99 1001.52 1086.65 1344.25 1086.65 1214.49 959.99"/>
       </svg>
+      <img className='click_me' src="/assets/imgs/click_me.svg" alt="" />
       </div>
-      <div className="hamburger-menu" onClick={(el) => {
+      <div className="hamburger-menu" onClick={() => {
           const globalContainer = document.querySelector("#global-container")
           globalContainer.classList.toggle("open")
 
@@ -54,7 +55,6 @@ const Header = () => {
 
           const menuList = document.querySelector(".menu-list")
           menuList.classList.toggle('open')
-
 
       }}>
         <span></span><span></span><span></span>

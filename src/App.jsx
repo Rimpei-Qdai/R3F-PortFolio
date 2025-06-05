@@ -1,11 +1,8 @@
-import { Suspense, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './app.css'
 import Experience from "./components/Experience"
 import Loader from './Loader'
-import { Route, Routes } from 'react-router-dom'
-import Works from './components/Works'
 import ContentManager from './components/ContentManager'
-import Calender from './components/Calender'
 
 
 function App() {
@@ -35,7 +32,6 @@ function App() {
 
           const menuList = document.querySelector(".menu-list")
           menuList.classList.toggle('open')
-
       }}></div>
       
       <ul className="menu-list">
