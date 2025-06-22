@@ -16,6 +16,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     overflow-y: scroll;
+    scrollbar-color: rgba(0, 0, 0, 0.6) transparent;
 
     & .warn {
         font-size: 10px;
