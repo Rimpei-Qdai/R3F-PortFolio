@@ -3,20 +3,12 @@ import '../styles/now.css'
 import { initializeApp } from "firebase/app";
 import { collection, getDocs, getFirestore, limit, orderBy, query } from 'firebase/firestore'
 import Calender from './Calender';
+import firebaseConfig from '../FIrebaseConfig';
 
 const Now = () => {
     const [latestItem, setLatestItem] = useState({cal:100, step:300});
 
     const getData = async () => {
-        const firebaseConfig = {
-            apiKey: "AIzaSyBfN_XVjsEqI21JgZCoNjbZqZqxhcf3Fjc",
-            authDomain: "bio-data-portfolio.firebaseapp.com",
-            projectId: "bio-data-portfolio",
-            storageBucket: "bio-data-portfolio.firebasestorage.app",
-            messagingSenderId: "901365318859",
-            appId: "1:901365318859:web:cfbe35d660a6b5c714074e",
-            measurementId: "G-C2XMCW24X3"
-        };
     
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
