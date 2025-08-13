@@ -21,6 +21,10 @@ const Now = () => {
         )
 
         const querySnapshot = await getDocs(q)
+
+        fetch("http://localhost:8080/api/nowdata").then(res => res.text()).then((text) => {
+            console.log(text)
+        })
         setLatestItem(querySnapshot.docs[0].data())
 
     }
