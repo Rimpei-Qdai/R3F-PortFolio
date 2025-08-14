@@ -107,6 +107,9 @@ const Calender = () => {
         fetch("http://localhost:8080/api/calendar").then(res => res.text()).then((text) => {
             console.log(text)
         })
+        fetch("http://localhost:8080/api/news").then(res => res.text()).then((text) => {
+            console.log(text)
+        })
         
         fetchData()
         console.log(mainEvent)

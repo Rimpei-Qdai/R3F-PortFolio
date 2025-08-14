@@ -9,7 +9,7 @@ import (
 )
 
 // SetupRouter は、ルーターを設定します
-func SetupRouter(healthHandler *handlers.HealthHandler, calendarHandler *handlers.CalendarHandler, sleepTimeHandler * handlers.SleepTimeHandler) *mux.Router {
+func SetupRouter(healthHandler *handlers.HealthHandler, calendarHandler *handlers.CalendarHandler, sleepTimeHandler *handlers.SleepTimeHandler, newsHandler *handlers.NewsHandler) *mux.Router {
 	router := mux.NewRouter()
 
 	// CORS設定
@@ -19,6 +19,7 @@ func SetupRouter(healthHandler *handlers.HealthHandler, calendarHandler *handler
 	router.HandleFunc("/api/nowdata", healthHandler.GetNowData).Methods("GET")
 	router.HandleFunc("/api/calendar", calendarHandler.GetTodayEvents).Methods("GET")
 	router.HandleFunc("/api/sleeptime", sleepTimeHandler.GetTodaySleepTime).Methods("GET")
+	router.HandleFunc("/api/news", newsHandler.GetNewsData).Methods("GET")
 
 	return router
 }

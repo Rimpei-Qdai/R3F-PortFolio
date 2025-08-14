@@ -52,6 +52,24 @@ func (f *FirebaseClient) GetLatestData(collection string) (map[string]interface{
 	return doc.Data(), nil
 }
 
+func (f *FirebaseClient) GetAllData(collection string) ([]map[string]interface{}, error) {
+	docs := f.client.Collection(collection).OrderBy("date", firestore.Desc).Documents(f.ctx)
+	
+	var results []map[string]interface{}
+	for {
+		doc, err := docs.Next()
+		if err == iterator.Done {
+			break
+		}
+		if err != nil {
+			return nil, fmt.Errorf("failed to get document: %w", err)
+		}
+		results = append(results, doc.Data())
+	}
+	
+	return results, nil
+}
+
 // Close は、Firestoreクライアントを閉じます
 func (f *FirebaseClient) Close() error {
 	return f.client.Close()
