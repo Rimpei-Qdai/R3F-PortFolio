@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import authData from '../Config'
-
 const Calender = () => {
 
     const [ todayEvent, setTodayEvent ] = useState(false)

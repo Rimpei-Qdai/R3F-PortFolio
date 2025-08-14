@@ -1,40 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/now.css'
-import { initializeApp } from "firebase/app";
-import { collection, getDocs, getFirestore, limit, orderBy, query } from 'firebase/firestore'
 import Calender from './Calender';
-import firebaseConfig from '../FIrebaseConfig';
 
 const Now = () => {
     const [latestItem, setLatestItem] = useState({cal:100, step:300});
 
-    const getData = async () => {
-    
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-
-        const q = query(
-            collection(db, "default"),
-            orderBy("fetchedAt", "desc"),
-            limit(1)
-        )
-
-        const querySnapshot = await getDocs(q)
-
-        fetch("http://localhost:8080/api/nowdata").then(res => res.text()).then((text) => {
-            console.log(text)
-        })
-        fetch("http://localhost:8080/api/sleeptime").then(res => res.text()).then((text) => {
-            console.log(text)
-        })
-        setLatestItem(querySnapshot.docs[0].data())
-
-    }
-
     useEffect(() => {
-        
-        getData()
+        fetch("http://localhost:8080/api/nowdata").then(res => res.json()).then((data) => {
+            console.log(data)
+            setLatestItem(data)
+        })
+        fetch("http://localhost:8080/api/sleeptime").then(res => res.json()).then((text) => {
+            console.log(text)
+        })
+        // getData()
     }, [])
 
 
