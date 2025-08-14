@@ -140,6 +140,25 @@ function App() {
       </a>
         </li>
         <li className="menu-item">
+          <a href="#news" onClick={() => {
+          const globalContainer = document.querySelector("#global-container")
+          globalContainer.classList.toggle("open")
+          const globalCover = document.querySelector(".global-cover")
+          globalCover.classList.toggle("open")
+          const hamburgerButton = document.querySelector(".hamburger-menu")
+          hamburgerButton.classList.toggle("open")
+
+          const menuList = document.querySelector(".menu-list")
+          menuList.classList.toggle('open')
+
+      }}>
+        <div className="menu-title">
+          NEWS
+        </div>
+        <div className="sub-title">お知らせ</div>
+      </a>
+        </li>
+        <li className="menu-item">
           <a href="#sns" onClick={() => {
           const globalContainer = document.querySelector("#global-container")
           globalContainer.classList.toggle("open")

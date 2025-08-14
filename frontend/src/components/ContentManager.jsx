@@ -8,6 +8,7 @@ import SNS from './SNS'
 import Header from './Header'
 import Intro from './Intro'
 import Now from './Now'
+import News from './News'
 
 const ContentManager = () => {
   const [content, setContent] = useState(useLocation().hash.slice(1))
@@ -57,6 +58,8 @@ const ContentManager = () => {
         <SNS />
       ) : content == "intro" ? (
         <Intro />
+      ) : content == "news" ? (
+        <News />
       ) : (
         <></>
       )

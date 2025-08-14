@@ -142,4 +142,7 @@ ul.menu-list.open li.menu-item:nth-child(6) {
 }
 ul.menu-list.open li.menu-item:nth-child(7) {
   transition-delay: 0.35s;
+}
+ul.menu-list.open li.menu-item:nth-child(8) {
+  transition-delay: 0.4s;
 }/*# sourceMappingURL=app.css.map */
