@@ -25,6 +25,9 @@ const Now = () => {
         fetch("http://localhost:8080/api/nowdata").then(res => res.text()).then((text) => {
             console.log(text)
         })
+        fetch("http://localhost:8080/api/sleeptime").then(res => res.text()).then((text) => {
+            console.log(text)
+        })
         setLatestItem(querySnapshot.docs[0].data())
 
     }

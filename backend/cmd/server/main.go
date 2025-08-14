@@ -28,13 +28,15 @@ func main() {
 	// ユースケースの初期化
 	healthUseCase := usecases.NewHealthUseCase(firebaseClient)
 	calendarUseCase := usecases.NewCalendarUseCase(googleCalendarClient)
+	sleepTimeUseCase := usecases.NewSleepTimeUseCase(firebaseClient)
 
 	// ハンドラーの初期化（カレンダーIDはgoogleCalendarClientから取得）
 	healthHandler := handlers.NewHealthHandler(healthUseCase)
 	calendarHandler := handlers.NewCalendarHandler(calendarUseCase, googleCalendarClient.GetCalendarID())
+	sleepTimeHandler := handlers.NewSleepTimeHandler(sleepTimeUseCase)
 
 	// ルーターの設定
-	router := server.SetupRouter(healthHandler, calendarHandler)
+	router := server.SetupRouter(healthHandler, calendarHandler, sleepTimeHandler)
 
 	// サーバー起動
 	fmt.Println("Server starting on :8080")
