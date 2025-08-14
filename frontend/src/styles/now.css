@@ -98,6 +98,31 @@
   text-align: center;
   margin-top: 0.8em;
 }
+.reat-time-data ul.data li.datum.long {
+  width: 100%;
+}
+.reat-time-data ul.data li.datum.long .datum-name {
+  border-bottom: 5px solid transparent; /* 幅を決めて透明にする */
+  -o-border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+     border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+  border-image-slice: 1; /* 全体を使う */
+}
+.reat-time-data ul.data li.datum.long .sleep {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.reat-time-data ul.data li.datum.long .sleep .datum-score {
+  width: 15%;
+  display: inline;
+  padding: 0.1em 0.5em;
+}
+.reat-time-data ul.data li.datum.long .sleep .datum-unit {
+  width: 20%;
+  margin: 0.2em;
+  text-align: start;
+  transform: translateY(20%);
+}
 .reat-time-data ul.data li.datum .datum-name {
   position: relative;
   font-size: 22px;

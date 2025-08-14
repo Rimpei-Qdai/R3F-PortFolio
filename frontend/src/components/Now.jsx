@@ -4,14 +4,16 @@ import Calender from './Calender';
 
 const Now = () => {
     const [latestItem, setLatestItem] = useState({cal:100, step:300});
+    const [sleepTime, setSleepTime] = useState({hour: 7, minutes:28})
 
     useEffect(() => {
         fetch("http://localhost:8080/api/nowdata").then(res => res.json()).then((data) => {
             console.log(data)
             setLatestItem(data)
         })
-        fetch("http://localhost:8080/api/sleeptime").then(res => res.json()).then((text) => {
-            console.log(text)
+        fetch("http://localhost:8080/api/sleeptime").then(res => res.json()).then((data) => {
+            setSleepTime(data)
+            console.log(data)
         })
         // getData()
     }, [])
@@ -47,6 +49,16 @@ const Now = () => {
                 <div className="datum-name">歩数</div>
                 <div className="datum-score">{ latestItem.step }</div>
                 <div className="datum-unit">steps</div>
+            </li>
+            <li className="datum long">
+                <div className="datum-name">睡眠時間</div>
+                <div className="sleep">
+                    <div className="datum-score">{ sleepTime.hour }</div>
+                    <div className="datum-unit">時間</div>
+                    <div className="datum-score">{ sleepTime.minutes }</div>
+                    <div className="datum-unit">分</div>
+
+                </div>
             </li>
             
         </ul>

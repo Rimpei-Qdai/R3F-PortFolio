@@ -102,6 +102,36 @@
             flex-wrap: wrap;
             text-align: center;
             margin-top: .8em;
+
+            &.long {
+                width: 100%;
+                & .datum-name {
+                    border-bottom: 5px solid transparent; /* 幅を決めて透明にする */
+                    border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
+                    border-image-slice: 1; /* 全体を使う */
+                }
+
+                & .sleep {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    // justify-content: space-between;
+                    & .datum-score {
+                        width: 15%;
+                        display: inline;
+                        padding: .1em .5em;
+                    }
+    
+                    & .datum-unit { 
+                        width: 20%;
+                        margin: .2em;
+                        text-align: start;
+                        transform: translateY(20%);
+    
+                    }
+                }
+
+            }
             & .datum-name {
                 position: relative;
                 font-size: 22px;
