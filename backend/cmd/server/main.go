@@ -1,0 +1,44 @@
+package main
+
+import (
+	"fmt"
+	"log"
+	"net/http"
+
+	"backend/domain/usecases"
+	"backend/infrastructure/external"
+	"backend/infrastructure/server"
+	"backend/interfaces/handlers"
+)
+
+func main() {
+	// Firebase クライアントの初期化
+	firebaseClient, err := external.NewFirebaseClient("infrastructure/config/firebaseAPIKey.json")
+	if err != nil {
+		log.Fatalf("Failed to initialize Firebase client: %v", err)
+	}
+	defer firebaseClient.Close()
+
+	// Google Calendar クライアントの初期化
+	googleCalendarClient, err := external.NewGoogleCalendarClient("infrastructure/config/calendarAPIKey.json")
+	if err != nil {
+		log.Fatalf("Failed to initialize Google Calendar client: %v", err)
+	}
+
+	// ユースケースの初期化
+	healthUseCase := usecases.NewHealthUseCase(firebaseClient)
+	calendarUseCase := usecases.NewCalendarUseCase(googleCalendarClient)
+
+	// ハンドラーの初期化（カレンダーIDはgoogleCalendarClientから取得）
+	healthHandler := handlers.NewHealthHandler(healthUseCase)
+	calendarHandler := handlers.NewCalendarHandler(calendarUseCase, googleCalendarClient.GetCalendarID())
+
+	// ルーターの設定
+	router := server.SetupRouter(healthHandler, calendarHandler)
+
+	// サーバー起動
+	fmt.Println("Server starting on :8080")
+	if err := http.ListenAndServe(":8080", router); err != nil {
+		log.Fatalf("Server failed to start: %v", err)
+	}
+}

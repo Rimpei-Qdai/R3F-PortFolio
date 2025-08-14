@@ -1,55 +1,58 @@
-package firebase 
-
+package external
 
 import (
 	"context"
-    "fmt"
+	"fmt"
 
-    "cloud.google.com/go/firestore"
-    firebase "firebase.google.com/go"
-    "google.golang.org/api/option"
+	"cloud.google.com/go/firestore"
+	firebase "firebase.google.com/go"
+	"google.golang.org/api/iterator"
+	"google.golang.org/api/option"
 )
 
-type Client struct {
-	firestoreClient *firestore.Client
+// FirebaseClient は、Firebaseクライアントをラップします
+type FirebaseClient struct {
+	client *firestore.Client
+	ctx    context.Context
 }
 
-func NewClient(filePath string) (*Client, error) {
+// NewFirebaseClient は、新しいFirebaseClientを作成します
+func NewFirebaseClient(credentialsPath string) (*FirebaseClient, error) {
 	ctx := context.Background()
-	sa := option.WithCredentialsFile(filePath)
-
+	
+	sa := option.WithCredentialsFile(credentialsPath)
 	app, err := firebase.NewApp(ctx, nil, sa)
-    if err != nil {
-        return nil, fmt.Errorf("Firebase接続エラー: %v", err)
-    }
+	if err != nil {
+		return nil, fmt.Errorf("failed to initialize Firebase app: %w", err)
+	}
 
-    client, err := app.Firestore(ctx)
-    if err != nil {
-        return nil, fmt.Errorf("Firestore取得エラー: %v", err)
-    }
+	client, err := app.Firestore(ctx)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create Firestore client: %w", err)
+	}
 
-	return &Client{firestoreClient: client}, nil
-
+	return &FirebaseClient{
+		client: client,
+		ctx:    ctx,
+	}, nil
 }
 
-func (c *Client) GetLatestData(ctx context.Context, collection string) (map[string]interface{}, error) {
-	col := c.firestoreClient.Collection(collection).OrderBy("fetchedAt", firestore.Desc).Limit(1).Documents(ctx)
-	doc, err := collection.Next()
+// GetLatestData は、指定されたコレクションから最新のデータを取得します
+func (f *FirebaseClient) GetLatestData(collection string) (map[string]interface{}, error) {
+	docs := f.client.Collection(collection).OrderBy("fetchedAt", firestore.Desc).Limit(1).Documents(f.ctx)
 
+	doc, err := docs.Next()
 	if err == iterator.Done {
-		fmt.Println("No data found")
-		return
+		return nil, fmt.Errorf("no data found")
 	}
 	if err != nil {
-		fmt.Printf("Error getting document: %v\n", err)
-		return
+		return nil, fmt.Errorf("failed to get document: %w", err)
 	}
-	//データを取得
-	data := doc.Data()
 
-	return data
+	return doc.Data(), nil
 }
 
-func (c *Client) Close() error {
-    return c.firestoreClient.Close()
+// Close は、Firestoreクライアントを閉じます
+func (f *FirebaseClient) Close() error {
+	return f.client.Close()
 }
