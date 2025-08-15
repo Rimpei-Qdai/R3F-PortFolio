@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import '../styles/news.css'
 
 const News = () => {
     const [ news, setNews ] = useState(false)
@@ -14,11 +15,10 @@ const News = () => {
       
         <div id="twoD-content" className='news'>
         <h2 className="title">
-            <p>I</p>
             <p>N</p>
-            <p>T</p>
-            <p>R</p>
-            <p>O</p>
+            <p>E</p>
+            <p>W</p>
+            <p>S</p>
         </h2>
         <a href='#' className="back-button" onClick={() => {
             const sectionDOM = document.querySelector('#twoD-content')
@@ -30,17 +30,19 @@ const News = () => {
 
         { news ? (
         <>
-        <ul>
+        <ul className='news-list'>
             {
-                news.map((el) => {
-                    return <>
-                    <li>
-                        <div>{ el.title }</div>
-                        <div>{ el.url }</div>
-                        <div>{ el.date }</div>
+                news.map((el, index) => (
+                      <li className='news-item' key={ index }>
+                        <div className='news-date'>{ el.date }</div>
+                        <div className='news-title'>{ el.title }BEENOS株式会社様のインターンに参加しました！</div>
+                        <a className='detail-button' target='_blank' href={ el.url }>
+                          <div className="text">
+                            詳しく見る
+                          </div>
+                        </a>
                     </li>
-                    </>
-                }) 
+                )) 
             }
         </ul>
         </>

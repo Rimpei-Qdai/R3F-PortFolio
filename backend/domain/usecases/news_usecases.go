@@ -48,7 +48,7 @@ func (h *NewsUseCase) GetNewsData() (*entities.NewsResponse, error) {
 				news.Date = v
 			case time.Time:
 				// time.Time型の場合、文字列に変換
-				news.Date = v.Format("2006-01-02 15:04:05")
+				news.Date = v.Format("2006/01/02")
 			default:
 				// その他の型の場合、文字列変換を試行
 				news.Date = fmt.Sprintf("%v", v)
