@@ -20,6 +20,7 @@ const Experience = ({ onLoaded }) => {
   
 
   const [isRenderd, setIsRendered] = useState(false)
+  const [ isRenderedShokora, setIsRenderedShokora ] = useState(false)
   const hashName = useLocation().hash.slice(1)
   const [cameraPosition, setCameraPosition] = useState(new THREE.Vector3(2.5611305471454915, 8.789112370409582, 24.548538336427537))
 
@@ -34,11 +35,11 @@ const Experience = ({ onLoaded }) => {
       }
     }
     setTimeout(() => {
-      if(isRenderd) {
+      if(isRenderd && isRenderedShokora) {
         onLoaded()
       }
     }, 1000)
-  }, [ isRenderd ])
+  }, [ isRenderd, isRenderedShokora ])
   return (
     <>
     <Canvas
@@ -54,7 +55,7 @@ const Experience = ({ onLoaded }) => {
     >
         <color args={ [0x74C2E8] }  attach="background" />
         <Island onRendered={ () => setIsRendered(true) }/>
-        <Shokora />
+        <Shokora onRendered={ () => setIsRenderedShokora(true) } />
         <Sea />
         <Fire />
         { window.innerWidth <= 600 ? (
@@ -114,7 +115,7 @@ const Experience = ({ onLoaded }) => {
           // maxAzimuthAngle={ Math.PI / 36 }
           // rotateSpeed={ 0.05 }
         /> */}
-        <OrbitControls />
+        {/* <OrbitControls /> */}
 
         { isRenderd ? (
       <>

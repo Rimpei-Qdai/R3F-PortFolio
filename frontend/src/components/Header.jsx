@@ -8,7 +8,7 @@ const Header = () => {
 
   useEffect(() => {
     const headerDOM = document.querySelector('.header')
-    if (hashName == "works" || hashName == "labo" || hashName == "hobby" || hashName == "vision" || hashName == "sns" || hashName == "intro" ) {
+    if (hashName == "works" || hashName == "labo" || hashName == "hobby" || hashName == "vision" || hashName == "sns" || hashName == "intro" || hashName == "news"  ) {
       headerDOM.classList.add('unview')
     } else {
       headerDOM.classList.remove('unview')

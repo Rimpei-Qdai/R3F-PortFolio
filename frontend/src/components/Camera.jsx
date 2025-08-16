@@ -36,10 +36,12 @@ const Camera = () => {
         setTargetCameraLookAt(new THREE.Vector3(-1.5,  0,  0.8))
       } else if(hashName == "sns") {
         setTargetCameraLookAt(new THREE.Vector3(-1,  1.5,  10.5))
+      } else if(hashName == "news") {
+        setTargetCameraLookAt(new THREE.Vector3(13.5,  2.3,  -0.4))
       } else {
         setTargetCameraLookAt(new THREE.Vector3(2.2,  9,  -7))
       }
-    } else{
+    } else {
       if(hashName == "works") {
         setTargetCameraLookAt(new THREE.Vector3(-18, -1, 1))
       } else if(hashName == "labo") {
@@ -52,8 +54,10 @@ const Camera = () => {
         setTargetCameraLookAt(new THREE.Vector3(-0.25,  0.9,  11.8))
       } else if(hashName == "intro") {
         setTargetCameraLookAt(new THREE.Vector3(-4.5,  0,  1))
+      } else if(hashName == "news") {
+        setTargetCameraLookAt(new THREE.Vector3(13.5,  2.3,  -0.4))
       } else {
-        setTargetCameraLookAt(new THREE.Vector3(0,  - 1,  4.5))
+        setTargetCameraLookAt(new THREE.Vector3(0,  - 1,  4))
       }
     }
   }, [ ])
@@ -72,7 +76,9 @@ const Camera = () => {
         setTargetCameraLookAt(new THREE.Vector3(-1,  1.5,  10.5))
       } else if(event.srcElement.location.hash.slice(1) == "intro") {
         setTargetCameraLookAt(new THREE.Vector3(-1.5,  0,  0.8))
-      }  else {
+      } else if(event.srcElement.location.hash.slice(1) == "news") {
+        setTargetCameraLookAt(new THREE.Vector3(13.5,  2.3,  -0.4))
+      } else {
         setTargetCameraLookAt(new THREE.Vector3(2.2,  9,  -7))
       }
     } else {
@@ -88,7 +94,9 @@ const Camera = () => {
         setTargetCameraLookAt(new THREE.Vector3(-0.25,  0.9,  11.8))
       } else if(event.srcElement.location.hash.slice(1) == "intro") {
         setTargetCameraLookAt(new THREE.Vector3(-4.5,  0,  1))
-      } else {
+      } else if(event.srcElement.location.hash.slice(1) == "news") {
+        setTargetCameraLookAt(new THREE.Vector3(13.5,  2.3,  -0.4))
+      }  else {
         setTargetCameraLookAt(new THREE.Vector3(0,  - 1,  4.5))
       }
     }

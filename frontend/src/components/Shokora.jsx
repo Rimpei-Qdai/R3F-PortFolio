@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { TextureUtils } from 'three';
 import { TextureLoader } from "three";
 
-const Shokora = () => {
+const Shokora = ({ onRendered }) => {
       const gltf = useGLTF("/assets/models/Shokora.glb?v=2", false);
       const nodes = useRef(gltf.nodes)
 
@@ -15,12 +15,12 @@ const Shokora = () => {
         const loader = new TextureLoader();
         loader.load("/assets/textures/Optimized/Shokora.webp", (texture) => {
             texture.flipY = false
-            console.log(nodes)
             setTexture(texture)
-            console.log(texture)
         })
 
         setLoaded(true)
+        onRendered()
+
 
       }, [ ])
 
@@ -29,16 +29,17 @@ const Shokora = () => {
     {
         loaded ? (
             <>
-                <Center>
+                {/* <Center> */}
                     <mesh
                         geometry={ nodes.current['Shokora'].geometry }
-                        position={ [10.8, 1.3, 4.7] }
-                        scale={ [0.06, 0.06 , 0.06] }
-                        rotation={ [ 0, Math.PI * - 0.25, 0 ] }
+                        // position={ [nodes.current['Shokora'].position.x + 10, nodes.current['Shokora'].position.y, nodes.current['Shokora'].position.z ]  }
+                        position={ [11, 1.2, 4.8] }
+                        scale={ [0.05, 0.05 , 0.05] }
+                        rotation={ [ 0, Math.PI * - 0.3, 0] }
                     >
                         <meshBasicMaterial map={ texture } />
                     </mesh>
-                </Center>
+                {/* </Center> */}
             </>
         ) : null
     }

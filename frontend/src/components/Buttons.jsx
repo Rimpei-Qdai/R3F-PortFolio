@@ -26,7 +26,7 @@ const Buttons = () => {
             y: 50,
             z: 38,
             duration:3,
-            ease: "power2.out",
+            ease: "power1.out",
           })
         } else {
           gsap.to(camera.position, {
@@ -61,6 +61,8 @@ const Buttons = () => {
           moveCamera({x:3.2, y:1.5, z:12.5})
         } else if(hashName == "intro") {
           moveCamera({x:-1.5, y:20, z:5})
+        } else if(hashName == "news") {          
+          moveCamera({x:10.6, y:1.2, z:5.4})
         } else {
           backCamera()
         }
@@ -77,6 +79,8 @@ const Buttons = () => {
           moveCamera({x:0, y:1.5, z:13.8})
         } else if(hashName == "intro") {
           moveCamera({x:-3, y:9, z:9})
+        } else if(hashName == "news") {
+          moveCamera({x:10.6, y:1.2, z:5.4})
         } else {
           backCamera()
         }
@@ -105,7 +109,7 @@ const Buttons = () => {
   return (
     <>
       {
-        !(hashName == "works" || hashName == "labo" || hashName == "hobby" || hashName == "vision" || hashName == "sns" || hashName == "works" || hashName == "intro" ) && window.innerWidth >= 1000  ? (
+        !(hashName == "works" || hashName == "labo" || hashName == "hobby" || hashName == "vision" || hashName == "sns" || hashName == "works" || hashName == "intro" || hashName == "news" ) && window.innerWidth >= 1000  ? (
           <>
             <Html position={ [ -15, -0.9, 2.3 ] } >
               <a className='ThreeeD-Button' href="#works" >
@@ -145,6 +149,11 @@ const Buttons = () => {
             <Html position={ [ - 3.8, 1, -1 ] }>   
               <a className='ThreeeD-Button' href="#intro" ><div className="text">
                   Intro
+                </div></a>    
+            </Html>
+            <Html position={ [ 12, 3, 3 ]  }>   
+              <a className='ThreeeD-Button' href="#news" ><div className="text">
+                  News
                 </div></a>    
             </Html>
         </>
