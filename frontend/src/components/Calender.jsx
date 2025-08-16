@@ -6,15 +6,12 @@ const Calender = () => {
 
       useEffect(() => {
         fetch("http://localhost:8080/api/calendar").then(res => res.json()).then((data) => {
-          console.log(data.message.title)
-          console.log(data)
           setTodayEvent(data)
         })
         // fetch("http://localhost:8080/api/news").then(res => res.text()).then((text) => {
         //   console.log(text)
         // })
-        
-        console.log(todayEvent)
+      
         setLoaded(true)
       }, [ ])
 

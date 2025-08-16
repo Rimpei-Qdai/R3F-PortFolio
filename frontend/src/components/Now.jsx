@@ -8,12 +8,10 @@ const Now = () => {
 
     useEffect(() => {
         fetch("http://localhost:8080/api/nowdata").then(res => res.json()).then((data) => {
-            console.log(data)
             setLatestItem(data)
         })
         fetch("http://localhost:8080/api/sleeptime").then(res => res.json()).then((data) => {
             setSleepTime(data)
-            console.log(data)
         })
         // getData()
     }, [])
