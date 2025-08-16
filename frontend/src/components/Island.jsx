@@ -25,6 +25,7 @@ useGLTF.preload("/assets/models/Rimpei_Optimized.glb")
 const Island = ({ onRendered }) => {
   const gltf = useGLTF("/assets/models/Rimpei_Optimized.glb?v=2", false);
   const nodes = useRef(gltf.nodes)
+  console.log(nodes)
 
   const brain = useRef()
   useFrame(() => {

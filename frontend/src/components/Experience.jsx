@@ -13,6 +13,7 @@ import * as THREE from 'three'
 import Imgs from './Imgs'
 import Fire from './Fire'
 import './Experience.css'
+import Shokora from './Shokora'
 
 
 const Experience = ({ onLoaded }) => {
@@ -53,6 +54,7 @@ const Experience = ({ onLoaded }) => {
     >
         <color args={ [0x74C2E8] }  attach="background" />
         <Island onRendered={ () => setIsRendered(true) }/>
+        <Shokora />
         <Sea />
         <Fire />
         { window.innerWidth <= 600 ? (
@@ -112,7 +114,7 @@ const Experience = ({ onLoaded }) => {
           // maxAzimuthAngle={ Math.PI / 36 }
           // rotateSpeed={ 0.05 }
         /> */}
-        {/* <OrbitControls /> */}
+        <OrbitControls />
 
         { isRenderd ? (
       <>
