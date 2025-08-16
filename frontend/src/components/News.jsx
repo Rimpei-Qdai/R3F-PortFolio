@@ -35,7 +35,7 @@ const News = () => {
                 news.map((el, index) => (
                       <li className='news-item' key={ index }>
                         <div className='news-date'>{ el.date }</div>
-                        <div className='news-title'>{ el.title }BEENOS株式会社様のインターンに参加しました！</div>
+                        <div className='news-title'>{ el.title }</div>
                         <a className='detail-button' target='_blank' href={ el.url }>
                           <div className="text">
                             詳しく見る
