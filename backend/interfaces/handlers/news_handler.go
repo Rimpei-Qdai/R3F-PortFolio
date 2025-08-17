@@ -19,7 +19,7 @@ func NewNewsHandler(useCase *usecases.NewsUseCase) *NewsHandler {
 }
 
 func (h *NewsHandler) GetNewsData(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Access-Control-Allow-Origin", "http://localhost:5173")
+	w.Header().Set("Access-Control-Allow-Origin", "https://rimpei-hata.com")
 	w.Header().Set("Access-Control-Allow-Methods", "GET")
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 	w.Header().Set("Content-Type", "application/json")

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"backend/domain/usecases"
 	"backend/infrastructure/external"
@@ -39,10 +40,13 @@ func main() {
 
 	// ルーターの設定
 	router := server.SetupRouter(healthHandler, calendarHandler, sleepTimeHandler, newsHandler)
-
+	port := os.Getenv("PORT") // Koyeb が割り当てるポート番号
+    if port == "" {
+        port = "8080"
+    }
 	// サーバー起動
 	fmt.Println("Server starting on :8080")
-	if err := http.ListenAndServe(":8080", router); err != nil {
+	if err := http.ListenAndServe(":" + port, router) ; err != nil {
 		log.Fatalf("Server failed to start: %v", err)
 	}
 }

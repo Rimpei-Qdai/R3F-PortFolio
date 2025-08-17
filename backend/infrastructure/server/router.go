@@ -27,7 +27,7 @@ func SetupRouter(healthHandler *handlers.HealthHandler, calendarHandler *handler
 // corsMiddleware は、CORS設定を行うミドルウェアです（main.go.bkと同じ設定）
 func corsMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin", "http://localhost:5173")
+		w.Header().Set("Access-Control-Allow-Origin", "https://rimpei-hata.com")
 		w.Header().Set("Access-Control-Allow-Methods", "GET")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 
