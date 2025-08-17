@@ -1,12 +1,15 @@
 FROM golang:1.24-alpine
 WORKDIR /app
 
-# モジュールルートとサブディレクトリのコードをコピー
+# go.modとgo.sumをコピーして依存関係をダウンロード
 COPY backend/go.mod backend/go.sum ./
-COPY backend/cmd/server ./cmd/server
+RUN go mod download
+
+# backendディレクトリの全体をコピー（依存パッケージを含む）
+COPY backend/ ./
 
 # ビルド
-RUN go build -o cmd/server/main ./cmd/server
+RUN go build -o server ./cmd/server
 
 # 起動
-CMD ["./cmd/server/main"]
+CMD ["./server"]
