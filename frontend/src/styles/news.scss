@@ -14,11 +14,11 @@
         & .news-title {
             font-family: "Line-Font-Eb";
             color: rgba(0, 0, 0, 0.9);
-            font-size: 18px;
+            font-size: 16px;
         }
         & .news-date {
             font-family: "Line-Font-Eb";
-            font-size: 24px;
+            font-size: 22px;
             color: rgba(0, 0, 0, 0.9);
             border-bottom: 3px solid transparent; /* 幅を決めて透明にする */
             border-image: linear-gradient(to right, #DA70D6 0%, #DA70D6 30%, #569CD6 35%, #569CD6 65%, #FFD602 70%, #FFD602 100%);
@@ -48,7 +48,7 @@
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     font-family: "Line-Font-Eb";
-                    font-size: 18px;
+                    font-size: 14px;
 
                 }
             }
