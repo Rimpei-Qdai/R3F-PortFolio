@@ -1,18 +1,12 @@
-# ベースイメージ
 FROM golang:1.24-alpine
-
-# 作業ディレクトリを設定
 WORKDIR /app
 
 # モジュールルートとサブディレクトリのコードをコピー
-COPY backend/go.mod backend/go.sum ./    # モジュール情報
-COPY backend/cmd/server ./cmd/server     # main.go を含むコード
+COPY backend/go.mod backend/go.sum ./
+COPY backend/cmd/server ./cmd/server
 
-# モジュールの依存関係を取得
-RUN go mod tidy
+# ビルド
+RUN go build -o cmd/server/main ./cmd/server
 
-# サブディレクトリでビルド
-RUN cd cmd/server && go build -o main .
-
-# コンテナ起動時に実行
+# 起動
 CMD ["./cmd/server/main"]
