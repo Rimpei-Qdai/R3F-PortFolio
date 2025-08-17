@@ -5,7 +5,7 @@ const Calender = () => {
     const [ loaded, setLoaded ] = useState(false)
 
       useEffect(() => {
-        fetch("http://localhost:8080/api/calendar").then(res => res.json()).then((data) => {
+        fetch("https://api.rimpei-hata.com/api/calendar").then(res => res.json()).then((data) => {
           setTodayEvent(data)
         })
         // fetch("http://localhost:8080/api/news").then(res => res.text()).then((text) => {

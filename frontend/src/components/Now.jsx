@@ -7,10 +7,10 @@ const Now = () => {
     const [sleepTime, setSleepTime] = useState({hour: 7, minutes:28})
 
     useEffect(() => {
-        fetch("http://localhost:8080/api/nowdata").then(res => res.json()).then((data) => {
+        fetch("https://api.rimpei-hata.com/api/nowdata").then(res => res.json()).then((data) => {
             setLatestItem(data)
         })
-        fetch("http://localhost:8080/api/sleeptime").then(res => res.json()).then((data) => {
+        fetch("https://api.rimpei-hata.com/api/sleeptime").then(res => res.json()).then((data) => {
             setSleepTime(data)
         })
         // getData()

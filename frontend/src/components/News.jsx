@@ -5,7 +5,7 @@ const News = () => {
     const [ news, setNews ] = useState(false)
 
     useEffect(() => {
-        fetch("http://localhost:8080/api/news").then(res => res.json()).then((data) => {
+        fetch("https://api.rimpei-hata.com/api/news").then(res => res.json()).then((data) => {
           setNews(data.news)
         })
     }, [ ])
