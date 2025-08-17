@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0 auto;
     margin-top: 1.5em;
+    margin-bottom: 3em;
     list-style: none;
     & .news-item {
         margin-top: 2em;
@@ -13,7 +14,7 @@
         & .news-title {
             font-family: "Line-Font-Eb";
             color: rgba(0, 0, 0, 0.9);
-            font-size: 20px;
+            font-size: 18px;
         }
         & .news-date {
             font-family: "Line-Font-Eb";

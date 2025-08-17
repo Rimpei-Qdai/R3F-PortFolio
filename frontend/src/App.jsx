@@ -34,13 +34,14 @@ function App() {
           menuList.classList.toggle('open')
       }}></div>
       
+      <div className="ham-menu-title">
+        <p>M</p>
+        <p>E</p>
+        <p>N</p>
+        <p>U</p>
+      </div>
       <ul className="menu-list">
-        <div className="title">
-          <p>M</p>
-          <p>E</p>
-          <p>N</p>
-          <p>U</p>
-        </div>
+        <div className="list-container">
         <li className="menu-item">
           <a href="#intro" onClick={() => {
           const globalContainer = document.querySelector("#global-container")
@@ -100,7 +101,7 @@ function App() {
         </a>
         </li>
 
-<li className="menu-item">
+        <li className="menu-item">
           <a href="#vision" onClick={() => {
           const globalContainer = document.querySelector("#global-container")
           globalContainer.classList.toggle("open")
@@ -177,6 +178,8 @@ function App() {
         <div className="sub-title">コンタクト</div>
       </a>
         </li>
+
+        </div>
 
       </ul>
     <div id="global-container">

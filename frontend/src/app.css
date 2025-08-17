@@ -68,34 +68,37 @@ body {
   touch-action: auto;
 }
 
-ul.menu-list {
+.ham-menu-title {
   position: absolute;
-  top: 0;
-  right: 0;
-  list-style: none;
-  margin-top: 3em;
-  margin-right: 3em;
-  overflow-y: scroll !important;
-  height: 100%;
-}
-ul.menu-list .title {
   font-size: 36px;
+  top: 1.4em;
+  right: 1.3em;
 }
-ul.menu-list .title p {
+.ham-menu-title p {
   font-family: "Line-Font-Eb";
   display: inline;
 }
-ul.menu-list .title p:nth-child(1) {
+.ham-menu-title p:nth-child(1) {
   color: #569CD6;
 }
-ul.menu-list .title p:nth-child(2) {
+.ham-menu-title p:nth-child(2) {
   color: #DA70D6;
 }
-ul.menu-list .title p:nth-child(3) {
+.ham-menu-title p:nth-child(3) {
   color: #FFD602;
 }
-ul.menu-list .title p:nth-child(4) {
+.ham-menu-title p:nth-child(4) {
   color: #49975E;
+}
+
+ul.menu-list {
+  position: absolute;
+  top: 3.5em;
+  right: 0;
+  list-style: none;
+  margin-top: 3em;
+  margin-right: 6em;
+  padding: 0;
 }
 ul.menu-list li.menu-item {
   margin-top: 0.5em;
@@ -109,17 +112,14 @@ ul.menu-list li.menu-item a {
   text-decoration: none;
 }
 ul.menu-list li.menu-item a .menu-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   font-family: "Line-Font-Eb";
   color: black;
 }
 ul.menu-list li.menu-item a .sub-title {
   color: rgba(0, 0, 0, 0.8);
-  font-size: 14px;
-}
-ul.menu-list.open {
-  overflow-y: scroll;
+  font-size: 12px;
 }
 ul.menu-list.open li.menu-item {
   transform: none;

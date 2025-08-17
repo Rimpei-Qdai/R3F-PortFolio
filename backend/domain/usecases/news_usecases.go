@@ -47,8 +47,9 @@ func (h *NewsUseCase) GetNewsData() (*entities.NewsResponse, error) {
 				// 既に文字列の場合
 				news.Date = v
 			case time.Time:
-				// time.Time型の場合、文字列に変換
-				news.Date = v.Format("2006/01/02")
+				// time.Time型の場合、UTCからJSTに変換して文字列に変換
+				jst := time.FixedZone("Asia/Tokyo", 9*60*60)
+				news.Date = v.In(jst).Format("2006/01/02")
 			default:
 				// その他の型の場合、文字列変換を試行
 				news.Date = fmt.Sprintf("%v", v)

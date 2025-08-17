@@ -11,6 +11,7 @@ body, html, #root, #global-container {
     height: 100%;
 }
 
+
 h1 {
     display: none;
 }
@@ -71,37 +72,44 @@ body {
 
 }
 
+
+.ham-menu-title {
+    position: absolute;
+    font-size: 36px;
+    top: 1.4em;
+    right: 1.3em;
+& p {
+    font-family: "Line-Font-Eb";
+    display: inline;
+
+    &:nth-child(1) {
+        color: #569CD6;
+    }
+    &:nth-child(2) {
+        color: #DA70D6;
+    }
+    &:nth-child(3) {
+        color: #FFD602;
+    }
+    &:nth-child(4) {
+        color: #49975E;
+    }
+}
+}
+
+
 ul.menu-list {
     position: absolute;
-    top: 0;
+    top: 3.5em;
     right: 0;
     list-style: none;
     margin-top: 3em;
-    margin-right: 3em;
-    overflow-y: scroll !important;
-    height: 100%;
+    margin-right: 6em;
+    // height: 100%;
+    padding: 0;
 
 
-    & .title {
-        font-size: 36px;
-        & p {
-            font-family: "Line-Font-Eb";
-            display: inline;
 
-            &:nth-child(1) {
-                color: #569CD6;
-            }
-            &:nth-child(2) {
-                color: #DA70D6;
-            }
-            &:nth-child(3) {
-                color: #FFD602;
-            }
-            &:nth-child(4) {
-                color: #49975E;
-            }
-        }
-    }
 
     & li.menu-item {
         margin-top: .5em;
@@ -116,7 +124,7 @@ ul.menu-list {
             text-decoration: none;
 
             & .menu-title {
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 600;
                 font-family: "Line-Font-Eb";
                 color: black;
@@ -124,14 +132,13 @@ ul.menu-list {
             
             & .sub-title {
                 color: rgba(0, 0, 0, 0.8);
-                font-size: 14px;
+                font-size: 12px;
             }
 
         }
     }
 
     &.open {
-        overflow-y: scroll;
         & li.menu-item {
             transform: none;
             opacity: 1;
