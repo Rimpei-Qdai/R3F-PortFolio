@@ -298,6 +298,16 @@
                     color: white;
                     font-size: 24px;
 
+                    & img.origami {
+                        display: block;
+                        width: 75%;
+                        object-fit: cover;
+                        margin: 1em auto;
+                        border: white solid 4px;
+
+
+                    }
+
                     &.references {
                         // font-size: ;
                     }

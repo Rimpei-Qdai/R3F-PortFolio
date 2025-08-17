@@ -83,14 +83,19 @@ const Intro = () => {
             <ul className="achieves">
                 <li className="achieve">
                 折り紙
+                <img src="/assets/imgs/Origami.JPG" alt="" className="origami" />
                 </li>
                 <li className="achieve">
                 プログラミング <br /> 
                 - PHP <br />
+                &ensp;&ensp; - Laravel <br />
                 - Swift <br />
+                &ensp;&ensp; - Swift UI <br />
+                - JavaScript <br />
+                &ensp;&ensp; - React.js <br />
+                &ensp;&ensp; - Three.js <br />
+                - GO <br />
                 - C# <br />
-                - React.js <br />
-                - Three.js <br />
                 - SQL <br />
                 </li>
                 

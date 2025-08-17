@@ -245,6 +245,14 @@
   color: white;
   font-size: 24px;
 }
+#twoD-content ul.works-list li.works-item ul.achieves li.achieve img.origami {
+  display: block;
+  width: 75%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 1em auto;
+  border: white solid 4px;
+}
 #twoD-content ul.works-list li.works-item ul.achieves li.achieve a {
   margin-top: 0.5em;
   font-size: 20px;
