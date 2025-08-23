@@ -9,7 +9,7 @@ import Sea from './Sea'
 import Shokora from './Shokora'
 import Fire from './Fire'
 import Imgs from './Imgs'
-import '../../styles/experience.css'
+import '../../styles/Experience.css'
 
 // コンポーネント
 import Buttons from './Buttons'
