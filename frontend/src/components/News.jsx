@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/news.css'
+import origin from '../origin.js'
 
 const News = () => {
     const [ news, setNews ] = useState(false)
 
     useEffect(() => {
-        fetch("https://api.rimpei-hata.com/api/news").then(res => res.json()).then((data) => {
+        fetch(`${ origin }/api/news`).then(res => res.json()).then((data) => {
           setNews(data.news)
         })
     }, [ ])

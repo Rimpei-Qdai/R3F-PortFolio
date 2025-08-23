@@ -12,13 +12,11 @@ import (
     "google.golang.org/api/option"
 )
 
-// CacheItem は、キャッシュアイテムです
 type CacheItem struct {
     Data      interface{}
     Timestamp time.Time
 }
 
-// FirebaseClient は、キャッシュ機能付きFirebaseクライアントです
 type FirebaseClient struct {
     client   *firestore.Client
     ctx      context.Context
@@ -27,7 +25,6 @@ type FirebaseClient struct {
     cacheTTL time.Duration
 }
 
-// NewFirebaseClient は、最適化されたFirebaseClientを作成します
 func NewFirebaseClient(credentialsPath string) (*FirebaseClient, error) {
     ctx := context.Background()
     
@@ -50,7 +47,6 @@ func NewFirebaseClient(credentialsPath string) (*FirebaseClient, error) {
     }, nil
 }
 
-// GetLatestData は、キャッシュ機能付きで最新データを取得します
 func (f *FirebaseClient) GetLatestData(collection string) (map[string]interface{}, error) {
     cacheKey := fmt.Sprintf("%s_latest", collection)
     
@@ -67,7 +63,6 @@ func (f *FirebaseClient) GetLatestData(collection string) (map[string]interface{
 
     fmt.Printf("Cache miss for %s, fetching from Firestore\n", cacheKey)
 
-    // Firestoreから取得（タイムアウト付き）
     ctx, cancel := context.WithTimeout(f.ctx, 10*time.Second)
     defer cancel()
 
@@ -97,7 +92,6 @@ func (f *FirebaseClient) GetLatestData(collection string) (map[string]interface{
     return data, nil
 }
 
-// GetAllData は、キャッシュ機能付きでデータを取得します
 func (f *FirebaseClient) GetAllData(collection string) ([]map[string]interface{}, error) {
     cacheKey := fmt.Sprintf("%s_all", collection)
     
@@ -154,7 +148,6 @@ func (f *FirebaseClient) GetAllData(collection string) ([]map[string]interface{}
     return results, nil
 }
 
-// ClearCache は、キャッシュをクリアします
 func (f *FirebaseClient) ClearCache() {
     f.cacheMu.Lock()
     defer f.cacheMu.Unlock()
@@ -162,7 +155,6 @@ func (f *FirebaseClient) ClearCache() {
     fmt.Println("Cache cleared")
 }
 
-// GetCacheStats は、キャッシュの統計情報を取得します
 func (f *FirebaseClient) GetCacheStats() map[string]interface{} {
     f.cacheMu.RLock()
     defer f.cacheMu.RUnlock()
@@ -179,7 +171,6 @@ func (f *FirebaseClient) GetCacheStats() map[string]interface{} {
     return stats
 }
 
-// Close は、Firestoreクライアントを閉じます
 func (f *FirebaseClient) Close() error {
     f.ClearCache()
     return f.client.Close()

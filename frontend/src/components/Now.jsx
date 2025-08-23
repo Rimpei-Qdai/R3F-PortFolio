@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/now.css'
 import Calender from './Calender';
+import origin from '../origin.js'
 
 const Now = () => {
     const [latestItem, setLatestItem] = useState({cal:100, step:300});
     const [sleepTime, setSleepTime] = useState({hour: 7, minutes:28})
 
     useEffect(() => {
-        fetch("https://api.rimpei-hata.com/api/nowdata").then(res => res.json()).then((data) => {
+        fetch(`${ origin }/api/nowdata`).then(res => res.json()).then((data) => {
             setLatestItem(data)
         })
-        fetch("https://api.rimpei-hata.com/api/sleeptime").then(res => res.json()).then((data) => {
+        fetch(`${ origin }/api/sleeptime`).then(res => res.json()).then((data) => {
             setSleepTime(data)
         })
         // getData()
