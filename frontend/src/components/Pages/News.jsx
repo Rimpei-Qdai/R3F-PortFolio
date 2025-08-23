@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import '../styles/news.css'
-import origin from '../origin.js'
+import '../../styles/news.css'
 
 const News = ({news}) => {
 

@@ -1,19 +1,20 @@
 // モジュールインポート
 import { OrbitControls, Text } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import Island from './Island'
-import Sea from './Sea'
 import { useEffect, useState } from 'react'
 import Camera from './Camera'
 import { useLocation } from 'react-router-dom'
+import Island from './Island'
+import Sea from './Sea'
+import Shokora from './Shokora'
+import Fire from './Fire'
+import Imgs from './Imgs'
+import '../../styles/experience.css'
 
 // コンポーネント
 import Buttons from './Buttons'
 import * as THREE from 'three'
-import Imgs from './Imgs'
-import Fire from './Fire'
-import './Experience.css'
-import Shokora from './Shokora'
+
 
 
 const Experience = ({ onLoaded }) => {

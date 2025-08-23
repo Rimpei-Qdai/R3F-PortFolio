@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/sns.css'
-import '../styles/works.css'
+import '../../styles/sns.css'
+import '../../styles/works.css'
 
 const SNS = () => {
   return (

@@ -1,4 +1,4 @@
 package config
 
-// OriginUrl = "https://rimpei-hata.com"
-var OriginUrl = "*"
+OriginUrl = "https://rimpei-hata.com"
+// var OriginUrl = "*"

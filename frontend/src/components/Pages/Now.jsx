@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import '../styles/now.css'
-import Calender from './Calender';
-import origin from '../origin.js'
+import '../../styles/now.css'
+import Calender from './Calender.jsx';
+import origin from '../../origin.js'
 
 const Now = () => {
     const [latestItem, setLatestItem] = useState({cal:100, step:300});

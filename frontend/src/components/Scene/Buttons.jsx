@@ -2,7 +2,7 @@ import { Float, Html } from '@react-three/drei'
 import gsap from 'gsap'
 import { useLocation } from 'react-router-dom'
 import { useThree } from 'react-three-fiber'
-import '../styles/buttons.css'
+import '../../styles/buttons.css'
 import { useEffect, useState } from 'react'
 import { hash } from 'three/tsl'
 

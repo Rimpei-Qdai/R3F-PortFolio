@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import './app.css'
-import Experience from "./components/Experience"
+import Experience from "./components/Scene/Experience"
 import Loader from './Loader'
-import ContentManager from './components/ContentManager'
+import ContentManager from './components/Utils/ContentManager'
 
 
 function App() {
