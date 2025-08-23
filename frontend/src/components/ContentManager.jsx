@@ -9,15 +9,22 @@ import Header from './Header'
 import Intro from './Intro'
 import Now from './Now'
 import News from './News'
+import origin from '../origin.js'
 
 const ContentManager = () => {
   const [content, setContent] = useState(useLocation().hash.slice(1))
+  const [ news, setNews ] = useState(false)
 
   useEffect(() => {
     window.addEventListener('hashchange', (event) => {
       setContent(event.srcElement.location.hash.slice(1))
     })
+
+    fetch(`${ origin }/api/news`).then(res => res.json()).then((data) => {
+      setNews(data.news)
+    })
   }, [ ])
+
 
   useEffect(() => {
     if(content != "") {
@@ -59,7 +66,7 @@ const ContentManager = () => {
       ) : content == "intro" ? (
         <Intro />
       ) : content == "news" ? (
-        <News />
+        <News news={ news } />
       ) : (
         <></>
       )

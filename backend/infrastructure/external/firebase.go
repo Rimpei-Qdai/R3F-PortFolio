@@ -3,7 +3,6 @@ package external
 import (
     "context"
     "fmt"
-    "sync"
     "time"
 
     "cloud.google.com/go/firestore"
@@ -12,17 +11,9 @@ import (
     "google.golang.org/api/option"
 )
 
-type CacheItem struct {
-    Data      interface{}
-    Timestamp time.Time
-}
 
 type FirebaseClient struct {
     client   *firestore.Client
-    ctx      context.Context
-    cache    map[string]*CacheItem
-    cacheMu  sync.RWMutex
-    cacheTTL time.Duration
 }
 
 func NewFirebaseClient(credentialsPath string) (*FirebaseClient, error) {
@@ -41,30 +32,12 @@ func NewFirebaseClient(credentialsPath string) (*FirebaseClient, error) {
 
     return &FirebaseClient{
         client:   client,
-        ctx:      ctx,
-        cache:    make(map[string]*CacheItem),
-        cacheTTL: 5 * time.Minute, // 5分間キャッシュ
     }, nil
 }
 
 func (f *FirebaseClient) GetLatestData(collection string) (map[string]interface{}, error) {
-    cacheKey := fmt.Sprintf("%s_latest", collection)
-    
-    // キャッシュチェック
-    f.cacheMu.RLock()
-    if item, exists := f.cache[cacheKey]; exists {
-        if time.Since(item.Timestamp) < f.cacheTTL {
-            f.cacheMu.RUnlock()
-            fmt.Printf("Cache hit for %s\n", cacheKey)
-            return item.Data.(map[string]interface{}), nil
-        }
-    }
-    f.cacheMu.RUnlock()
-
-    fmt.Printf("Cache miss for %s, fetching from Firestore\n", cacheKey)
-
-    ctx, cancel := context.WithTimeout(f.ctx, 10*time.Second)
-    defer cancel()
+    fmt.Println("GetLatestData called for collection:", collection)
+    ctx := context.Background()
 
     docs := f.client.Collection(collection).
         OrderBy("fetchedAt", firestore.Desc).
@@ -81,36 +54,14 @@ func (f *FirebaseClient) GetLatestData(collection string) (map[string]interface{
 
     data := doc.Data()
 
-    // キャッシュに保存
-    f.cacheMu.Lock()
-    f.cache[cacheKey] = &CacheItem{
-        Data:      data,
-        Timestamp: time.Now(),
-    }
-    f.cacheMu.Unlock()
+
 
     return data, nil
 }
 
 func (f *FirebaseClient) GetAllData(collection string) ([]map[string]interface{}, error) {
-    cacheKey := fmt.Sprintf("%s_all", collection)
-    
-    // キャッシュチェック
-    f.cacheMu.RLock()
-    if item, exists := f.cache[cacheKey]; exists {
-        if time.Since(item.Timestamp) < f.cacheTTL {
-            f.cacheMu.RUnlock()
-            fmt.Printf("Cache hit for %s\n", cacheKey)
-            return item.Data.([]map[string]interface{}), nil
-        }
-    }
-    f.cacheMu.RUnlock()
-
-    fmt.Printf("Cache miss for %s, fetching from Firestore\n", cacheKey)
-
-    // Firestoreから取得（タイムアウトと件数制限付き）
-    ctx, cancel := context.WithTimeout(f.ctx, 15*time.Second)
-    defer cancel()
+    fmt.Println("GetAllData called for collection:", collection)
+    ctx := context.Background()
 
     docs := f.client.Collection(collection).
         OrderBy("date", firestore.Desc).
@@ -137,41 +88,10 @@ func (f *FirebaseClient) GetAllData(collection string) ([]map[string]interface{}
         results = append(results, data)
     }
 
-    // キャッシュに保存
-    f.cacheMu.Lock()
-    f.cache[cacheKey] = &CacheItem{
-        Data:      results,
-        Timestamp: time.Now(),
-    }
-    f.cacheMu.Unlock()
-
     return results, nil
 }
 
-func (f *FirebaseClient) ClearCache() {
-    f.cacheMu.Lock()
-    defer f.cacheMu.Unlock()
-    f.cache = make(map[string]*CacheItem)
-    fmt.Println("Cache cleared")
-}
-
-func (f *FirebaseClient) GetCacheStats() map[string]interface{} {
-    f.cacheMu.RLock()
-    defer f.cacheMu.RUnlock()
-    
-    stats := make(map[string]interface{})
-    stats["cache_size"] = len(f.cache)
-    stats["cache_ttl_minutes"] = f.cacheTTL.Minutes()
-    
-    for key, item := range f.cache {
-        age := time.Since(item.Timestamp)
-        stats[fmt.Sprintf("%s_age_seconds", key)] = age.Seconds()
-    }
-    
-    return stats
-}
 
 func (f *FirebaseClient) Close() error {
-    f.ClearCache()
     return f.client.Close()
 }
