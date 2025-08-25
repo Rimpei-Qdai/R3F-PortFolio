@@ -80,9 +80,12 @@ func (f *FirebaseClient) GetAllData(collection string) ([]map[string]interface{}
 
         data := doc.Data()
         
-        // timestampフィールドをstringに変換
+        // timestampフィールドをstringに変換（JST対応）
         if timestamp, ok := data["date"].(time.Time); ok {
-            data["date"] = timestamp.Format("2006-01-02")
+            // JSTに変換してから日付文字列に変換
+            jst := time.FixedZone("Asia/Tokyo", 9*60*60)
+            jstTime := timestamp.In(jst)
+            data["date"] = jstTime.Format("2006-01-02")
         }
         
         results = append(results, data)

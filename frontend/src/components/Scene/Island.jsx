@@ -48,10 +48,6 @@ const Island = ({ onRendered }) => {
 
           loader.load(path, (texture) => {
             texture.flipY = false;
-            // texture.needsUpdate = true;
-            // texture.colorSpace = SRGBColorSpace;
-            // texture.generateMipmaps = true;
-            // texture.minFilter = LinearMipMapLinearFilter;
             resolve({ name, texture });
           })
         })
