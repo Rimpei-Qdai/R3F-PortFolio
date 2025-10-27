@@ -14,14 +14,15 @@ import (
 
 func main() {
 	// Firebase クライアントの初期化
-	firebaseClient, err := external.NewFirebaseClient("infrastructure/config/firebaseAPIKey.json")
+	firebaseClient, err := external.NewFirebaseClient("../../infrastructure/config/firebaseAPIKey.json")
+	fmt.Println(firebaseClient, err)	
 	if err != nil {
 		log.Fatalf("Failed to initialize Firebase client: %v", err)
 	}
 	defer firebaseClient.Close()
 
 	// Google Calendar クライアントの初期化
-	googleCalendarClient, err := external.NewGoogleCalendarClient("infrastructure/config/calendarAPIKey.json")
+	googleCalendarClient, err := external.NewGoogleCalendarClient("../../infrastructure/config/calendarAPIKey.json")
 	if err != nil {
 		log.Fatalf("Failed to initialize Google Calendar client: %v", err)
 	}
