@@ -1,7 +1,7 @@
 // モジュールインポート
-import { OrbitControls, Text } from '@react-three/drei'
+import { DeviceOrientationControls, OrbitControls, Text } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Camera from './Camera'
 import { useLocation } from 'react-router-dom'
 import Island from './Island'
@@ -19,11 +19,53 @@ import * as THREE from 'three'
 
 const Experience = ({ onLoaded }) => {
   
-
+  const orbitControlsRef = useRef()
   const [isRenderd, setIsRendered] = useState(false)
   const [ isRenderedShokora, setIsRenderedShokora ] = useState(false)
-  const hashName = useLocation().hash.slice(1)
-  const [cameraPosition, setCameraPosition] = useState(new THREE.Vector3(2.5611305471454915, 8.789112370409582, 24.548538336427537))
+  const location = useLocation()
+  const [hashName, setHashName] = useState(location.hash.slice(1))
+  const [cameraPosition] = useState(new THREE.Vector3(2.5611305471454915, 8.789112370409582, 24.548538336427537))
+  
+  // 角度制限の設定（ホーム画面かどうかで切り替え）
+  const [angleConstraints, setAngleConstraints] = useState({
+    minPolarAngle: window.innerWidth <= 600 ? Math.PI / 8 : Math.PI / 4,
+    maxPolarAngle: window.innerWidth <= 600 ? Math.PI / 4.8 : Math.PI / 3,
+    minAzimuthAngle: -Math.PI / 6,
+    maxAzimuthAngle: Math.PI / 6
+  })
+
+  // hashが変わったら角度制限を更新
+  useEffect(() => {
+    const handleHashChange = () => {
+      const newHash = window.location.hash.slice(1)
+      setHashName(newHash)
+      
+      if (newHash === "") {
+        // ホーム画面：角度制限あり
+        setAngleConstraints({
+          minPolarAngle: window.innerWidth <= 600 ? Math.PI / 8 : Math.PI / 4,
+          maxPolarAngle: window.innerWidth <= 600 ? Math.PI / 4 : Math.PI / 3,
+          minAzimuthAngle: -Math.PI / 6,
+          maxAzimuthAngle: Math.PI / 6
+        })
+      } else {
+        // 各セクション：角度制限なし
+        setAngleConstraints({
+          minPolarAngle: 0,
+          maxPolarAngle: Math.PI,
+          minAzimuthAngle: -Infinity,
+          maxAzimuthAngle: Infinity
+        })
+      }
+    }
+
+    window.addEventListener('hashchange', handleHashChange)
+    handleHashChange() // 初期化時にも実行
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange)
+    }
+  }, [])
 
 
 
@@ -120,8 +162,19 @@ const Experience = ({ onLoaded }) => {
 
         { isRenderd ? (
       <>
-        <Camera />
-
+        <Camera orbitControlsRef={orbitControlsRef} />
+        <OrbitControls 
+          ref={orbitControlsRef}
+          enableZoom={false} 
+          enablePan={false}
+          minPolarAngle={ angleConstraints.minPolarAngle }
+          maxPolarAngle={ angleConstraints.maxPolarAngle }
+          minAzimuthAngle={ angleConstraints.minAzimuthAngle }
+          maxAzimuthAngle={ angleConstraints.maxAzimuthAngle }
+          rotateSpeed={ 0.02 }
+          makeDefault
+          // enableDamping={ false }
+        />
       </>
     ) : (
       <></>

@@ -28,3 +28,4 @@ dist-ssr
 
 Config.jsx
 FIrebaseConfig.jsx
+.DS_Store

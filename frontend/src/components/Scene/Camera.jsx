@@ -5,7 +5,7 @@ import * as THREE from 'three'
 
 
 
-const Camera = () => {
+const Camera = ({ orbitControlsRef }) => {
   const { camera } = useThree()
 
   //読み込み時にHashを取得
@@ -108,6 +108,12 @@ const Camera = () => {
         // camera.position.z = Math.cos(state.clock.elapsedTime * 0.1 ) + 15 
         currentLookAt.current.lerp(targetCameraLookAt, 0.03)
         camera.lookAt(currentLookAt.current)
+        
+        // OrbitControlsのターゲットも同期
+        if (orbitControlsRef?.current) {
+          orbitControlsRef.current.target.copy(currentLookAt.current)
+          orbitControlsRef.current.update()
+        }
       })
   return (
     <></>
