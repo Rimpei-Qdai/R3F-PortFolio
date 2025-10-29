@@ -9,6 +9,7 @@ import Sea from './Sea'
 import Shokora from './Shokora'
 import Fire from './Fire'
 import Imgs from './Imgs'
+import Firework from './Firework'
 import '../../styles/Experience.css'
 
 // コンポーネント
@@ -173,8 +174,10 @@ const Experience = ({ onLoaded }) => {
           maxAzimuthAngle={ angleConstraints.maxAzimuthAngle }
           rotateSpeed={ 0.02 }
           makeDefault
-          // enableDamping={ false }
+          target={[0, 0, 0]}
+          enableDamping={false}
         />
+        {hashName === "" && <Firework />}
       </>
     ) : (
       <></>
