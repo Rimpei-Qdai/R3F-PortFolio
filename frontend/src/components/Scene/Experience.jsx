@@ -175,7 +175,7 @@ const Experience = ({ onLoaded }) => {
           rotateSpeed={ 0.02 }
           makeDefault
           target={[0, 0, 0]}
-          enableDamping={false}
+          enableDamping={true}
         />
         {hashName === "" && <Firework />}
       </>

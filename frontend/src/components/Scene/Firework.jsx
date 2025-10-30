@@ -187,7 +187,9 @@ const Firework = () => {
     
     // Y座標を調整（地面より上に）
     position.y = Math.max(position.y, 2);
-    
+
+    // Z軸をランダムに調整（-5から5の範囲）
+    position.z = (Math.random()  * 10) + 20; 
     createFirework(position);
   };
 
