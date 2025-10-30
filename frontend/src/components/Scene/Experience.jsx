@@ -172,7 +172,7 @@ const Experience = ({ onLoaded }) => {
           maxPolarAngle={ angleConstraints.maxPolarAngle }
           minAzimuthAngle={ angleConstraints.minAzimuthAngle }
           maxAzimuthAngle={ angleConstraints.maxAzimuthAngle }
-          rotateSpeed={ 0.02 }
+          rotateSpeed={ 0.03 }
           makeDefault
           target={[0, 0, 0]}
           enableDamping={true}
