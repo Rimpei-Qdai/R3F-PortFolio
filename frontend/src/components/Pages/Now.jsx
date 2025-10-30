@@ -1,21 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import '../../styles/now.css'
 import Calender from './Calender.jsx';
-import origin from '../../origin.js'
+import { useHealthData, useSleepData } from '../../hooks/useHealthData'
 
 const Now = () => {
-    const [latestItem, setLatestItem] = useState({cal:100, step:300});
-    const [sleepTime, setSleepTime] = useState({hour: 7, minutes:28})
-
-    useEffect(() => {
-        fetch(`${ origin }/api/nowdata`).then(res => res.json()).then((data) => {
-            setLatestItem(data)
-        })
-        fetch(`${ origin }/api/sleeptime`).then(res => res.json()).then((data) => {
-            setSleepTime(data)
-        })
-        // getData()
-    }, [])
+    const { latestItem, isLoading: healthLoading, isError: healthError } = useHealthData();
+    const { sleepTime, isLoading: sleepLoading, isError: sleepError } = useSleepData();
 
 
   return (
@@ -41,20 +31,28 @@ const Now = () => {
                   <Calender />
             <li className="datum">
                 <div className="datum-name">消費</div>
-                <div className="datum-score">{ latestItem.cal }</div>
+                <div className="datum-score">
+                    {healthLoading ? '...' : healthError ? '-' : latestItem?.cal || 0}
+                </div>
                 <div className="datum-unit">kcal</div>
             </li>
             <li className="datum">
                 <div className="datum-name">歩数</div>
-                <div className="datum-score">{ latestItem.step }</div>
+                <div className="datum-score">
+                    {healthLoading ? '...' : healthError ? '-' : latestItem?.step || 0}
+                </div>
                 <div className="datum-unit">steps</div>
             </li>
             <li className="datum long">
                 <div className="datum-name">睡眠時間</div>
                 <div className="sleep">
-                    <div className="datum-score">{ sleepTime.hour }</div>
+                    <div className="datum-score">
+                        {sleepLoading ? '...' : sleepError ? '-' : sleepTime?.hour || 0}
+                    </div>
                     <div className="datum-unit">時間</div>
-                    <div className="datum-score">{ sleepTime.minutes }</div>
+                    <div className="datum-score">
+                        {sleepLoading ? '...' : sleepError ? '-' : sleepTime?.minutes || 0}
+                    </div>
                     <div className="datum-unit">分</div>
 
                 </div>

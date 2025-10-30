@@ -1,24 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import origin from '../../origin.js'
+import React from 'react'
+import { useCalendarData } from '../../hooks/useCalendarData'
+
 const Calender = () => {
 
-    const [ todayEvent, setTodayEvent ] = useState(false)
-    const [ loaded, setLoaded ] = useState(false)
-
-      useEffect(() => {
-        fetch(`${ origin }/api/calendar`).then(res => res.json()).then((data) => {
-          setTodayEvent(data)
-        })
-        // fetch("http://localhost:8080/api/news").then(res => res.text()).then((text) => {
-        //   console.log(text)
-        // })
-      
-        setLoaded(true)
-      }, [ ])
+    const { todayEvent, isLoading, isError } = useCalendarData();
 
   return (
     <>
-      {loaded && todayEvent ? (
+      {!isLoading && !isError && todayEvent ? (
         <>
         {/* 予定表示 */}
         { todayEvent.main_event == "イベント" ? (

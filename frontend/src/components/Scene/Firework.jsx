@@ -191,7 +191,10 @@ const Firework = ({ isMobile = false }) => {
     // Z軸をランダムに調整（-5から5の範囲）
     if(isMobile) {
       position.z = (Math.random()  * 10) + 20; 
+    } else {
+      position.z = 15
     }
+    console.log(position.z)
 
     createFirework(position);
   };

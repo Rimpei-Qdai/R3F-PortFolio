@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import origin from '../../origin.js'
+import { useNewsData } from '../../hooks/useNewsData'
 import Header from '../Partials/Header.jsx'
 import Now from '../Pages/Now.jsx'
 import Works from '../Pages/Works.jsx'
@@ -13,15 +13,11 @@ import News from '../Pages/News.jsx'
 
 const ContentManager = () => {
   const [content, setContent] = useState(useLocation().hash.slice(1))
-  const [ news, setNews ] = useState(false)
+  const { news, isLoading: newsLoading, isError: newsError } = useNewsData();
 
   useEffect(() => {
     window.addEventListener('hashchange', (event) => {
       setContent(event.srcElement.location.hash.slice(1))
-    })
-
-    fetch(`${ origin }/api/news`).then(res => res.json()).then((data) => {
-      setNews(data.news)
     })
   }, [ ])
 
@@ -66,7 +62,7 @@ const ContentManager = () => {
       ) : content == "intro" ? (
         <Intro />
       ) : content == "news" ? (
-        <News news={ news } />
+        <News news={ news?.news } />
       ) : (
         <></>
       )

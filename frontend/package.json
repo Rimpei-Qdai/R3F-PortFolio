@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@react-three/drei": "^10.0.4",
+    "axios": "^1.13.1",
     "firebase": "^11.6.1",
     "gapi-script": "^1.2.0",
     "gsap": "^3.12.7",
@@ -21,6 +22,7 @@
     "react-google-calendar-api": "^2.3.0",
     "react-router-dom": "^7.4.0",
     "react-three-fiber": "^6.0.13",
+    "swr": "^2.3.6",
     "three": "^0.174.0",
     "three-particle-fire": "^0.1.0",
     "vercel": "^46.0.2"
