@@ -3,10 +3,12 @@ import './app.css'
 import Experience from "./components/Scene/Experience"
 import Loader from './Loader'
 import ContentManager from './components/Utils/ContentManager'
+import { useImagePreloader } from './hooks/useImagePreloader'
 
 
 function App() {
   const [loaded, setLoaded] = useState(false)
+  const { isPriorityLoaded, isAllLoaded, progress, stats } = useImagePreloader();
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,6 +17,16 @@ function App() {
       }
     },3200)
   }, [ loaded ])
+
+  // 画像プリロードの進捗をログ出力（開発時のみ）
+  useEffect(() => {
+    if (isPriorityLoaded) {
+      console.log('🎨 Priority images loaded:', stats.priorityLoaded, '/', stats.priorityTotal);
+    }
+    if (isAllLoaded) {
+      console.log('🎨 All images loaded:', stats.totalLoaded, '/', stats.totalImages);
+    }
+  }, [isPriorityLoaded, isAllLoaded, stats]);
 
   return (
     <>
