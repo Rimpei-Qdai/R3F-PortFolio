@@ -177,7 +177,7 @@ const Experience = ({ onLoaded }) => {
           target={[0, 0, 0]}
           enableDamping={true}
         />
-        {hashName === "" && <Firework />}
+        {hashName === "" && <Firework isMobile={window.innerWidth <= 600} />}
       </>
     ) : (
       <></>

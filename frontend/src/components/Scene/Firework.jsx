@@ -69,7 +69,7 @@ void main() {
 }
 `;
 
-const Firework = () => {
+const Firework = ({ isMobile = false }) => {
   const { scene, size, gl, camera } = useThree();
   const fireworksRef = useRef([]);
   const raycaster = useRef(new THREE.Raycaster());
@@ -189,7 +189,10 @@ const Firework = () => {
     position.y = Math.max(position.y, 2);
 
     // Z軸をランダムに調整（-5から5の範囲）
-    position.z = (Math.random()  * 10) + 20; 
+    if(isMobile) {
+      position.z = (Math.random()  * 10) + 20; 
+    }
+
     createFirework(position);
   };
 
