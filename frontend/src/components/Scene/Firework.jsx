@@ -60,7 +60,7 @@ void main() {
     // pictureIntensity を最小値0.3に制限して、暗い部分も見えるように
     float visibleIntensity = max(pictureIntensity, 0.3);
     gl_PointSize = uSize * uResolution.y * aSize * sizeProgress * sizeTwinkling * visibleIntensity;
-    gl_PointSize *= 3.0 / - viewPosition.z;
+    gl_PointSize *= 8.0 / - viewPosition.z;
     
     // Varyings - darker where picture is darker
     vColor = vec3(pictureIntensity);
@@ -95,19 +95,15 @@ const Firework = ({ isMobile = false }) => {
   
   // 馬のテクスチャを読み込み
   const horseTexture = useTexture('/assets/textures/fireworks/eto_uma_family.png');
-  
-  useEffect(() => {
-    console.log('🎆 Firework component mounted');
-    console.log('📸 Texture loaded:', horseTexture);
-    console.log('📏 Texture size:', horseTexture.image?.width, 'x', horseTexture.image?.height);
-  }, [horseTexture]);
 
   const createFirework = (position) => {
-    console.log('🎇 Creating firework at:', position);
     // テクスチャベースのパーティクル生成
     // 解像度を設定（より多くのパーティクルで詳細な形を表現）
-    const resolution = 128;
+    const resolution = 64;
     const particleCount = resolution * resolution;
+    
+    // ランダムなスケール（0.7倍から1.3倍）
+    const randomScale = 0.7 + Math.random() * 0.6;
     
     // Geometry
     const positionsArray = new Float32Array(particleCount * 3);
@@ -126,8 +122,8 @@ const Firework = ({ isMobile = false }) => {
         const u = x / (resolution - 1);
         const v = y / (resolution - 1);
         
-        // UV座標を-1から1の範囲に変換（中心を原点に）、スケールを3倍に
-        const scale = 3.0;
+        // UV座標を-1から1の範囲に変換（中心を原点に）、スケールをランダムに
+        const scale = 3.0 * randomScale;
         const posX = (u - 0.5) * 2.0 * scale;
         const posY = (v - 0.5) * 2.0 * scale;
         const posZ = (Math.random() - 0.5) * 0.3; // 少しの奥行き
@@ -156,11 +152,14 @@ const Firework = ({ isMobile = false }) => {
     const hue = Math.random();
     const color = new THREE.Color().setHSL(hue, 1.0, 0.8);
     
+    // ランダムなパーティクルサイズ
+    const randomParticleSize = 0.8 + Math.random() * 0.4;
+    
     const material = new THREE.ShaderMaterial({
       vertexShader: fireworkVertexShader,
       fragmentShader: fireworkFragmentShader,
       uniforms: {
-        uSize: { value: isMobile ? 0.15 : 0.25 }, // デスクトップで大幅増加
+        uSize: { value: (isMobile ? 0.15 : 0.2) * randomParticleSize }, // PCサイズを0.25から0.2に縮小
         uResolution: { value: new THREE.Vector2(size.width * gl.getPixelRatio(), size.height * gl.getPixelRatio()) },
         uProgress: { value: 0.05 }, // 初期状態で少し展開
         uColor: { value: color },
@@ -173,13 +172,6 @@ const Firework = ({ isMobile = false }) => {
 
     const points = new THREE.Points(geometry, material);
     points.position.copy(position);
-    
-    console.log('✨ Points created:', {
-      particleCount,
-      position: points.position,
-      material: material,
-      geometry: geometry
-    });
 
     const firework = {
       mesh: points,
@@ -195,14 +187,10 @@ const Firework = ({ isMobile = false }) => {
     scene.add(points);
     fireworksRef.current.push(firework);
 
-    console.log('🎆 Firework added to scene. Total fireworks:', fireworksRef.current.length);
-
     return firework;
   };
 
   const handleClick = (event) => {
-    console.log('🖱️ Click detected:', event.clientX, event.clientY);
-    
     // マウス座標を正規化デバイス座標に変換
     mouse.current.x = (event.clientX / window.innerWidth) * 2 - 1;
     mouse.current.y = -(event.clientY / window.innerHeight) * 2 + 1;
@@ -228,8 +216,6 @@ const Firework = ({ isMobile = false }) => {
       position.z = 15;
     }
 
-    console.log('📍 Firework position:', position);
-
     createFirework(position);
   };
 
@@ -254,14 +240,8 @@ const Firework = ({ isMobile = false }) => {
       const progress = Math.min(elapsed / firework.duration, 1);
 
       firework.mesh.material.uniforms.uProgress.value = progress;
-      
-      // 最初のフレームだけログ
-      if (elapsed < 100 && i === 0) {
-        console.log('🎬 Animating firework:', { progress, elapsed, visible: firework.mesh.visible });
-      }
 
       if (progress >= 1) {
-        console.log('💥 Firework finished, removing');
         firework.destroy();
         fireworksRef.current.splice(i, 1);
       }
