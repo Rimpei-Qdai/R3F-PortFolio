@@ -25,6 +25,7 @@ export const PRELOAD_IMAGES = [
   '/assets/imgs/google-apps-script-logo.png',
   '/assets/imgs/Swift.png',
   '/assets/imgs/ThreeJS.png',
+  '/assets/imgs/internship.png',
   
   // Philosophy thumbnails
   '/assets/imgs/自我と無意識.png',
