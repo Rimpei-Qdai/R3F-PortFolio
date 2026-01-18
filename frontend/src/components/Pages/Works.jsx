@@ -53,6 +53,9 @@ const Works = () => {
             <li className="achieve">
                 Engineer Driven Day 2023 決勝進出         
             </li>
+            <li className="achieve">
+                技育博 2025 vol.6       
+            </li>
            
           </ul>
 
@@ -61,9 +64,14 @@ const Works = () => {
             福岡未踏プロジェクトページ
             </div>
           </a>
-          <a href='https://protopedia.net/prototype/4674' target='_blank' className="more-button">
+          <a href='https://protopedia.net/prototype/4674' target='_blank' className="more-button second">
             <div className="text">
             プロトぺディア
+            </div>
+          </a>
+          <a href='https://geek.supporterz.jp/geekpjt/' target='_blank' className="more-button">
+            <div className="text">
+            技育成プロジェクトとは
             </div>
           </a>
         </li>
