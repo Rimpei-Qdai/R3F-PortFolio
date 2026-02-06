@@ -200,6 +200,10 @@
                 border: solid 6px white;
                 box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.4);
 
+                &.no-border {
+                    border: none;
+                }
+
                 &.face {
                     width: 80%;
                     display: block;

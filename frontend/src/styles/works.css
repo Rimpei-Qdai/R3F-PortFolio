@@ -168,6 +168,9 @@
   border: solid 6px white;
   box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.4);
 }
+#twoD-content ul.works-list li.works-item .thumbnail.no-border {
+  border: none;
+}
 #twoD-content ul.works-list li.works-item .thumbnail.face {
   width: 80%;
   display: block;
